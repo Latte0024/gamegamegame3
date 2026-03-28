@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv08x2qy86qmt"]
+
+[ext_resource type="Script" uid="uid://ik1ixkfbnn7i" path="res://scripts/battle/group.gd" id="1_apoy7"]
+[ext_resource type="PackedScene" uid="uid://cvmaivqceuib6" path="res://scripts/battle/npc.tscn" id="2_qxegs"]
+
+[node name="enemygroup" type="Node2D"]
+script = ExtResource("1_apoy7")
+
+[node name="NPC" parent="." instance=ExtResource("2_qxegs")]
+
+[node name="NPC2" parent="." instance=ExtResource("2_qxegs")]
+
+[node name="NPC3" parent="." instance=ExtResource("2_qxegs")]
+
+[editable path="NPC"]
+[editable path="NPC2"]
+[editable path="NPC3"]

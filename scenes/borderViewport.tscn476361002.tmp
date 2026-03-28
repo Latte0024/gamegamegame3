@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=3 uid="uid://c3emxl7s7ay8b"]
+
+[ext_resource type="Script" uid="uid://7m7v1fuqoj8k" path="res://scenes/border_viewport.gd" id="1_40ycd"]
+[ext_resource type="Texture2D" uid="uid://cpnwgw7uc0yi3" path="res://textures/backgrounds/titlescreen/background.png" id="1_fikng"]
+[ext_resource type="PackedScene" uid="uid://bwxrgu1t8edlv" path="res://maps/CH1/Forest.tscn" id="2_qdxly"]
+[ext_resource type="Script" uid="uid://ba1y62rqjqw0d" path="res://scripts/sceneSwitcher.gd" id="3_q55kd"]
+[ext_resource type="PackedScene" uid="uid://p1xw2rpfph8i" path="res://scripts/battle_manager.tscn" id="5_qgpuv"]
+[ext_resource type="PackedScene" uid="uid://b0fumhrevvnp" path="res://scripts/menu.tscn" id="6_ljkjh"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_8bnje"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="GDScript" id="GDScript_q55kd"]
+script/source = "extends Node2D
+
+
+func _on_teleportbutton_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://maps/camp.tscn\")
+"
+
+[node name="borderViewport" type="Control"]
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_40ycd")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(816, 624)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 100.0
+offset_bottom = 268.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_fikng")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_8bnje")
+stretch_mode = 5
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+canvas_item_default_texture_filter = 0
+size = Vector2i(816, 624)
+size_2d_override_stretch = true
+script = ExtResource("3_q55kd")
+
+[node name="Forest" parent="SubViewport" instance=ExtResource("2_qdxly")]
+script = SubResource("GDScript_q55kd")
+
+[node name="BattleGUI" parent="." instance=ExtResource("5_qgpuv")]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -408.0
+offset_top = -312.0
+offset_right = 408.0
+offset_bottom = 312.0
+size_flags_horizontal = 4
+
+[node name="Menu" parent="." instance=ExtResource("6_ljkjh")]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -408.0
+offset_top = -312.0
+offset_right = 408.0
+offset_bottom = 312.0

@@ -1,0 +1,9 @@
+res://scenes/borderViewport.tscn
+res://maps/CH1/Forest.tscn
+res://characters/player/player.tscn
+res://scripts/system/switchandsuch.tscn
+res://maps/CH2/piratepuzzle.tscn
+res://maps/CH2/city.tscn
+res://maps/CH2/cityroad.tscn
+res://maps/CH2/alleyway.tscn
+res://maps/CH2/cityinside.tscn

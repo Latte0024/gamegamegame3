@@ -1,0 +1,12 @@
+Node2D
+Area2D
+Marker2D
+TileMapLayer
+CollisionShape2D
+Timer
+Camera2D
+AnimatedSprite2D
+AnimationPlayer
+TextureRect
+HBoxContainer
+VBoxContainer

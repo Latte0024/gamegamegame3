@@ -1,0 +1,107 @@
+[gd_scene load_steps=16 format=3 uid="uid://u4s8nmn655ye"]
+
+[ext_resource type="Texture2D" uid="uid://bxxrnoedr0wql" path="res://textures/characters/main-er_charaters/fishwhatever.png" id="1_fg03y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnbxh"]
+atlas = ExtResource("1_fg03y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n588e"]
+atlas = ExtResource("1_fg03y")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2xka"]
+atlas = ExtResource("1_fg03y")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcfdd"]
+atlas = ExtResource("1_fg03y")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2f8ol"]
+atlas = ExtResource("1_fg03y")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhp2w"]
+atlas = ExtResource("1_fg03y")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23i14"]
+atlas = ExtResource("1_fg03y")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kml2o"]
+atlas = ExtResource("1_fg03y")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0ude"]
+atlas = ExtResource("1_fg03y")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkqlu"]
+atlas = ExtResource("1_fg03y")
+region = Rect2(96, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svnnd"]
+atlas = ExtResource("1_fg03y")
+region = Rect2(48, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27vu3"]
+atlas = ExtResource("1_fg03y")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qnrle"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnbxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n588e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2xka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcfdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2f8ol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhp2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23i14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kml2o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0ude")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkqlu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svnnd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27vu3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2nb00"]
+size = Vector2(38, 29)
+
+[node name="fishwhatever" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qnrle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 2.5)
+shape = SubResource("RectangleShape2D_2nb00")

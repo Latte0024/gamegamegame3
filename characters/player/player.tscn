@@ -1,0 +1,179 @@
+[gd_scene load_steps=21 format=3 uid="uid://oyngbaearmvw"]
+
+[ext_resource type="Script" uid="uid://w4k8oswfcrf5" path="res://characters/player/player.gd" id="1_xxgcw"]
+[ext_resource type="Texture2D" uid="uid://cbbpph2ebxhfj" path="res://textures/characters/main-er_charaters/DW_Charlotte.png" id="2_exd8k"]
+[ext_resource type="Texture2D" uid="uid://cw25mm0xodffs" path="res://textures/system/fade.png" id="3_5dc8e"]
+[ext_resource type="Script" uid="uid://cv1cyo6piciyl" path="res://scripts/system/fadeplayer.gd" id="4_ixbpm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t07l"]
+atlas = ExtResource("2_exd8k")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5dtk"]
+atlas = ExtResource("2_exd8k")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_on558"]
+atlas = ExtResource("2_exd8k")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxgcw"]
+atlas = ExtResource("2_exd8k")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_508ok"]
+atlas = ExtResource("2_exd8k")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exd8k"]
+atlas = ExtResource("2_exd8k")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixbpm"]
+atlas = ExtResource("2_exd8k")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dc8e"]
+atlas = ExtResource("2_exd8k")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6leb"]
+atlas = ExtResource("2_exd8k")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idpv6"]
+atlas = ExtResource("2_exd8k")
+region = Rect2(48, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dirf7"]
+atlas = ExtResource("2_exd8k")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpf03"]
+atlas = ExtResource("2_exd8k")
+region = Rect2(96, 144, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gqopd"]
+animations = [{
+"frames": [{
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_3t07l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5dtk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t07l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_on558")
+}],
+"loop": true,
+"name": &"walk down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_xxgcw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_508ok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxgcw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exd8k")
+}],
+"loop": true,
+"name": &"walk left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_ixbpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dc8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ixbpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6leb")
+}],
+"loop": true,
+"name": &"walk right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_idpv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dirf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idpv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpf03")
+}],
+"loop": true,
+"name": &"walk up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icpky"]
+size = Vector2(28, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxgcw"]
+size = Vector2(28, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c6leb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5dc8e")
+}],
+"loop": true,
+"name": &"fadein",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("_animated_sprite") groups=["player"]]
+collision_layer = 2147483651
+collision_mask = 3
+script = ExtResource("1_xxgcw")
+_animated_sprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gqopd")
+animation = &"walk down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 16.5)
+shape = SubResource("RectangleShape2D_icpky")
+
+[node name="Area2D" type="Area2D" parent="." groups=["player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 16.5)
+shape = SubResource("RectangleShape2D_xxgcw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="fading" type="AnimatedSprite2D" parent="." node_paths=PackedStringArray("fadetoblack")]
+process_mode = 3
+visible = false
+z_index = 100
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_c6leb")
+animation = &"fadein"
+script = ExtResource("4_ixbpm")
+fadetoblack = NodePath(".")
+
+[node name="Timer" type="Timer" parent="fading"]
+wait_time = 0.2
+
+[connection signal="timeout" from="fading/Timer" to="fading" method="_on_timer_timeout"]

@@ -1,0 +1,90 @@
+[gd_scene load_steps=13 format=3 uid="uid://cvmaivqceuib6"]
+
+[ext_resource type="Script" uid="uid://cxnlaays4713j" path="res://scripts/battle/npc.gd" id="1_1ndn6"]
+[ext_resource type="Texture2D" uid="uid://bf0kxppklh2bs" path="res://textures/characters/NPC/inabakumori.png" id="2_vjhd6"]
+[ext_resource type="Texture2D" uid="uid://8l1mmwr0cyn0" path="res://textures/system/cursor.png" id="3_ouh5l"]
+[ext_resource type="Script" uid="uid://d2mqftwhok1wp" path="res://scripts/system/battlestarter.gd" id="4_8hrkn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6brss"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vjhd6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqopd"]
+atlas = ExtResource("3_ouh5l")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icpky"]
+atlas = ExtResource("3_ouh5l")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ot1jj"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_gqopd")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_icpky")
+}],
+"loop": true,
+"name": &"selected",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ot1jj"]
+size = Vector2(34, 33.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6brss"]
+size = Vector2(48, 48)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6brss"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ot1jj"]
+bg_color = Color(0.596299, 0.0659399, 0.248997, 1)
+
+[node name="NPC" type="CharacterBody2D" node_paths=PackedStringArray("hurtbox", "HPbar")]
+script = ExtResource("1_1ndn6")
+hurtbox = NodePath("Area2D")
+HPbar = NodePath("ProgressBar")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6brss")
+
+[node name="focus" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, -55)
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_ot1jj")
+animation = &"selected"
+frame_progress = 0.00123188
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_ot1jj")
+
+[node name="Area2D" type="Area2D" parent="." groups=["enemy"]]
+script = ExtResource("4_8hrkn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_6brss")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -25.0
+offset_top = -50.0
+offset_right = 25.0
+offset_bottom = -30.0
+theme_override_styles/background = SubResource("StyleBoxFlat_6brss")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ot1jj")
+value = 50.0
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

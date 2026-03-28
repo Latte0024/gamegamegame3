@@ -1,0 +1,863 @@
+[gd_scene load_steps=46 format=3 uid="uid://d34q6b1jrqbgh"]
+
+[ext_resource type="Script" uid="uid://1l5k73dggl7n" path="res://scripts/system/rockswitch1.gd" id="1_u1wj2"]
+[ext_resource type="Texture2D" uid="uid://c3jms2u3et888" path="res://textures/tilesets/Chapter 1/DW_NOutside_C.png" id="2_2p1xv"]
+[ext_resource type="Script" uid="uid://b4igwri2pj6ti" path="res://scripts/system/rock.gd" id="2_tpt5k"]
+[ext_resource type="Texture2D" uid="uid://jrvlq53mahla" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_C - Train.png" id="2_waa3b"]
+[ext_resource type="Script" uid="uid://gg5ku14h72n5" path="res://scripts/system/rockswitch_2.gd" id="5_47hdv"]
+[ext_resource type="Script" uid="uid://d4a3jwniuof2w" path="res://scripts/system/rockswitch_4.gd" id="5_mlw67"]
+[ext_resource type="Script" uid="uid://xi1iknaajjha" path="res://scripts/system/rock_2.gd" id="6_v7xsd"]
+[ext_resource type="PackedScene" uid="uid://oyngbaearmvw" path="res://characters/player/player.tscn" id="7_v7xsd"]
+[ext_resource type="Script" uid="uid://b2u8erag4hjrv" path="res://scripts/system/rockswitch_3.gd" id="8_oinu4"]
+[ext_resource type="Script" uid="uid://ds3hk37t6fp8g" path="res://scripts/system/rock_3.gd" id="9_mlw67"]
+[ext_resource type="Script" uid="uid://b2a8juhcksof6" path="res://scripts/system/rock_4.gd" id="10_0hi7g"]
+[ext_resource type="Script" uid="uid://urnm4w8h465a" path="res://scripts/system/pirateswitch_1.gd" id="11_uq4se"]
+[ext_resource type="Script" uid="uid://cotljmvkec123" path="res://scripts/system/pirateswitch_2.gd" id="12_016jr"]
+[ext_resource type="Script" uid="uid://b66tbga5jnkrx" path="res://scripts/system/pirate_1.gd" id="12_jd3k2"]
+[ext_resource type="Script" uid="uid://bykn8mtm8f0xb" path="res://scripts/system/pirateswitch_3.gd" id="13_s6uw0"]
+[ext_resource type="Script" uid="uid://c7l1fp8n2en54" path="res://scripts/system/pirateswitch_4.gd" id="14_du2v4"]
+[ext_resource type="Script" uid="uid://dm5pkc2tb74eu" path="res://scripts/system/pirate_2.gd" id="16_5sib6"]
+[ext_resource type="Script" uid="uid://bqd8y0hev5j7a" path="res://scripts/system/pirate_3.gd" id="17_e4cmd"]
+[ext_resource type="Script" uid="uid://b5m5uyn28fv13" path="res://scripts/system/pirate_4.gd" id="18_e4cmd"]
+[ext_resource type="Script" uid="uid://bcmqx03hcdpjd" path="res://scripts/system/antipirate_1.gd" id="19_0qatm"]
+[ext_resource type="Script" uid="uid://cd5hsb8ksk6d7" path="res://scripts/system/antipirate_2.gd" id="20_ownrw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4a7y"]
+size = Vector2(48, 96)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e4cmd"]
+texture = ExtResource("2_waa3b")
+texture_region_size = Vector2i(48, 48)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+9:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+9:4/0 = 0
+11:4/0 = 0
+14:4/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+12:14/0 = 0
+13:14/0 = 0
+14:14/0 = 0
+15:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+11:15/0 = 0
+12:15/0 = 0
+13:15/0 = 0
+14:15/0 = 0
+15:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+0:17/0 = 0
+0:18/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_47hdv"]
+tile_size = Vector2i(48, 48)
+sources/0 = SubResource("TileSetAtlasSource_e4cmd")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_47hdv"]
+size = Vector2(48, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oinu4"]
+size = Vector2(48, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jd3k2"]
+size = Vector2(48, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tpt5k"]
+size = Vector2(48, 48)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ugf4s"]
+texture = ExtResource("2_2p1xv")
+texture_region_size = Vector2i(48, 48)
+13:6/0 = 0
+13:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
+
+[sub_resource type="TileSet" id="TileSet_ugf4s"]
+tile_size = Vector2i(48, 48)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ugf4s")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7xsd"]
+size = Vector2(48, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlw67"]
+size = Vector2(48, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uq4se"]
+size = Vector2(48, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_016jr"]
+size = Vector2(48, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1b7es"]
+size = Vector2(48, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5sib6"]
+size = Vector2(48, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qatm"]
+size = Vector2(48, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hi7g"]
+size = Vector2(48, 142)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ownrw"]
+texture = ExtResource("2_waa3b")
+texture_region_size = Vector2i(48, 48)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+9:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+9:4/0 = 0
+11:4/0 = 0
+14:4/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+12:14/0 = 0
+13:14/0 = 0
+14:14/0 = 0
+15:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+11:15/0 = 0
+12:15/0 = 0
+13:15/0 = 0
+14:15/0 = 0
+15:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+0:17/0 = 0
+0:18/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_uq4se"]
+tile_size = Vector2i(48, 48)
+sources/0 = SubResource("TileSetAtlasSource_ownrw")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ownrw"]
+size = Vector2(48, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngoro"]
+size = Vector2(48, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i1min"]
+size = Vector2(48, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_el0bm"]
+size = Vector2(48, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnml7"]
+size = Vector2(48, 142)
+
+[node name="switchandsuch" type="Node2D"]
+
+[node name="ROCKSWITCH" type="Node2D" parent="."]
+
+[node name="rockswitch1" type="Area2D" parent="ROCKSWITCH"]
+position = Vector2(626, 123)
+script = ExtResource("1_u1wj2")
+metadata/_edit_group_ = true
+
+[node name="switchhitbox" type="CollisionShape2D" parent="ROCKSWITCH/rockswitch1"]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_k4a7y")
+
+[node name="Timer" type="Timer" parent="ROCKSWITCH/rockswitch1"]
+
+[node name="on" type="TileMapLayer" parent="ROCKSWITCH/rockswitch1"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 2, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="off" type="TileMapLayer" parent="ROCKSWITCH/rockswitch1"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 1, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="rockswitch2" type="Area2D" parent="ROCKSWITCH"]
+position = Vector2(626, 283)
+script = ExtResource("5_47hdv")
+metadata/_edit_group_ = true
+
+[node name="switchhitbox" type="CollisionShape2D" parent="ROCKSWITCH/rockswitch2"]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_47hdv")
+
+[node name="Timer" type="Timer" parent="ROCKSWITCH/rockswitch2"]
+
+[node name="on" type="TileMapLayer" parent="ROCKSWITCH/rockswitch2"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 2, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="off" type="TileMapLayer" parent="ROCKSWITCH/rockswitch2"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 1, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="rockswitch3" type="Area2D" parent="ROCKSWITCH"]
+position = Vector2(626, 440)
+script = ExtResource("8_oinu4")
+metadata/_edit_group_ = true
+
+[node name="switchhitbox" type="CollisionShape2D" parent="ROCKSWITCH/rockswitch3"]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_oinu4")
+
+[node name="Timer" type="Timer" parent="ROCKSWITCH/rockswitch3"]
+
+[node name="on" type="TileMapLayer" parent="ROCKSWITCH/rockswitch3"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 2, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="off" type="TileMapLayer" parent="ROCKSWITCH/rockswitch3"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 1, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="rockswitch4" type="Area2D" parent="ROCKSWITCH"]
+position = Vector2(626, 580)
+script = ExtResource("5_mlw67")
+metadata/_edit_group_ = true
+
+[node name="switchhitbox" type="CollisionShape2D" parent="ROCKSWITCH/rockswitch4"]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_jd3k2")
+
+[node name="Timer" type="Timer" parent="ROCKSWITCH/rockswitch4"]
+
+[node name="on" type="TileMapLayer" parent="ROCKSWITCH/rockswitch4"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 2, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="off" type="TileMapLayer" parent="ROCKSWITCH/rockswitch4"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 1, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="ROCK" type="Node2D" parent="."]
+
+[node name="rock1" type="Area2D" parent="ROCK"]
+position = Vector2(566, 98)
+script = ExtResource("2_tpt5k")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ROCK/rock1"]
+shape = SubResource("RectangleShape2D_tpt5k")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="ROCK/rock1"]
+position = Vector2(24, 24)
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 13, 0, 6, 0, 0, 0)
+tile_set = SubResource("TileSet_ugf4s")
+
+[node name="rock2" type="Area2D" parent="ROCK"]
+position = Vector2(568, 281)
+script = ExtResource("6_v7xsd")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ROCK/rock2"]
+shape = SubResource("RectangleShape2D_v7xsd")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="ROCK/rock2"]
+position = Vector2(24, 24)
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 13, 0, 6, 0, 0, 0)
+tile_set = SubResource("TileSet_ugf4s")
+
+[node name="rock3" type="Area2D" parent="ROCK"]
+position = Vector2(570, 444)
+script = ExtResource("9_mlw67")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ROCK/rock3"]
+shape = SubResource("RectangleShape2D_mlw67")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="ROCK/rock3"]
+position = Vector2(24, 24)
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 13, 0, 6, 0, 0, 0)
+tile_set = SubResource("TileSet_ugf4s")
+
+[node name="rock4" type="Area2D" parent="ROCK"]
+position = Vector2(571, 581)
+script = ExtResource("10_0hi7g")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ROCK/rock4"]
+shape = SubResource("RectangleShape2D_uq4se")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="ROCK/rock4"]
+position = Vector2(24, 24)
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 13, 0, 6, 0, 0, 0)
+tile_set = SubResource("TileSet_ugf4s")
+
+[node name="PIRATESWITCH" type="Node2D" parent="."]
+
+[node name="pirateswitch1" type="Area2D" parent="PIRATESWITCH"]
+position = Vector2(362, 112)
+script = ExtResource("11_uq4se")
+metadata/_edit_group_ = true
+
+[node name="switchhitbox" type="CollisionShape2D" parent="PIRATESWITCH/pirateswitch1"]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_016jr")
+
+[node name="Timer" type="Timer" parent="PIRATESWITCH/pirateswitch1"]
+
+[node name="on" type="TileMapLayer" parent="PIRATESWITCH/pirateswitch1"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 2, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="off" type="TileMapLayer" parent="PIRATESWITCH/pirateswitch1"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 1, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="pirateswitch2" type="Area2D" parent="PIRATESWITCH"]
+position = Vector2(363, 294)
+script = ExtResource("12_016jr")
+metadata/_edit_group_ = true
+
+[node name="switchhitbox" type="CollisionShape2D" parent="PIRATESWITCH/pirateswitch2"]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_1b7es")
+
+[node name="Timer" type="Timer" parent="PIRATESWITCH/pirateswitch2"]
+
+[node name="on" type="TileMapLayer" parent="PIRATESWITCH/pirateswitch2"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 2, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="off" type="TileMapLayer" parent="PIRATESWITCH/pirateswitch2"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 1, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="pirateswitch3" type="Area2D" parent="PIRATESWITCH"]
+position = Vector2(354, 464)
+script = ExtResource("13_s6uw0")
+metadata/_edit_group_ = true
+
+[node name="switchhitbox" type="CollisionShape2D" parent="PIRATESWITCH/pirateswitch3"]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_5sib6")
+
+[node name="Timer" type="Timer" parent="PIRATESWITCH/pirateswitch3"]
+
+[node name="on" type="TileMapLayer" parent="PIRATESWITCH/pirateswitch3"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 2, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="off" type="TileMapLayer" parent="PIRATESWITCH/pirateswitch3"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 1, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="pirateswitch4" type="Area2D" parent="PIRATESWITCH"]
+position = Vector2(358, 614)
+script = ExtResource("14_du2v4")
+metadata/_edit_group_ = true
+
+[node name="switchhitbox" type="CollisionShape2D" parent="PIRATESWITCH/pirateswitch4"]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_0qatm")
+
+[node name="Timer" type="Timer" parent="PIRATESWITCH/pirateswitch4"]
+
+[node name="on" type="TileMapLayer" parent="PIRATESWITCH/pirateswitch4"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 2, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="off" type="TileMapLayer" parent="PIRATESWITCH/pirateswitch4"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 1, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="PIRATE" type="Node2D" parent="."]
+
+[node name="pirate1" type="Area2D" parent="PIRATE"]
+position = Vector2(288, 103)
+script = ExtResource("12_jd3k2")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PIRATE/pirate1"]
+position = Vector2(-24, 23)
+shape = SubResource("RectangleShape2D_0hi7g")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="PIRATE/pirate1"]
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 12, 0, 1, 0, 0, 0)
+tile_set = SubResource("TileSet_uq4se")
+
+[node name="Marker2D" type="Marker2D" parent="PIRATE/pirate1"]
+position = Vector2(-259, -17)
+
+[node name="pirate2" type="Area2D" parent="PIRATE"]
+position = Vector2(288, 271)
+script = ExtResource("16_5sib6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PIRATE/pirate2"]
+position = Vector2(-24, 23)
+shape = SubResource("RectangleShape2D_ownrw")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="PIRATE/pirate2"]
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 12, 0, 1, 0, 0, 0)
+tile_set = SubResource("TileSet_uq4se")
+
+[node name="Marker2D" type="Marker2D" parent="PIRATE/pirate2"]
+position = Vector2(-259, -17)
+
+[node name="pirate3" type="Area2D" parent="PIRATE"]
+position = Vector2(291, 452)
+script = ExtResource("17_e4cmd")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PIRATE/pirate3"]
+position = Vector2(-24, 23)
+shape = SubResource("RectangleShape2D_ngoro")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="PIRATE/pirate3"]
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 12, 0, 1, 0, 0, 0)
+tile_set = SubResource("TileSet_uq4se")
+
+[node name="Marker2D" type="Marker2D" parent="PIRATE/pirate3"]
+position = Vector2(-259, -17)
+
+[node name="pirate4" type="Area2D" parent="PIRATE"]
+position = Vector2(290, 605)
+script = ExtResource("18_e4cmd")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PIRATE/pirate4"]
+position = Vector2(-24, 23)
+shape = SubResource("RectangleShape2D_i1min")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="PIRATE/pirate4"]
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 12, 0, 1, 0, 0, 0)
+tile_set = SubResource("TileSet_uq4se")
+
+[node name="Marker2D" type="Marker2D" parent="PIRATE/pirate4"]
+position = Vector2(-259, -17)
+
+[node name="ANTIPIRATE" type="Node2D" parent="."]
+
+[node name="antipirate1" type="Area2D" parent="ANTIPIRATE"]
+position = Vector2(859, 91)
+script = ExtResource("19_0qatm")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ANTIPIRATE/antipirate1"]
+position = Vector2(-24, 23)
+shape = SubResource("RectangleShape2D_el0bm")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="ANTIPIRATE/antipirate1"]
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 12, 0, 1, 0, 0, 0)
+tile_set = SubResource("TileSet_uq4se")
+
+[node name="Marker2D" type="Marker2D" parent="ANTIPIRATE/antipirate1"]
+position = Vector2(-259, -17)
+
+[node name="antipirate2" type="Area2D" parent="ANTIPIRATE"]
+position = Vector2(913, 284)
+script = ExtResource("20_ownrw")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ANTIPIRATE/antipirate2"]
+position = Vector2(-24, 23)
+shape = SubResource("RectangleShape2D_rnml7")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="ANTIPIRATE/antipirate2"]
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 12, 0, 1, 0, 0, 0)
+tile_set = SubResource("TileSet_uq4se")
+
+[node name="Marker2D" type="Marker2D" parent="ANTIPIRATE/antipirate2"]
+position = Vector2(-259, -17)
+
+[node name="Player" parent="." instance=ExtResource("7_v7xsd")]
+
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+limit_left = 0
+limit_top = 0
+limit_right = 1968
+limit_bottom = 1344
+limit_smoothed = true
+metadata/_edit_group_ = true
+
+[connection signal="area_entered" from="ROCKSWITCH/rockswitch1" to="ROCKSWITCH/rockswitch1" method="_on_area_entered"]
+[connection signal="area_exited" from="ROCKSWITCH/rockswitch1" to="ROCKSWITCH/rockswitch1" method="_on_area_exited"]
+[connection signal="timeout" from="ROCKSWITCH/rockswitch1/Timer" to="ROCKSWITCH/rockswitch1" method="_on_timer_timeout"]
+[connection signal="area_entered" from="ROCKSWITCH/rockswitch2" to="ROCKSWITCH/rockswitch2" method="_on_area_entered"]
+[connection signal="area_exited" from="ROCKSWITCH/rockswitch2" to="ROCKSWITCH/rockswitch2" method="_on_area_exited"]
+[connection signal="timeout" from="ROCKSWITCH/rockswitch2/Timer" to="ROCKSWITCH/rockswitch2" method="_on_timer_timeout"]
+[connection signal="area_entered" from="ROCKSWITCH/rockswitch3" to="ROCKSWITCH/rockswitch3" method="_on_area_entered"]
+[connection signal="area_exited" from="ROCKSWITCH/rockswitch3" to="ROCKSWITCH/rockswitch3" method="_on_area_exited"]
+[connection signal="timeout" from="ROCKSWITCH/rockswitch3/Timer" to="ROCKSWITCH/rockswitch3" method="_on_timer_timeout"]
+[connection signal="area_entered" from="ROCKSWITCH/rockswitch4" to="ROCKSWITCH/rockswitch4" method="_on_area_entered"]
+[connection signal="area_exited" from="ROCKSWITCH/rockswitch4" to="ROCKSWITCH/rockswitch4" method="_on_area_exited"]
+[connection signal="timeout" from="ROCKSWITCH/rockswitch4/Timer" to="ROCKSWITCH/rockswitch4" method="_on_timer_timeout"]
+[connection signal="area_entered" from="PIRATESWITCH/pirateswitch1" to="PIRATESWITCH/pirateswitch1" method="_on_area_entered"]
+[connection signal="area_exited" from="PIRATESWITCH/pirateswitch1" to="PIRATESWITCH/pirateswitch1" method="_on_area_exited"]
+[connection signal="timeout" from="PIRATESWITCH/pirateswitch1/Timer" to="PIRATESWITCH/pirateswitch1" method="_on_timer_timeout"]
+[connection signal="area_entered" from="PIRATESWITCH/pirateswitch2" to="PIRATESWITCH/pirateswitch2" method="_on_area_entered"]
+[connection signal="area_exited" from="PIRATESWITCH/pirateswitch2" to="PIRATESWITCH/pirateswitch2" method="_on_area_exited"]
+[connection signal="timeout" from="PIRATESWITCH/pirateswitch2/Timer" to="PIRATESWITCH/pirateswitch2" method="_on_timer_timeout"]
+[connection signal="area_entered" from="PIRATESWITCH/pirateswitch3" to="PIRATESWITCH/pirateswitch3" method="_on_area_entered"]
+[connection signal="area_exited" from="PIRATESWITCH/pirateswitch3" to="PIRATESWITCH/pirateswitch3" method="_on_area_exited"]
+[connection signal="timeout" from="PIRATESWITCH/pirateswitch3/Timer" to="PIRATESWITCH/pirateswitch3" method="_on_timer_timeout"]
+[connection signal="area_entered" from="PIRATESWITCH/pirateswitch4" to="PIRATESWITCH/pirateswitch4" method="_on_area_entered"]
+[connection signal="area_exited" from="PIRATESWITCH/pirateswitch4" to="PIRATESWITCH/pirateswitch4" method="_on_area_exited"]
+[connection signal="timeout" from="PIRATESWITCH/pirateswitch4/Timer" to="PIRATESWITCH/pirateswitch4" method="_on_timer_timeout"]
+[connection signal="body_entered" from="PIRATE/pirate1" to="PIRATE/pirate1" method="_on_body_entered"]
+[connection signal="body_entered" from="PIRATE/pirate2" to="PIRATE/pirate2" method="_on_body_entered"]
+[connection signal="body_entered" from="PIRATE/pirate3" to="PIRATE/pirate3" method="_on_body_entered"]
+[connection signal="body_entered" from="PIRATE/pirate4" to="PIRATE/pirate4" method="_on_body_entered"]
+[connection signal="body_entered" from="ANTIPIRATE/antipirate1" to="ANTIPIRATE/antipirate1" method="_on_body_entered"]
+[connection signal="body_entered" from="ANTIPIRATE/antipirate2" to="ANTIPIRATE/antipirate2" method="_on_body_entered"]
