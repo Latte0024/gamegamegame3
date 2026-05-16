@@ -3613,7 +3613,7 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_mb8e4")
 
 [node name="puzzlereset4" type="Area2D" parent="."]
-position = Vector2(908, 741)
+position = Vector2(908, 723)
 collision_mask = 2147483648
 script = ExtResource("7_rtpcc")
 toScene = "res://maps/CH1/puzzle.tscn"

@@ -3702,7 +3702,7 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_s5xb8")
 
 [node name="Player" parent="." instance=ExtResource("6_x3ov0")]
-position = Vector2(1421, 517)
+position = Vector2(148, 466)
 metadata/_edit_group_ = true
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]

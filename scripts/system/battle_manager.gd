@@ -2,27 +2,34 @@ extends Control
 
 @onready var heartbeat = $heartbeat/TextureRect/AnimatedSprite2D
 
+
+
+
+
+
 signal closed
 signal opened
-
-
 
 
 func _ready():
 	Battlestarter.connect("BattleStart", Initiate)
 	displaytext()
+
+
+
 @warning_ignore("unused_parameter")
 
 func displaytext():
 	$everything.hide()
 	$"Textbox for text".show()
-	$"Textbox for text/Button".text = "Battle initiates!"
+
 
 
 
 func Initiate():
 	$"Textbox for text/Button".grab_focus()
 	opened.emit()
+
 
 func _on_opened():
 
@@ -64,3 +71,4 @@ func _on_text_button_pressed():
 	$"Textbox for text".hide()
 	$everything.show()
 	$everything/choice/choices/Attack.grab_focus()
+	$"Textbox for text/Button".text ="Battle initiates!"

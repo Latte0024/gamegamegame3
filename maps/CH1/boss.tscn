@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=4 uid="uid://btlqbv3ch0gin"]
+[gd_scene load_steps=17 format=4 uid="uid://btlqbv3ch0gin"]
 
 [ext_resource type="Texture2D" uid="uid://dvjoceeta7vux" path="res://textures/tilesets/Chapter 1/DW_NOutside_A2 - .png" id="1_sq04e"]
 [ext_resource type="Texture2D" uid="uid://b3iwlwp3k0e3s" path="res://textures/tilesets/Chapter 1/DW_Outside_A1.png" id="2_kkhcw"]
 [ext_resource type="Texture2D" uid="uid://rbeptii3wyk5" path="res://textures/tilesets/Chapter 1/DW_Outside_B.png" id="3_lf5s3"]
 [ext_resource type="Texture2D" uid="uid://b3j6k0osg6ih6" path="res://textures/tilesets/Chapter 1/DW_Outside_A4.png" id="4_qkogf"]
 [ext_resource type="Texture2D" uid="uid://c3jms2u3et888" path="res://textures/tilesets/Chapter 1/DW_NOutside_C.png" id="5_5tktp"]
+[ext_resource type="Script" uid="uid://leypjrc6exs3" path="res://scripts/system/switcherArea.gd" id="6_1dohu"]
 [ext_resource type="PackedScene" uid="uid://oyngbaearmvw" path="res://characters/player/player.tscn" id="6_w85gm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dhqoe"]
@@ -992,11 +993,14 @@ texture_region_size = Vector2i(48, 48)
 29:8/0 = 0
 30:8/0 = 0
 0:9/0 = 0
-0:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
+0:9/0/z_index = 3
+0:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, 5.64474, 24, 5.64474, 24, 24, -24, 24)
 1:9/0 = 0
-1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
+1:9/0/z_index = 3
+1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, 5.64474, 24, 5.64474, 24, 24, -24, 24)
 2:9/0 = 0
-2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
+2:9/0/z_index = 3
+2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, 5.64474, 24, 5.64474, 24, 24, -24, 24)
 29:9/0 = 0
 0:10/0 = 0
 1:10/0 = 0
@@ -1515,7 +1519,8 @@ texture_region_size = Vector2i(48, 48)
 2:19/0/terrains_peering_bit/top_right_corner = 4
 2:11/0 = 0
 3:9/0 = 0
-3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
+3:9/0/z_index = 3
+3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, 5.64474, 24, 5.64474, 24, 24, -24, 24)
 3:10/0 = 0
 3:17/0 = 0
 3:17/0/terrain_set = 0
@@ -3544,6 +3549,9 @@ tile_size = Vector2i(48, 48)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_gnesv")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pjpw"]
+size = Vector2(102, 18)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -3573,8 +3581,20 @@ tile_set = SubResource("TileSet_o34pl")
 visible = false
 tile_set = SubResource("TileSet_o34pl")
 
+[node name="puzzle" type="Area2D" parent="."]
+position = Vector2(480, 3304)
+collision_mask = 2147483648
+script = ExtResource("6_1dohu")
+toScene = "res://maps/CH1/beforeboss.tscn"
+pos = Vector2(460, 200)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzle"]
+shape = SubResource("RectangleShape2D_2pjpw")
+
 [node name="Player" parent="." instance=ExtResource("6_w85gm")]
-position = Vector2(594, 513)
+position = Vector2(483, 3218)
+metadata/_edit_group_ = true
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 limit_left = 0
@@ -3582,3 +3602,5 @@ limit_top = 0
 limit_right = 960
 limit_bottom = 3360
 limit_smoothed = true
+
+[connection signal="body_entered" from="puzzle" to="puzzle" method="_on_body_entered"]

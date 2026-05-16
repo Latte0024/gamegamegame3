@@ -10,10 +10,12 @@ class_name player
 @export var inpirate : bool
 
 
+@export var monsters : Array[EnemyData]
+
 
 
 func get_input():
-	if icephysics == false or icephysics == true and moving == false or inpirate == false:
+	if icephysics == false or icephysics == true and moving == false:
 		var input_direction = Input.get_vector("left", "right", "up", "down")
 		velocity = input_direction * speed
 
@@ -58,8 +60,11 @@ func _ready():
 	Icephysics.connect("icephysicson", iceon)
 	iceon()
 	iceoff()
+	Battlestarter.connect("BattleStart", Initiate)
 
 
+func Initiate():
+	var battlemonster = monsters.pick_random()
 
 
 func iceoff():

@@ -1,3 +1,7 @@
+res://textures/enemies
+res://scripts/battle/resources/enemies/
+res://maps/CH1
+res://maps/houses/CH1
 res://maps/CH2
 res://textures/backgrounds/gamebackground
 res://scripts/system

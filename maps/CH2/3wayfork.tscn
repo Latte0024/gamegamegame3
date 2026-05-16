@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://leypjrc6exs3" path="res://scripts/system/switcherArea.gd" id="7_14ohw"]
 [ext_resource type="PackedScene" uid="uid://oyngbaearmvw" path="res://characters/player/player.tscn" id="8_q7dss"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qrh61"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_osljh"]
 texture = ExtResource("1_osljh")
 texture_region_size = Vector2i(48, 48)
 0:0/0 = 0
@@ -341,7 +341,7 @@ texture_region_size = Vector2i(48, 48)
 0:4/0/terrains_peering_bit/bottom_side = 2
 0:4/0/terrains_peering_bit/top_side = 2
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gsboj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eweth"]
 texture = ExtResource("2_eweth")
 texture_region_size = Vector2i(48, 48)
 0:0/0 = 0
@@ -1101,7 +1101,7 @@ texture_region_size = Vector2i(48, 48)
 32:13/0 = 0
 30:13/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pa6dg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bn7qi"]
 texture = ExtResource("3_bn7qi")
 texture_region_size = Vector2i(48, 48)
 0:0/0 = 0
@@ -1315,7 +1315,7 @@ texture_region_size = Vector2i(48, 48)
 32:19/0 = 0
 32:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sekwg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ahnse"]
 texture = ExtResource("4_ahnse")
 texture_region_size = Vector2i(48, 48)
 5:0/0 = 0
@@ -1410,7 +1410,7 @@ texture_region_size = Vector2i(48, 48)
 14:15/0 = 0
 15:15/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hky0"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5f5gc"]
 texture = ExtResource("5_5f5gc")
 texture_region_size = Vector2i(48, 48)
 0:0/0 = 0
@@ -1729,7 +1729,7 @@ texture_region_size = Vector2i(48, 48)
 13:16/0 = 0
 14:16/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4jv5l"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqkup"]
 texture = ExtResource("6_aqkup")
 texture_region_size = Vector2i(48, 48)
 0:0/0 = 0
@@ -2142,12 +2142,12 @@ terrain_set_0/terrain_1/name = "shadow 1"
 terrain_set_0/terrain_1/color = Color(0, 0, 0, 1)
 terrain_set_0/terrain_2/name = "water 2"
 terrain_set_0/terrain_2/color = Color(0.807247, 0.000104155, 0.664912, 1)
-sources/0 = SubResource("TileSetAtlasSource_qrh61")
-sources/1 = SubResource("TileSetAtlasSource_gsboj")
-sources/2 = SubResource("TileSetAtlasSource_pa6dg")
-sources/3 = SubResource("TileSetAtlasSource_sekwg")
-sources/4 = SubResource("TileSetAtlasSource_0hky0")
-sources/5 = SubResource("TileSetAtlasSource_4jv5l")
+sources/0 = SubResource("TileSetAtlasSource_osljh")
+sources/1 = SubResource("TileSetAtlasSource_eweth")
+sources/2 = SubResource("TileSetAtlasSource_bn7qi")
+sources/3 = SubResource("TileSetAtlasSource_ahnse")
+sources/4 = SubResource("TileSetAtlasSource_5f5gc")
+sources/5 = SubResource("TileSetAtlasSource_aqkup")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_osljh"]
 size = Vector2(180, 16.5)

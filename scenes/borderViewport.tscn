@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://7m7v1fuqoj8k" path="res://scenes/border_viewport.gd" id="1_40ycd"]
 [ext_resource type="Texture2D" uid="uid://cpnwgw7uc0yi3" path="res://textures/backgrounds/titlescreen/background.png" id="1_fikng"]
 [ext_resource type="Script" uid="uid://ba1y62rqjqw0d" path="res://scripts/system/sceneSwitcher.gd" id="3_q55kd"]
-[ext_resource type="PackedScene" uid="uid://yh7vy3kxkojl" path="res://maps/CH2/piratepuzzle.tscn" id="4_ljkjh"]
+[ext_resource type="PackedScene" uid="uid://bwxrgu1t8edlv" path="res://maps/CH1/Forest.tscn" id="4_ljkjh"]
 [ext_resource type="PackedScene" uid="uid://p1xw2rpfph8i" path="res://scripts/system/battle_manager.tscn" id="5_qgpuv"]
 [ext_resource type="PackedScene" uid="uid://b0fumhrevvnp" path="res://scripts/system/menu.tscn" id="6_ljkjh"]
 
@@ -51,7 +51,7 @@ size = Vector2i(816, 624)
 size_2d_override_stretch = true
 script = ExtResource("3_q55kd")
 
-[node name="piratepuzzle" parent="SubViewport" instance=ExtResource("4_ljkjh")]
+[node name="Forest" parent="SubViewport" instance=ExtResource("4_ljkjh")]
 
 [node name="battlemanager" parent="." instance=ExtResource("5_qgpuv")]
 visible = false

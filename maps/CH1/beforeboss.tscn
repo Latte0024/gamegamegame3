@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://xn7lyes5fj18"]
+[gd_scene load_steps=18 format=4 uid="uid://xn7lyes5fj18"]
 
 [ext_resource type="Texture2D" uid="uid://dvjoceeta7vux" path="res://textures/tilesets/Chapter 1/DW_NOutside_A2 - .png" id="1_y6li8"]
 [ext_resource type="Texture2D" uid="uid://b3iwlwp3k0e3s" path="res://textures/tilesets/Chapter 1/DW_Outside_A1.png" id="2_6wqc8"]
@@ -3548,6 +3548,9 @@ sources/0 = SubResource("TileSetAtlasSource_gnesv")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pnp14"]
 size = Vector2(236, 15.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwlwp"]
+size = Vector2(49, 15.5)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -3587,8 +3590,19 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="beforeboss"]
 shape = SubResource("RectangleShape2D_pnp14")
 
+[node name="beforeboss2" type="Area2D" parent="."]
+position = Vector2(457, 146)
+collision_mask = 2147483648
+script = ExtResource("7_cwlwp")
+toScene = "res://maps/CH1/boss.tscn"
+pos = Vector2(452, 3200)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="beforeboss2"]
+shape = SubResource("RectangleShape2D_cwlwp")
+
 [node name="Player" parent="." instance=ExtResource("6_ssj3p")]
-position = Vector2(452, 940)
+position = Vector2(461, 207)
 metadata/_edit_group_ = true
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
@@ -3599,3 +3613,4 @@ limit_bottom = 1008
 limit_smoothed = true
 
 [connection signal="body_entered" from="beforeboss" to="beforeboss" method="_on_body_entered"]
+[connection signal="body_entered" from="beforeboss2" to="beforeboss2" method="_on_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bgkphxxrdh160"]
+[gd_scene load_steps=18 format=4 uid="uid://bgkphxxrdh160"]
 
 [ext_resource type="Texture2D" uid="uid://dvjoceeta7vux" path="res://textures/tilesets/Chapter 1/DW_NOutside_A2 - .png" id="1_fgmkh"]
 [ext_resource type="Texture2D" uid="uid://b3iwlwp3k0e3s" path="res://textures/tilesets/Chapter 1/DW_Outside_A1.png" id="2_ve3ol"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c3jms2u3et888" path="res://textures/tilesets/Chapter 1/DW_NOutside_C.png" id="4_eibbv"]
 [ext_resource type="Texture2D" uid="uid://b3j6k0osg6ih6" path="res://textures/tilesets/Chapter 1/DW_Outside_A4.png" id="4_ve3ol"]
 [ext_resource type="PackedScene" uid="uid://oyngbaearmvw" path="res://characters/player/player.tscn" id="6_g6b4w"]
+[ext_resource type="Script" uid="uid://leypjrc6exs3" path="res://scripts/system/switcherArea.gd" id="7_ox08s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dhqoe"]
 texture = ExtResource("1_fgmkh")
@@ -3065,6 +3066,12 @@ texture_region_size = Vector2i(48, 48)
 tile_size = Vector2i(48, 48)
 sources/0 = SubResource("TileSetAtlasSource_cht4q")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b21x4"]
+size = Vector2(6, 308)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ox08s"]
+size = Vector2(6, 308)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -3084,8 +3091,33 @@ tile_set = SubResource("TileSet_o34pl")
 
 [node name="TileMapLayer5" type="TileMapLayer" parent="."]
 
+[node name="afterpaper" type="Area2D" parent="."]
+position = Vector2(1, 253)
+collision_mask = 2147483648
+script = ExtResource("7_ox08s")
+toScene = "res://maps/CH1/afterpaper.tscn"
+pos = Vector2(640, 1040)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="afterpaper"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_b21x4")
+
+[node name="nuclear" type="Area2D" parent="."]
+position = Vector2(1965, 671)
+collision_mask = 2147483648
+script = ExtResource("7_ox08s")
+toScene = "res://maps/CH1/nuclear.tscn"
+pos = Vector2(80, 460)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nuclear"]
+shape = SubResource("RectangleShape2D_ox08s")
+metadata/_edit_group_ = true
+
 [node name="Player" parent="." instance=ExtResource("6_g6b4w")]
-position = Vector2(80, 257)
+position = Vector2(1894, 649)
+metadata/_edit_group_ = true
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 limit_left = 0
@@ -3093,3 +3125,6 @@ limit_top = 0
 limit_right = 1968
 limit_bottom = 864
 limit_smoothed = true
+
+[connection signal="body_entered" from="afterpaper" to="afterpaper" method="_on_body_entered"]
+[connection signal="body_entered" from="nuclear" to="nuclear" method="_on_body_entered"]

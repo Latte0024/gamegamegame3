@@ -1,9 +1,19 @@
+res://maps/CH1/nuclearfactory.tscn
+res://maps/CH1/nuclear.tscn
 res://scenes/borderViewport.tscn
-res://maps/CH1/Forest.tscn
 res://characters/player/player.tscn
-res://scripts/system/switchandsuch.tscn
-res://maps/CH2/piratepuzzle.tscn
-res://maps/CH2/city.tscn
-res://maps/CH2/cityroad.tscn
-res://maps/CH2/alleyway.tscn
-res://maps/CH2/cityinside.tscn
+res://scripts/system/battle_manager.tscn
+res://scripts/battle/npc.tscn
+res://scripts/battle/npc.gd
+res://scripts/system/battle_manager.gd
+res://scripts/battle/enemies/npc.tscn
+res://enemy_data.gd
+res://scripts/battle/enemies/npc.gd
+res://scripts/battle/resources/enemies/npc.tscn
+res://scripts/battle/resources/enemies/slime.tres
+res://scripts/battle/resources/enemies/enemy_data.gd
+res://scripts/battle/resources/enemies/cat in a bag.tres
+res://scripts/battle/resources/enemies/tuffbrush.tres
+res://scripts/system/battlestarter.gd
+res://characters/player/player.gd
+res://maps/CH1/Forest.tscn

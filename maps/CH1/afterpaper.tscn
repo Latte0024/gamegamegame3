@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://d1luup0568yq2"]
+[gd_scene load_steps=34 format=4 uid="uid://d1luup0568yq2"]
 
 [ext_resource type="Texture2D" uid="uid://ce80gqcs0n77g" path="res://textures/tilesets/Chapter 1/DW_Outside_A2.png" id="1_gnwys"]
 [ext_resource type="Texture2D" uid="uid://b3iwlwp3k0e3s" path="res://textures/tilesets/Chapter 1/DW_Outside_A1.png" id="2_ghn4a"]
@@ -5042,6 +5042,9 @@ sources/0 = SubResource("TileSetAtlasSource_ixa32")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nll3f"]
 size = Vector2(6, 308)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a78lo"]
+size = Vector2(6, 308)
+
 [node name="afterpapel" type="Node2D"]
 
 [node name="Layer 0" type="TileMapLayer" parent="."]
@@ -5074,18 +5077,30 @@ scale = Vector2(1, 1.00234)
 tile_map_data = PackedByteArray("AAAEAAQACAAPAAMAAAAEAAIACAAPAAQAAAA=")
 tile_set = SubResource("TileSet_qk8mk")
 
-[node name="switcher5" type="Area2D" parent="."]
-position = Vector2(-286, 173)
+[node name="papel" type="Area2D" parent="."]
+position = Vector2(-141, 169)
 collision_mask = 2147483648
 script = ExtResource("13_ghn4a")
-toScene = "res://maps/CH1/afterpaper.tscn"
-pos = Vector2(-211, 152)
+toScene = "res://maps/CH1/papel.tscn"
+pos = Vector2(3800, 500)
+metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="switcher5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="papel"]
 shape = SubResource("RectangleShape2D_nll3f")
 
+[node name="nuclearroad" type="Area2D" parent="."]
+position = Vector2(670, 1029)
+collision_mask = 2147483648
+script = ExtResource("13_ghn4a")
+toScene = "res://maps/CH1/nuclearroad.tscn"
+pos = Vector2(70, 240)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nuclearroad"]
+shape = SubResource("RectangleShape2D_a78lo")
+
 [node name="Player" parent="." instance=ExtResource("12_c8t34")]
-position = Vector2(-212, 152)
+position = Vector2(567, 1029)
 metadata/_edit_group_ = true
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
@@ -5095,4 +5110,5 @@ limit_right = 672
 limit_bottom = 1152
 limit_smoothed = true
 
-[connection signal="body_entered" from="switcher5" to="switcher5" method="_on_body_entered"]
+[connection signal="body_entered" from="papel" to="papel" method="_on_body_entered"]
+[connection signal="body_entered" from="nuclearroad" to="nuclearroad" method="_on_body_entered"]
