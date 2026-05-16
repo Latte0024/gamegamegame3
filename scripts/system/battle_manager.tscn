@@ -318,7 +318,6 @@ focus_next = NodePath("Textbox for text/Button")
 script = ExtResource("1_yhyvb")
 
 [node name="background" type="TextureRect" parent="."]
-visible = false
 custom_minimum_size = Vector2(816, 624)
 layout_mode = 1
 anchors_preset = 5

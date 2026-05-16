@@ -1,19 +1,13 @@
-res://maps/CH1/nuclearfactory.tscn
-res://maps/CH1/nuclear.tscn
 res://scenes/borderViewport.tscn
+res://characters/player/player.gd
+res://scripts/battle/npc.gd
+res://scripts/system/battle_manager.gd
 res://characters/player/player.tscn
 res://scripts/system/battle_manager.tscn
 res://scripts/battle/npc.tscn
-res://scripts/battle/npc.gd
-res://scripts/system/battle_manager.gd
-res://scripts/battle/enemies/npc.tscn
-res://enemy_data.gd
-res://scripts/battle/enemies/npc.gd
-res://scripts/battle/resources/enemies/npc.tscn
-res://scripts/battle/resources/enemies/slime.tres
-res://scripts/battle/resources/enemies/enemy_data.gd
-res://scripts/battle/resources/enemies/cat in a bag.tres
-res://scripts/battle/resources/enemies/tuffbrush.tres
-res://scripts/system/battlestarter.gd
-res://characters/player/player.gd
 res://maps/CH1/Forest.tscn
+res://scripts/state/icephysics.gd
+res://scripts/battle/resources/enemies/enemy_data.gd
+res://scripts/system/battlestarter.gd
+res://scripts/battle/resources/enemies/slime.tres
+res://maps/CH1/nuclear.tscn

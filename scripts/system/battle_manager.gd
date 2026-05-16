@@ -1,8 +1,7 @@
 extends Control 
 
 @onready var heartbeat = $heartbeat/TextureRect/AnimatedSprite2D
-
-
+@warning_ignore("unused_parameter")
 
 
 
@@ -17,7 +16,7 @@ func _ready():
 
 
 
-@warning_ignore("unused_parameter")
+
 
 func displaytext():
 	$everything.hide()
@@ -46,7 +45,7 @@ func _on_closed():
 	
 func _process(_delta):
 	heartbeat.play("heartbeat")
-
+	$"Textbox for text/Button".text ="Battle initiates!"
 
 
 func _on_button_pressed():
@@ -62,6 +61,7 @@ func _on_button_3_pressed() -> void:
 
 
 func _on_button_4_pressed():
+
 	$"Textbox for text".show()
 	closed.emit()
 
@@ -71,4 +71,3 @@ func _on_text_button_pressed():
 	$"Textbox for text".hide()
 	$everything.show()
 	$everything/choice/choices/Attack.grab_focus()
-	$"Textbox for text/Button".text ="Battle initiates!"

@@ -60,11 +60,9 @@ func _ready():
 	Icephysics.connect("icephysicson", iceon)
 	iceon()
 	iceoff()
-	Battlestarter.connect("BattleStart", Initiate)
 
 
-func Initiate():
-	var battlemonster = monsters.pick_random()
+
 
 
 func iceoff():
