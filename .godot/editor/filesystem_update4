@@ -11,3 +11,4 @@ res://scripts/battle/resources/enemies/enemy_data.gd
 res://scripts/system/battlestarter.gd
 res://scripts/battle/resources/enemies/slime.tres
 res://maps/CH1/nuclear.tscn
+res://maps/CH1/nuclearroad.tscn
