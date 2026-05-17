@@ -22,3 +22,5 @@ res://scripts/battle/member.gd
 res://scripts/battle/classes/partyMember.gd
 res://scripts/battle/button.gd
 res://scripts/battle/scenes/button.tscn
+res://scripts/battle/classes/enemyData.gd
+res://scripts/battle/resources/enemies/slime.tres

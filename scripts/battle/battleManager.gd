@@ -85,6 +85,7 @@ func _init_battle() -> void:
 		
 		var enemySprite = preload("res://scripts/battle/scenes/enemy.tscn").instantiate()
 		enemySprite.texture_normal = enemy.texture 
+		enemySprite.damageVal = enemy.damage 
 		enemySprite.battleHandler = self
 		$enemies.add_child(enemySprite)
 		enemySprite.name = enemy.name
@@ -191,7 +192,7 @@ func _enemy_turn():
 	
 	if !$enemies.get_children().is_empty():
 		for enemy in $enemies.get_children().size():
-			print($enemies.get_children()[enemy].name, ": geci sexy vagyok")
+			$ui/party.get_children().pick_random().damage($enemies.get_child(enemy).damageVal,$enemies.get_child(enemy).name)
 	
 	_player_turn()
 
