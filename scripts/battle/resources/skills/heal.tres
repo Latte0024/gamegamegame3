@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="skill" load_steps=2 format=3 uid="uid://cxucs0u003efc"]
+
+[ext_resource type="Script" uid="uid://df5ublabgw4w1" path="res://scripts/battle/classes/skill.gd" id="1_oaqfg"]
+
+[resource]
+script = ExtResource("1_oaqfg")
+skillName = "bandage"
+skillDesc = "heals for small amount"
+targeting = 0
+effect = -10
+cost = 10
+scaling = 0.2
+metadata/_custom_type_script = "uid://df5ublabgw4w1"

@@ -1,5 +1,10 @@
-res://textures/enemies
+res://scripts/battle/scenes
+res://scripts/battle
+res://scripts/battle/resources/skills/
+res://scripts/battle/resources/party/
 res://scripts/battle/resources/enemies/
+res://scripts/battle/classes
+res://textures/enemies
 res://maps/CH1
 res://maps/houses/CH1
 res://maps/CH2

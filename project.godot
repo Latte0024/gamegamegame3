@@ -18,10 +18,10 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-Battlestarter="*res://scripts/system/battlestarter.gd"
 Icephysics="*res://scripts/state/icephysics.gd"
 Fade="*res://scripts/system/fade.gd"
 Puzzleswitch="*res://scripts/system/puzzleswitches.gd"
+BattleGlobals="*res://scripts/battle/battleGlobals.gd"
 
 [debug]
 
@@ -138,6 +138,7 @@ close={
 
 [layer_names]
 
+2d_physics/layer_16="player"
 2d_physics/layer_32="player"
 
 [rendering]

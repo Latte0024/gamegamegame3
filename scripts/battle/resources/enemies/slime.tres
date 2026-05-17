@@ -1,15 +1,11 @@
-[gd_resource type="Resource" script_class="EnemyData" load_steps=4 format=3 uid="uid://dugk3iubufxlr"]
+[gd_resource type="Resource" script_class="enemyData" load_steps=3 format=3 uid="uid://jwdo22r48kxh"]
 
-[ext_resource type="Script" uid="uid://cv5vn7ud1cmu" path="res://scripts/battle/resources/enemies/enemy_data.gd" id="1_7jgg3"]
+[ext_resource type="Script" uid="uid://dsv06g22ujcux" path="res://scripts/battle/classes/enemyData.gd" id="1_nttb6"]
 [ext_resource type="Texture2D" uid="uid://bx14s1lo6ys85" path="res://textures/enemies/slime.png" id="2_7jgg3"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7m4gi"]
-atlas = ExtResource("2_7jgg3")
-
 [resource]
-script = ExtResource("1_7jgg3")
-name = "Slime"
-texture = SubResource("AtlasTexture_7m4gi")
-eHP = 100
-damage = 20
-metadata/_custom_type_script = "uid://cv5vn7ud1cmu"
+script = ExtResource("1_nttb6")
+name = "slime"
+texture = ExtResource("2_7jgg3")
+health = 20
+metadata/_custom_type_script = "uid://dsv06g22ujcux"

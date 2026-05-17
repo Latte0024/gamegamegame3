@@ -10,7 +10,7 @@ class_name player
 @export var inpirate : bool
 
 
-@export var monsters : Array[EnemyData]
+@export var monsters : Array[enemyData]
 
 
 

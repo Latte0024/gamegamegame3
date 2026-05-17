@@ -1,1 +1,3 @@
-EnemyData
+skill
+partyMember
+enemyData

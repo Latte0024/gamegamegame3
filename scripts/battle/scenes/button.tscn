@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bcpmpayxnh5t0"]
+
+[ext_resource type="Texture2D" uid="uid://kqxqvayg2ajk" path="res://textures/system/battle/white-npr.png" id="1_3t46k"]
+[ext_resource type="Texture2D" uid="uid://doa8b6o1xwcv" path="res://textures/system/battle/battle-npr.png" id="2_880nh"]
+[ext_resource type="Script" uid="uid://dp3ev8jv805q" path="res://scripts/battle/button.gd" id="3_mxhu1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_plmrm"]
+texture = ExtResource("1_3t46k")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jmigx"]
+texture = ExtResource("2_880nh")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[node name="button" type="Button"]
+custom_minimum_size = Vector2(0, 34)
+focus_mode = 0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxTexture_plmrm")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_jmigx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_jmigx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_plmrm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jmigx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_jmigx")
+text = "raul beam"
+script = ExtResource("3_mxhu1")
+
+[connection signal="focus_entered" from="." to="." method="_on_focus"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="partyMember" load_steps=6 format=3 uid="uid://dv3lvht5lvshc"]
+
+[ext_resource type="Script" uid="uid://da34dsvtsvir0" path="res://scripts/battle/classes/partyMember.gd" id="1_t080i"]
+[ext_resource type="Texture2D" uid="uid://sb0bwsbnw5ej" path="res://textures/system/battle/placeholder-portrait.png" id="2_qtl0g"]
+[ext_resource type="Script" uid="uid://df5ublabgw4w1" path="res://scripts/battle/classes/skill.gd" id="2_t080i"]
+[ext_resource type="Resource" uid="uid://cxucs0u003efc" path="res://scripts/battle/resources/skills/heal.tres" id="3_4drkl"]
+
+[sub_resource type="Resource" id="Resource_elu81"]
+script = ExtResource("2_t080i")
+skillName = "raul beam"
+skillDesc = "raul fucking kills you"
+targeting = 4
+effect = 500
+cost = -1
+scaling = 1.0
+metadata/_custom_type_script = "uid://df5ublabgw4w1"
+
+[resource]
+script = ExtResource("1_t080i")
+name = "Raul"
+texture = ExtResource("2_qtl0g")
+maxHealth = 200
+maxEnergy = 100
+skills = Array[ExtResource("2_t080i")]([SubResource("Resource_elu81"), ExtResource("3_4drkl")])
+attack = 10
+atkScaling = 0.2
+metadata/_custom_type_script = "uid://da34dsvtsvir0"

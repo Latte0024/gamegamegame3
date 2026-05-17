@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cpnwgw7uc0yi3" path="res://textures/backgrounds/titlescreen/background.png" id="1_fikng"]
 [ext_resource type="Script" uid="uid://ba1y62rqjqw0d" path="res://scripts/system/sceneSwitcher.gd" id="3_q55kd"]
 [ext_resource type="PackedScene" uid="uid://bwxrgu1t8edlv" path="res://maps/CH1/Forest.tscn" id="4_ljkjh"]
-[ext_resource type="PackedScene" uid="uid://p1xw2rpfph8i" path="res://scripts/system/battle_manager.tscn" id="5_qgpuv"]
+[ext_resource type="PackedScene" uid="uid://p1xw2rpfph8i" path="res://scripts/battle/battleManager.tscn" id="5_qgpuv"]
 [ext_resource type="PackedScene" uid="uid://b0fumhrevvnp" path="res://scripts/system/menu.tscn" id="6_ljkjh"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_8bnje"]
@@ -54,10 +54,16 @@ script = ExtResource("3_q55kd")
 [node name="Forest" parent="SubViewport" instance=ExtResource("4_ljkjh")]
 
 [node name="battlemanager" parent="." instance=ExtResource("5_qgpuv")]
-visible = false
 layout_mode = 1
-grow_horizontal = 1
-grow_vertical = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -408.0
+offset_top = -312.0
+offset_right = 408.0
+offset_bottom = 312.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Menu" parent="." instance=ExtResource("6_ljkjh")]

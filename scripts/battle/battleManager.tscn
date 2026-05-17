@@ -1,0 +1,159 @@
+[gd_scene load_steps=14 format=3 uid="uid://p1xw2rpfph8i"]
+
+[ext_resource type="Script" uid="uid://by8l0pgalpsur" path="res://scripts/battle/battleManager.gd" id="1_sy4si"]
+[ext_resource type="Texture2D" uid="uid://r6mn0y5bmhnw" path="res://textures/backgrounds/battlebackground/background.png" id="1_yjgn1"]
+[ext_resource type="PackedScene" uid="uid://bdvfpo2lwkqve" path="res://scripts/battle/scenes/enemy.tscn" id="3_sy4si"]
+[ext_resource type="PackedScene" uid="uid://dmtx881ue7s5u" path="res://scripts/battle/scenes/member.tscn" id="4_plmrm"]
+[ext_resource type="Texture2D" uid="uid://c2d4wbxklletj" path="res://textures/system/battle/btn-fight.png" id="11_j75xd"]
+[ext_resource type="Texture2D" uid="uid://c40bciid7nvoa" path="res://textures/system/battle/btn-fight-sel.png" id="12_cf5bt"]
+[ext_resource type="Texture2D" uid="uid://dcsmmhxufytcu" path="res://textures/system/battle/btn-skill.png" id="13_kho12"]
+[ext_resource type="Texture2D" uid="uid://dpy2kyjkuxmnn" path="res://textures/system/battle/btn-skill-sel.png" id="14_jirhe"]
+[ext_resource type="Texture2D" uid="uid://b77ypkm3jhsll" path="res://textures/system/battle/btn-stuff.png" id="15_tauwv"]
+[ext_resource type="Texture2D" uid="uid://bbhsq1gprhylw" path="res://textures/system/battle/btn-stuff-sel.png" id="16_wefmh"]
+[ext_resource type="Texture2D" uid="uid://cqmte8satrr6j" path="res://textures/system/battle/btn-flee.png" id="17_4gs7k"]
+[ext_resource type="Texture2D" uid="uid://drjj0t6da4erp" path="res://textures/system/battle/btn-flee-sel.png" id="18_lv7jt"]
+[ext_resource type="Texture2D" uid="uid://doa8b6o1xwcv" path="res://textures/system/battle/battle-npr.png" id="19_wjcqa"]
+
+[node name="battleManager" type="Control"]
+process_mode = 3
+visible = false
+clip_contents = true
+custom_minimum_size = Vector2(816, 624)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sy4si")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_yjgn1")
+
+[node name="enemies" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -120.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="enemy" parent="enemies" instance=ExtResource("3_sy4si")]
+layout_mode = 2
+
+[node name="ui" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="party" type="VBoxContainer" parent="ui"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="member" parent="ui/party" instance=ExtResource("4_plmrm")]
+layout_mode = 2
+
+[node name="btn" type="VBoxContainer" parent="ui"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="fight" type="TextureButton" parent="ui/btn"]
+layout_mode = 2
+texture_normal = ExtResource("11_j75xd")
+texture_focused = ExtResource("12_cf5bt")
+
+[node name="skill" type="TextureButton" parent="ui/btn"]
+layout_mode = 2
+texture_normal = ExtResource("13_kho12")
+texture_focused = ExtResource("14_jirhe")
+
+[node name="stuff" type="TextureButton" parent="ui/btn"]
+layout_mode = 2
+texture_normal = ExtResource("15_tauwv")
+texture_focused = ExtResource("16_wefmh")
+
+[node name="flee" type="TextureButton" parent="ui/btn"]
+layout_mode = 2
+texture_normal = ExtResource("17_4gs7k")
+texture_focused = ExtResource("18_lv7jt")
+
+[node name="status" type="NinePatchRect" parent="ui"]
+custom_minimum_size = Vector2(512, 160)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("19_wjcqa")
+region_rect = Rect2(0, 0, 24, 24)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="margin" type="MarginContainer" parent="ui/status"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="battleLog" type="RichTextLabel" parent="ui/status/margin"]
+layout_mode = 2
+bbcode_enabled = true
+scroll_active = false
+scroll_following = true
+
+[node name="skills" type="HBoxContainer" parent="ui/status/margin"]
+visible = false
+layout_mode = 2
+
+[node name="list" type="VBoxContainer" parent="ui/status/margin/skills"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="summary" type="VBoxContainer" parent="ui/status/margin/skills"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="name" type="Label" parent="ui/status/margin/skills/summary"]
+layout_mode = 2
+text = "raul beam"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="ui/status/margin/skills/summary"]
+layout_mode = 2
+
+[node name="desc" type="Label" parent="ui/status/margin/skills/summary"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "raul fucking kills you"
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[connection signal="pressed" from="ui/btn/fight" to="." method="_on_fight"]
+[connection signal="pressed" from="ui/btn/skill" to="." method="_on_skill_pressed"]
+[connection signal="pressed" from="ui/btn/stuff" to="." method="_on_stuff_pressed"]
+[connection signal="pressed" from="ui/btn/flee" to="." method="_on_flee"]
