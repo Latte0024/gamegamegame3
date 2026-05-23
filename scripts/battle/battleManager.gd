@@ -5,6 +5,8 @@ extends Control
 @onready var skillmenu = $ui/status/margin/skills
 
 var canCycle:bool = true
+## im killing ymself
+
 ## who the skill tagets
 enum target {
 	## user of spell only, skips target confirmation
