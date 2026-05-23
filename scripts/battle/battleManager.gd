@@ -5,7 +5,7 @@ extends Control
 @onready var skillmenu = $ui/status/margin/skills
 
 var canCycle:bool = true
-## im killing ymself
+## im killing ymslef
 
 ## who the skill tagets
 enum target {
@@ -79,7 +79,10 @@ func _process(delta: float) -> void:
 		text.visible = true
 
 func _init_battle() -> void:
-	canCycle = false
+	text.text = ""
+	canCycle = true
+	checked = false
+	print("i can cycle")
 	visible = !visible
 	
 	text.append_text("[i]* FOES DRAW NEAR !! [/i]")
@@ -118,7 +121,8 @@ func _init_battle() -> void:
 
 
 func _player_turn():
-	if canCycle:
+	if !canCycle:
+		print("i cant cycle im breaking player turn")
 		return
 		
 	_enemy_check()
@@ -156,6 +160,12 @@ func _player_turn():
 		onTurnIndex = member
 		$ui/party.get_children()[member].anim.play("select")
 		
+		
+		## if skills arent empty before drawing, kill them brutally with rocks
+		if !skillmenu.get_child(0).get_children().is_empty():
+			for skillbtn in skillmenu.get_child(0).get_children():
+				skillbtn.queue_free()
+		
 		## draw skills
 		for e in BattleGlobals.party[member].skills.size():
 			var btn = preload("res://scripts/battle/scenes/button.tscn").instantiate()
@@ -173,12 +183,24 @@ func _player_turn():
 
 
 func _enemy_check():
-	if canCycle:
+	if !canCycle:
 		return
 	
 	await get_tree().create_timer(.3).timeout
 	if $enemies.get_children().is_empty() and !checked:
-		canCycle = true
+		
+		for i in $enemies.get_children():
+			i.set_focus_mode(FOCUS_NONE)
+			i.disabled = true
+		for i in $ui/party.get_children():
+			i.set_focus_mode(FOCUS_NONE)
+		for i in $ui/btn.get_children():
+			i.set_focus_mode(FOCUS_NONE)
+			i.disabled = true
+		
+		
+		canCycle = false
+		print("i cant cycle")
 		checked = true
 		text.newline()
 		text.newline()
@@ -188,7 +210,8 @@ func _enemy_check():
 		
 
 func _enemy_turn():
-	if canCycle:
+	if !canCycle:
+		print("i cant cycle im breaking enemy turn")
 		return
 		
 	_enemy_check()
@@ -221,7 +244,12 @@ func _on_fight() -> void:
 
 
 func _battle_end():
-	visible = !visible
+	
+	visible = false
+	
+	
+	
+	
 	
 	for child in $enemies.get_children():
 		print("queue free", child.name)
@@ -235,7 +263,8 @@ func _battle_end():
 		
 		
 func _target_select(targeting:target, effect:int, scaling:float, cost:int):
-	if canCycle:
+	if !canCycle:
+		print("i cant cycle im breaking targeting turn")
 		return
 	
 	var damageCalc = effect * (1 + (scaling * BattleGlobals.partyLevel))
