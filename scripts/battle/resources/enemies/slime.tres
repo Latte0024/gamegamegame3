@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="enemyData" load_steps=3 format=3 uid="uid://jwdo22r48kxh"]
 
-[ext_resource type="Script" uid="uid://dsv06g22ujcux" path="res://scripts/battle/classes/enemyData.gd" id="1_nttb6"]
+[ext_resource type="Script" uid="uid://dsv06g22ujcux" path="res://scripts/battle/classes/enemyData.gd" id="1_7jgg3"]
 [ext_resource type="Texture2D" uid="uid://bx14s1lo6ys85" path="res://textures/enemies/slime.png" id="2_7jgg3"]
 
 [resource]
-script = ExtResource("1_nttb6")
+script = ExtResource("1_7jgg3")
 name = "slime"
 texture = ExtResource("2_7jgg3")
-health = 20
+health = 30
+damage = 10
 metadata/_custom_type_script = "uid://dsv06g22ujcux"
