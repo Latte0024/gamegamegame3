@@ -3,6 +3,8 @@ extends Control
 
 @onready var text = $ui/status/margin/battleLog
 @onready var skillmenu = $ui/status/margin/skills
+
+var canCycle:bool = true
 ## who the skill tagets
 enum target {
 	## user of spell only, skips target confirmation
@@ -75,7 +77,7 @@ func _process(delta: float) -> void:
 		text.visible = true
 
 func _init_battle() -> void:
-	
+	canCycle = false
 	visible = !visible
 	
 	text.append_text("[i]* FOES DRAW NEAR !! [/i]")
@@ -114,6 +116,9 @@ func _init_battle() -> void:
 
 
 func _player_turn():
+	if canCycle:
+		return
+		
 	_enemy_check()
 	print("enemy check at start of player turn")
 	
@@ -166,9 +171,12 @@ func _player_turn():
 
 
 func _enemy_check():
+	if canCycle:
+		return
 	
 	await get_tree().create_timer(.3).timeout
 	if $enemies.get_children().is_empty() and !checked:
+		canCycle = true
 		checked = true
 		text.newline()
 		text.newline()
@@ -178,6 +186,9 @@ func _enemy_check():
 		
 
 func _enemy_turn():
+	if canCycle:
+		return
+		
 	_enemy_check()
 	
 	for i in $ui/btn.get_children():
@@ -222,6 +233,9 @@ func _battle_end():
 		
 		
 func _target_select(targeting:target, effect:int, scaling:float, cost:int):
+	if canCycle:
+		return
+	
 	var damageCalc = effect * (1 + (scaling * BattleGlobals.partyLevel))
 	match targeting:
 		0: #me
@@ -264,8 +278,8 @@ func _target_select(targeting:target, effect:int, scaling:float, cost:int):
 				i.set_focus_mode(FOCUS_ALL)
 				i.disabled = false
 			
-			
-			$enemies.get_child(0).grab_focus()
+			if !$enemies.get_children().is_empty():
+				$enemies.get_child(0).grab_focus()
 		
 		4: #foes
 			for i in $ui/btn.get_children():
