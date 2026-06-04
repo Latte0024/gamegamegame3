@@ -1,3 +1,4 @@
+res://maps/CH2
 res://textures/characters/main-er_charaters
 res://scripts/battle/scenes
 res://scripts/battle
@@ -8,7 +9,6 @@ res://scripts/battle/classes
 res://textures/enemies
 res://maps/CH1
 res://maps/houses/CH1
-res://maps/CH2
 res://textures/backgrounds/gamebackground
 res://scripts/system
 res://textures/tilesets/Chapter 1

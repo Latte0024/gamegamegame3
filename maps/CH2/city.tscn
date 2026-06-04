@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://cv3y2msl0y5ta"]
+[gd_scene load_steps=17 format=4 uid="uid://cv3y2msl0y5ta"]
 
 [ext_resource type="Texture2D" uid="uid://ly42h3tp8atm" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_A1.png" id="1_82100"]
 [ext_resource type="Texture2D" uid="uid://uddmsd2awkg6" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_A2.png" id="2_8ii57"]
@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://leypjrc6exs3" path="res://scripts/system/switcherArea.gd" id="16_olyf6"]
 [ext_resource type="PackedScene" uid="uid://oyngbaearmvw" path="res://characters/player/player.tscn" id="17_qsfc7"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t3m4h"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vnc6o"]
 texture = ExtResource("1_82100")
 texture_region_size = Vector2i(48, 48)
 0:0/0 = 0
@@ -389,7 +389,7 @@ texture_region_size = Vector2i(48, 48)
 0:4/0/terrains_peering_bit/top_side = 2
 5:4/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mxd2s"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0gtp5"]
 texture = ExtResource("2_8ii57")
 texture_region_size = Vector2i(48, 48)
 0:0/0 = 0
@@ -1152,8 +1152,202 @@ texture_region_size = Vector2i(48, 48)
 17:15/0 = 0
 16:15/0 = 0
 16:16/0 = 0
+15:8/0 = 0
+15:9/0 = 0
+15:10/0 = 0
+15:11/0 = 0
+15:12/0 = 0
+15:13/0 = 0
+15:14/0 = 0
+15:15/0 = 0
+15:16/0 = 0
+15:17/0 = 0
+15:18/0 = 0
+15:19/0 = 0
+16:8/0 = 0
+16:9/0 = 0
+16:10/0 = 0
+16:11/0 = 0
+16:12/0 = 0
+16:13/0 = 0
+16:14/0 = 0
+16:17/0 = 0
+16:18/0 = 0
+16:19/0 = 0
+17:8/0 = 0
+17:9/0 = 0
+17:10/0 = 0
+17:11/0 = 0
+17:12/0 = 0
+17:13/0 = 0
+17:14/0 = 0
+18:8/0 = 0
+18:9/0 = 0
+18:10/0 = 0
+18:11/0 = 0
+18:12/0 = 0
+18:13/0 = 0
+19:8/0 = 0
+19:9/0 = 0
+19:10/0 = 0
+19:11/0 = 0
+19:12/0 = 0
+19:13/0 = 0
+20:8/0 = 0
+20:9/0 = 0
+20:10/0 = 0
+20:11/0 = 0
+20:12/0 = 0
+20:13/0 = 0
+21:8/0 = 0
+21:9/0 = 0
+21:10/0 = 0
+21:11/0 = 0
+21:12/0 = 0
+21:13/0 = 0
+22:8/0 = 0
+22:9/0 = 0
+22:10/0 = 0
+22:11/0 = 0
+22:12/0 = 0
+22:13/0 = 0
+23:8/0 = 0
+23:9/0 = 0
+23:10/0 = 0
+23:11/0 = 0
+23:12/0 = 0
+23:13/0 = 0
+24:8/0 = 0
+24:9/0 = 0
+24:10/0 = 0
+24:11/0 = 0
+24:12/0 = 0
+24:13/0 = 0
+25:8/0 = 0
+25:9/0 = 0
+25:10/0 = 0
+25:11/0 = 0
+25:12/0 = 0
+25:13/0 = 0
+26:8/0 = 0
+26:9/0 = 0
+26:10/0 = 0
+26:11/0 = 0
+26:12/0 = 0
+26:13/0 = 0
+27:8/0 = 0
+27:9/0 = 0
+27:10/0 = 0
+27:11/0 = 0
+27:12/0 = 0
+27:13/0 = 0
+28:8/0 = 0
+28:9/0 = 0
+28:10/0 = 0
+28:11/0 = 0
+28:12/0 = 0
+28:13/0 = 0
+29:8/0 = 0
+29:9/0 = 0
+29:10/0 = 0
+29:11/0 = 0
+29:12/0 = 0
+29:13/0 = 0
+30:8/0 = 0
+30:9/0 = 0
+30:10/0 = 0
+30:11/0 = 0
+30:12/0 = 0
+31:8/0 = 0
+31:9/0 = 0
+31:10/0 = 0
+31:11/0 = 0
+31:12/0 = 0
+32:8/0 = 0
+32:9/0 = 0
+32:10/0 = 0
+32:11/0 = 0
+32:12/0 = 0
+19:4/0 = 0
+19:5/0 = 0
+19:6/0 = 0
+19:7/0 = 0
+20:4/0 = 0
+20:5/0 = 0
+20:6/0 = 0
+20:7/0 = 0
+21:4/0 = 0
+21:5/0 = 0
+21:6/0 = 0
+21:7/0 = 0
+22:2/0 = 0
+22:3/0 = 0
+22:4/0 = 0
+22:5/0 = 0
+22:6/0 = 0
+22:7/0 = 0
+23:2/0 = 0
+23:3/0 = 0
+23:4/0 = 0
+23:5/0 = 0
+23:6/0 = 0
+23:7/0 = 0
+24:2/0 = 0
+24:3/0 = 0
+24:4/0 = 0
+24:5/0 = 0
+24:6/0 = 0
+24:7/0 = 0
+25:2/0 = 0
+25:3/0 = 0
+25:4/0 = 0
+25:5/0 = 0
+25:6/0 = 0
+25:7/0 = 0
+26:2/0 = 0
+26:3/0 = 0
+26:4/0 = 0
+26:5/0 = 0
+26:6/0 = 0
+26:7/0 = 0
+27:2/0 = 0
+27:3/0 = 0
+27:4/0 = 0
+27:5/0 = 0
+27:6/0 = 0
+27:7/0 = 0
+28:2/0 = 0
+28:3/0 = 0
+28:4/0 = 0
+28:5/0 = 0
+28:6/0 = 0
+28:7/0 = 0
+29:2/0 = 0
+29:3/0 = 0
+29:4/0 = 0
+29:5/0 = 0
+29:6/0 = 0
+29:7/0 = 0
+30:2/0 = 0
+30:3/0 = 0
+30:4/0 = 0
+30:5/0 = 0
+30:6/0 = 0
+30:7/0 = 0
+31:2/0 = 0
+31:3/0 = 0
+31:4/0 = 0
+31:5/0 = 0
+31:6/0 = 0
+31:7/0 = 0
+32:2/0 = 0
+32:3/0 = 0
+32:4/0 = 0
+32:5/0 = 0
+32:6/0 = 0
+32:7/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40mbj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o0kdj"]
 texture = ExtResource("3_som3s")
 texture_region_size = Vector2i(48, 48)
 0:0/0 = 0
@@ -1367,7 +1561,7 @@ texture_region_size = Vector2i(48, 48)
 32:19/0 = 0
 32:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6lwgj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_klrvu"]
 texture = ExtResource("4_1373w")
 texture_region_size = Vector2i(48, 48)
 5:0/0 = 0
@@ -1462,7 +1656,7 @@ texture_region_size = Vector2i(48, 48)
 14:15/0 = 0
 15:15/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4lvmp"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ssfka"]
 texture = ExtResource("5_yml3y")
 texture_region_size = Vector2i(48, 48)
 0:0/0 = 0
@@ -1781,7 +1975,7 @@ texture_region_size = Vector2i(48, 48)
 13:16/0 = 0
 14:16/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rsrwv"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fw4v6"]
 texture = ExtResource("6_mgbgl")
 texture_region_size = Vector2i(48, 48)
 0:0/0 = 0
@@ -2521,6 +2715,132 @@ texture_region_size = Vector2i(48, 48)
 24:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 24:10/0 = 0
 24:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
+23:18/0 = 0
+23:19/0 = 0
+23:20/0 = 0
+23:21/0 = 0
+23:22/0 = 0
+23:23/0 = 0
+23:24/0 = 0
+23:25/0 = 0
+23:26/0 = 0
+23:27/0 = 0
+23:28/0 = 0
+23:29/0 = 0
+23:30/0 = 0
+23:31/0 = 0
+24:18/0 = 0
+24:19/0 = 0
+24:20/0 = 0
+24:21/0 = 0
+24:22/0 = 0
+24:23/0 = 0
+24:24/0 = 0
+24:25/0 = 0
+24:26/0 = 0
+24:27/0 = 0
+24:28/0 = 0
+24:29/0 = 0
+24:30/0 = 0
+24:31/0 = 0
+25:18/0 = 0
+25:19/0 = 0
+25:20/0 = 0
+25:21/0 = 0
+25:22/0 = 0
+25:23/0 = 0
+25:24/0 = 0
+25:25/0 = 0
+25:26/0 = 0
+25:27/0 = 0
+25:28/0 = 0
+25:29/0 = 0
+25:30/0 = 0
+25:31/0 = 0
+26:18/0 = 0
+26:19/0 = 0
+26:20/0 = 0
+26:21/0 = 0
+26:22/0 = 0
+26:23/0 = 0
+26:24/0 = 0
+26:25/0 = 0
+26:26/0 = 0
+26:27/0 = 0
+26:28/0 = 0
+26:29/0 = 0
+26:30/0 = 0
+26:31/0 = 0
+27:18/0 = 0
+27:19/0 = 0
+27:20/0 = 0
+27:21/0 = 0
+27:22/0 = 0
+27:23/0 = 0
+27:24/0 = 0
+27:25/0 = 0
+27:26/0 = 0
+27:27/0 = 0
+27:28/0 = 0
+27:29/0 = 0
+27:30/0 = 0
+27:31/0 = 0
+28:18/0 = 0
+28:19/0 = 0
+28:20/0 = 0
+28:21/0 = 0
+28:22/0 = 0
+28:23/0 = 0
+28:24/0 = 0
+28:25/0 = 0
+28:26/0 = 0
+28:27/0 = 0
+28:28/0 = 0
+28:29/0 = 0
+28:30/0 = 0
+28:31/0 = 0
+29:18/0 = 0
+29:19/0 = 0
+29:20/0 = 0
+29:21/0 = 0
+29:22/0 = 0
+29:23/0 = 0
+29:24/0 = 0
+29:25/0 = 0
+29:26/0 = 0
+29:27/0 = 0
+29:28/0 = 0
+29:29/0 = 0
+29:30/0 = 0
+29:31/0 = 0
+30:18/0 = 0
+30:19/0 = 0
+30:20/0 = 0
+30:21/0 = 0
+30:22/0 = 0
+30:23/0 = 0
+30:24/0 = 0
+30:25/0 = 0
+30:26/0 = 0
+30:27/0 = 0
+30:28/0 = 0
+30:29/0 = 0
+30:30/0 = 0
+30:31/0 = 0
+31:18/0 = 0
+31:19/0 = 0
+31:20/0 = 0
+31:21/0 = 0
+31:22/0 = 0
+31:23/0 = 0
+31:24/0 = 0
+31:25/0 = 0
+31:26/0 = 0
+31:27/0 = 0
+31:28/0 = 0
+31:29/0 = 0
+31:30/0 = 0
+31:31/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_2rqyk"]
 tile_size = Vector2i(48, 48)
@@ -2533,18 +2853,15 @@ terrain_set_0/terrain_1/name = "shadow 1"
 terrain_set_0/terrain_1/color = Color(0, 0, 0, 1)
 terrain_set_0/terrain_2/name = "water 2"
 terrain_set_0/terrain_2/color = Color(0.807247, 0.000104155, 0.664912, 1)
-sources/0 = SubResource("TileSetAtlasSource_t3m4h")
-sources/1 = SubResource("TileSetAtlasSource_mxd2s")
-sources/2 = SubResource("TileSetAtlasSource_40mbj")
-sources/3 = SubResource("TileSetAtlasSource_6lwgj")
-sources/4 = SubResource("TileSetAtlasSource_4lvmp")
-sources/5 = SubResource("TileSetAtlasSource_rsrwv")
+sources/0 = SubResource("TileSetAtlasSource_vnc6o")
+sources/1 = SubResource("TileSetAtlasSource_0gtp5")
+sources/2 = SubResource("TileSetAtlasSource_o0kdj")
+sources/3 = SubResource("TileSetAtlasSource_klrvu")
+sources/4 = SubResource("TileSetAtlasSource_ssfka")
+sources/5 = SubResource("TileSetAtlasSource_fw4v6")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_osljh"]
-size = Vector2(27, 216)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0maq"]
-size = Vector2(15.5, 188)
+size = Vector2(27, 332)
 
 [node name="city" type="Node2D"]
 
@@ -2596,21 +2913,11 @@ pos = Vector2(700, 90)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cityroad"]
+position = Vector2(0, -26)
 shape = SubResource("RectangleShape2D_osljh")
 
-[node name="shipsideview" type="Area2D" parent="."]
-position = Vector2(8, 551)
-collision_mask = 2147483648
-script = ExtResource("16_olyf6")
-toScene = "res://maps/CH2/shipsideview.tscn"
-pos = Vector2(1515, 1515)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="shipsideview"]
-shape = SubResource("RectangleShape2D_q0maq")
-
 [node name="Player" parent="." instance=ExtResource("17_qsfc7")]
-position = Vector2(2541, 537)
+position = Vector2(59, 405)
 metadata/_edit_group_ = true
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
@@ -2621,4 +2928,3 @@ limit_bottom = 768
 limit_smoothed = true
 
 [connection signal="body_entered" from="cityroad" to="cityroad" method="_on_body_entered"]
-[connection signal="body_entered" from="shipsideview" to="shipsideview" method="_on_body_entered"]

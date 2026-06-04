@@ -2555,10 +2555,10 @@ sources/4 = SubResource("TileSetAtlasSource_4lvmp")
 sources/5 = SubResource("TileSetAtlasSource_rsrwv")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fawlg"]
-size = Vector2(213, 15)
+size = Vector2(509, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eweth"]
-size = Vector2(215, 20)
+size = Vector2(506, 20)
 
 [node name="cityroad" type="Node2D"]
 
@@ -2596,7 +2596,7 @@ tile_set = SubResource("TileSet_2rqyk")
 tile_map_data = PackedByteArray("AAAeACgABQAOAAEAAAAdACgABQAOAAEAAAAcACgABQAOAAEAAAAbACgABQAOAAEAAAAaACgABQAOAAEAAAAZACgABQAOAAEAAAAYACgABQAOAAEAAAAXACgABQAOAAEAAAAWACgABQAOAAEAAAAVACgABQAOAAEAAAAUACgABQAOAAEAAAATACgABQAOAAEAAAASACgABQAOAAEAAAARACgABQAOAAEAAAAQACgABQAOAAEAAAAPACgABQAOAAEAAAAOACgABQAOAAEAAAANACgABQAOAAEAAAAMACgABQAOAAEAAAALACgABQAOAAEAAAAKACgABQAOAAEAAAAJACgABQAOAAEAAAAIACgABQAOAAEAAAAHACgABQAOAAEAAAAGACgABQAOAAEAAAAFACgABQAOAAEAAAAEACgABQAOAAEAAAADACgABQAOAAEAAAACACgABQAOAAEAAAABACgABQAOAAEAAAAAACgABQAOAAEAAAD//ygABQAOAAEAAAAeACcABQAOAAEAAAAeACYABQAOAAEAAAAeACUABQAOAAEAAAAeACQABQAOAAEAAAAeACMABQAOAAEAAAAeACIABQAOAAEAAAAeACEABQAOAAEAAAAeACAABQAOAAEAAAAeAB8ABQAOAAEAAAAeAB4ABQAOAAEAAAAeAB0ABQAOAAEAAAAeABwABQAOAAEAAAAeABsABQAOAAEAAAAeABoABQAOAAEAAAAeABkABQAOAAEAAAAeABgABQAOAAEAAAAeABcABQAOAAEAAAAeABYABQAOAAEAAAAeABUABQAOAAEAAAAeABQABQAOAAEAAAAeABMABQAOAAEAAAAeABIABQAOAAEAAAAeABEABQAOAAEAAAAeABAABQAOAAEAAAAeAA8ABQAOAAEAAAAeAA4ABQAOAAEAAAAeAA0ABQAOAAEAAAAeAAwABQAOAAEAAAAeAAsABQAOAAEAAAAeAAoABQAOAAEAAAAeAAkABQAOAAEAAAAeAAgABQAOAAEAAAAeAAcABQAOAAEAAAAeAAYABQAOAAEAAAAeAAUABQAOAAEAAAAeAAQABQAOAAEAAAAeAAMABQAOAAEAAAAeAAIABQAOAAEAAAAeAAEABQAOAAEAAAAeAAAABQAOAAEAAAAeAP//BQAOAAEAAAAdAP//BQAOAAEAAAAcAP//BQAOAAEAAAAbAP//BQAOAAEAAAAaAP//BQAOAAEAAAAZAP//BQAOAAEAAAAYAP//BQAOAAEAAAAXAP//BQAOAAEAAAAWAP//BQAOAAEAAAAVAP//BQAOAAEAAAAUAP//BQAOAAEAAAATAP//BQAOAAEAAAASAP//BQAOAAEAAAARAP//BQAOAAEAAAAQAP//BQAOAAEAAAAPAP//BQAOAAEAAAAOAP//BQAOAAEAAAANAP//BQAOAAEAAAAMAP//BQAOAAEAAAALAP//BQAOAAEAAAAKAP//BQAOAAEAAAAJAP//BQAOAAEAAAAIAP//BQAOAAEAAAAHAP//BQAOAAEAAAAGAP//BQAOAAEAAAAFAP//BQAOAAEAAAAEAP//BQAOAAEAAAADAP//BQAOAAEAAAACAP//BQAOAAEAAAABAP//BQAOAAEAAAAAAP//BQAOAAEAAAD/////BQAOAAEAAAD//ycABQAOAAEAAAD//yYABQAOAAEAAAD//yUABQAOAAEAAAD//yQABQAOAAEAAAD//yMABQAOAAEAAAD//yIABQAOAAEAAAD//yEABQAOAAEAAAD//yAABQAOAAEAAAD//x8ABQAOAAEAAAD//x4ABQAOAAEAAAD//x0ABQAOAAEAAAD//xwABQAOAAEAAAD//xsABQAOAAEAAAD//xoABQAOAAEAAAD//xkABQAOAAEAAAD//xgABQAOAAEAAAD//xcABQAOAAEAAAD//xYABQAOAAEAAAD//xUABQAOAAEAAAD//xQABQAOAAEAAAD//xMABQAOAAEAAAD//xIABQAOAAEAAAD//xEABQAOAAEAAAD//xAABQAOAAEAAAD//w8ABQAOAAEAAAD//w4ABQAOAAEAAAD//w0ABQAOAAEAAAD//wwABQAOAAEAAAD//wsABQAOAAEAAAD//woABQAOAAEAAAD//wkABQAOAAEAAAD//wgABQAOAAEAAAD//wcABQAOAAEAAAD//wYABQAOAAEAAAD//wUABQAOAAEAAAD//wQABQAOAAEAAAD//wMABQAOAAEAAAD//wIABQAOAAEAAAD//wEABQAOAAEAAAD//wAABQAOAAEAAAA=")
 tile_set = SubResource("TileSet_2rqyk")
 
-[node name="3wayfork" type="Area2D" parent="."]
+[node name="city" type="Area2D" parent="."]
 position = Vector2(700, 6)
 collision_mask = 2147483648
 script = ExtResource("7_edm0o")
@@ -2604,22 +2604,23 @@ toScene = "res://maps/CH2/city.tscn"
 pos = Vector2(2540, 540)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="3wayfork"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="city"]
+position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_fawlg")
 
-[node name="shipsideview" type="Area2D" parent="."]
+[node name="cityinside" type="Area2D" parent="."]
 position = Vector2(699, 1916)
 collision_mask = 2147483648
 script = ExtResource("7_edm0o")
-toScene = "res://maps/CH2/shipsideview.tscn"
-pos = Vector2(1515, 1515)
+toScene = "res://maps/CH2/cityroad.tscn"
+pos = Vector2(1500, 70)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="shipsideview"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cityinside"]
 shape = SubResource("RectangleShape2D_eweth")
 
 [node name="Player" parent="." instance=ExtResource("8_is01f")]
-position = Vector2(699, 89)
+position = Vector2(559, 1852)
 metadata/_edit_group_ = true
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
@@ -2629,5 +2630,5 @@ limit_right = 1440
 limit_bottom = 1920
 limit_smoothed = true
 
-[connection signal="body_entered" from="3wayfork" to="3wayfork" method="_on_body_entered"]
-[connection signal="body_entered" from="shipsideview" to="shipsideview" method="_on_body_entered"]
+[connection signal="body_entered" from="city" to="city" method="_on_body_entered"]
+[connection signal="body_entered" from="cityinside" to="cityinside" method="_on_body_entered"]

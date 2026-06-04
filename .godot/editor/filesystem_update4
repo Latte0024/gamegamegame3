@@ -3,12 +3,8 @@ res://scripts/battle/resources/skills/heal.tres
 res://scripts/battle/resources/party/raul_placeholder.tres
 res://characters/player/player.gd
 res://scripts/battle/button.gd
-res://scripts/battle/battleManager.gd
 res://characters/player/player.tscn
-res://scripts/battle/battleManager.tscn
 res://maps/CH1/Forest.tscn
-res://maps/CH1/nuclearroad.tscn
-res://scripts/battle/encounter.tscn
-res://scripts/battle/scenes/enemy.tscn
-res://scripts/battle/scenes/member.tscn
-res://scripts/battle/scenes/button.tscn
+res://maps/CH2/city.tscn
+res://maps/CH2/ghostshipdeck.tscn
+res://maps/CH2/shipsideview.tscn
