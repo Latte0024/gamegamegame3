@@ -5961,4 +5961,5 @@ limit_smoothed = true
 metadata/_edit_group_ = true
 
 [connection signal="body_entered" from="JUMPPAD1" to="JUMPPAD1" method="_on_body_entered"]
+[connection signal="body_exited" from="JUMPPAD1" to="JUMPPAD1" method="_on_body_exited"]
 [connection signal="body_entered" from="JUMPPAD2" to="JUMPPAD2" method="_on_body_entered"]
