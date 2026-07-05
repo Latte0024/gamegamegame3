@@ -1589,7 +1589,7 @@ texture_region_size = Vector2i(48, 48)
 12:1/0 = 0
 13:1/0 = 0
 14:1/0 = 0
-14:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, 0, 1.12895, -24, 24, 2.2579, 2.25789, 24)
+14:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 15:1/0 = 0
 0:2/0 = 0
 0:2/0/y_sort_origin = 1
@@ -1610,7 +1610,7 @@ texture_region_size = Vector2i(48, 48)
 15:2/0 = 0
 0:3/0 = 0
 0:3/0/y_sort_origin = 1
-0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -3.95132, 24, -5.08027, 24, 24, -24, 24)
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 1:3/0 = 0
 2:3/0 = 0
 3:3/0 = 0
@@ -1619,9 +1619,9 @@ texture_region_size = Vector2i(48, 48)
 6:3/0 = 0
 7:3/0 = 0
 8:3/0 = 0
-8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, 0, 1.12895, -24, 24, 2.2579, 2.25789, 24)
+8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 9:3/0 = 0
-9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, 0, 1.12895, -24, 24, 2.2579, 2.25789, 24)
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 10:3/0 = 0
 11:3/0 = 0
 12:3/0 = 0
@@ -3192,28 +3192,29 @@ tile_set = SubResource("TileSet_csm4n")
 scale = Vector2(1, 1.00234)
 tile_set = SubResource("TileSet_fqd1e")
 
-[node name="switcher" parent="." instance=ExtResource("12_g20f8")]
+[node name="camproad3" parent="." instance=ExtResource("12_g20f8")]
 position = Vector2(1253, 1459)
-toScene = "res://maps/CH1/camp_road_2.tscn"
+toScene = "res://maps/CH1/camp_road_3.tscn"
 pos = Vector2(481, 70)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="switcher"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="camproad3"]
+position = Vector2(-1, 28)
 shape = SubResource("RectangleShape2D_rukmr")
 
-[node name="switcher2" parent="." instance=ExtResource("12_g20f8")]
+[node name="Forest" parent="." instance=ExtResource("12_g20f8")]
 position = Vector2(2388, 1486)
 pos = Vector2(938, 54)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="switcher2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Forest"]
 shape = SubResource("RectangleShape2D_rfejc")
 metadata/_edit_group_ = true
 
-[node name="switcher3" parent="." instance=ExtResource("12_g20f8")]
+[node name="area_road" parent="." instance=ExtResource("12_g20f8")]
 position = Vector2(1472, 5)
 toScene = "res://maps/CH1/area_road.tscn"
 pos = Vector2(475, 1119)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="switcher3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_road"]
 shape = SubResource("RectangleShape2D_g20f8")
 
 [node name="Player" parent="." instance=ExtResource("11_8ddmu")]

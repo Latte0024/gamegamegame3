@@ -4,7 +4,7 @@ res://scripts/battle/resources/party/raul_placeholder.tres
 res://characters/player/player.gd
 res://scripts/battle/button.gd
 res://characters/player/player.tscn
-res://maps/CH1/Forest.tscn
-res://maps/CH2/city.tscn
-res://maps/CH2/ghostshipdeck.tscn
-res://maps/CH2/shipsideview.tscn
+res://maps/CH3/blighted_gardens.tscn
+res://maps/CH3/beforemaze.tscn
+res://scripts/system/switchandsuch.tscn
+res://scripts/system/jumppad.gd

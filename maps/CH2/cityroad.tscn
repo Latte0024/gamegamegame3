@@ -2601,7 +2601,7 @@ position = Vector2(700, 6)
 collision_mask = 2147483648
 script = ExtResource("7_edm0o")
 toScene = "res://maps/CH2/city.tscn"
-pos = Vector2(2540, 540)
+pos = Vector2(2540, 410)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="city"]
@@ -2612,7 +2612,7 @@ shape = SubResource("RectangleShape2D_fawlg")
 position = Vector2(699, 1916)
 collision_mask = 2147483648
 script = ExtResource("7_edm0o")
-toScene = "res://maps/CH2/cityroad.tscn"
+toScene = "res://maps/CH2/cityinside.tscn"
 pos = Vector2(1500, 70)
 metadata/_edit_group_ = true
 
@@ -2620,7 +2620,7 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_eweth")
 
 [node name="Player" parent="." instance=ExtResource("8_is01f")]
-position = Vector2(559, 1852)
+position = Vector2(561, 60)
 metadata/_edit_group_ = true
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]

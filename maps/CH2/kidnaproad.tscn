@@ -2202,15 +2202,15 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="shipsideview"]
 shape = SubResource("RectangleShape2D_eweth")
 
-[node name="piratepuzzle" type="Area2D" parent="."]
+[node name="ghostshipdeck" type="Area2D" parent="."]
 position = Vector2(7, 443)
 collision_mask = 2147483648
 script = ExtResource("7_gesui")
-toScene = "res://maps/CH2/piratepuzzle.tscn"
-pos = Vector2(2544, 308)
+toScene = "res://maps/CH2/ghostshipdeck.tscn"
+pos = Vector2(530, 1950)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="piratepuzzle"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ghostshipdeck"]
 shape = SubResource("RectangleShape2D_bn7qi")
 
 [node name="Player" parent="." instance=ExtResource("8_psm5a")]
@@ -2226,4 +2226,4 @@ limit_smoothed = true
 
 [connection signal="body_entered" from="city" to="city" method="_on_body_entered"]
 [connection signal="body_entered" from="shipsideview" to="shipsideview" method="_on_body_entered"]
-[connection signal="body_entered" from="piratepuzzle" to="piratepuzzle" method="_on_body_entered"]
+[connection signal="body_entered" from="ghostshipdeck" to="ghostshipdeck" method="_on_body_entered"]

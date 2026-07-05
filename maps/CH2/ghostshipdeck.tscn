@@ -3408,7 +3408,7 @@ position = Vector2(0, -26)
 shape = SubResource("RectangleShape2D_osljh")
 
 [node name="Player" parent="." instance=ExtResource("8_aa57a")]
-position = Vector2(510, 1531)
+position = Vector2(527, 1943)
 metadata/_edit_group_ = true
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]

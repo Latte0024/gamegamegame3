@@ -35,5 +35,4 @@ func visibility():
 func _on_body_entered(body: Node2D) -> void:
 	if $".".is_visible_in_tree():
 		body.set_position($Marker2D.global_position)
-		print("ghalo")
 		Fade.fade.emit()
