@@ -1,12 +1,12 @@
 [gd_scene load_steps=19 format=4 uid="uid://h7gktygfklkq"]
 
 [ext_resource type="Texture2D" uid="uid://cmmfynuruc2jw" path="res://textures/backgrounds/gamebackground/underspace_squid.png" id="1_pur00"]
-[ext_resource type="Texture2D" uid="uid://ly42h3tp8atm" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_A1.png" id="2_q1p3e"]
-[ext_resource type="Texture2D" uid="uid://uddmsd2awkg6" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_A2.png" id="3_5if2r"]
-[ext_resource type="Texture2D" uid="uid://bn85vj6t6u56a" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_A4.png" id="4_h7olm"]
-[ext_resource type="Texture2D" uid="uid://cyef2wtilqw6y" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_B.png" id="5_3f7dt"]
-[ext_resource type="Texture2D" uid="uid://csg3hpmonau5m" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_C - GhostShip.png" id="6_qboha"]
-[ext_resource type="Texture2D" uid="uid://jrvlq53mahla" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_C - Train.png" id="7_1hkab"]
+[ext_resource type="Texture2D" uid="uid://ly42h3tp8atm" path="res://textures/tilesets/Chapter 2/CH2DW_Water.png" id="2_q1p3e"]
+[ext_resource type="Texture2D" uid="uid://uddmsd2awkg6" path="res://textures/tilesets/Chapter 2/CH2DW_Ground.png" id="3_5if2r"]
+[ext_resource type="Texture2D" uid="uid://bn85vj6t6u56a" path="res://textures/tilesets/Chapter 2/CH2DW_Cliffs.png" id="4_h7olm"]
+[ext_resource type="Texture2D" uid="uid://cyef2wtilqw6y" path="res://textures/tilesets/Chapter 2/CH2DW_Assets.png" id="5_3f7dt"]
+[ext_resource type="Texture2D" uid="uid://csg3hpmonau5m" path="res://textures/tilesets/Chapter 2/CH2DW_PirateShip.png" id="6_qboha"]
+[ext_resource type="Texture2D" uid="uid://jrvlq53mahla" path="res://textures/tilesets/Chapter 2/CH2DW_Train.png" id="7_1hkab"]
 [ext_resource type="Script" uid="uid://leypjrc6exs3" path="res://scripts/system/switcherArea.gd" id="8_516ht"]
 [ext_resource type="PackedScene" uid="uid://oyngbaearmvw" path="res://characters/player/player.tscn" id="9_3ywuf"]
 

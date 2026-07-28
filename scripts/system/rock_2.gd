@@ -9,7 +9,7 @@ extends Area2D
 
 
 func _ready():
-	if Puzzleswitch.rockgone  == true:
+	if Puzzleswitch.rock2gone  == true:
 		queue_free()
 	else:
 		Puzzleswitch.connect("Rockswitch2on", visible2on)
@@ -19,21 +19,22 @@ func _ready():
 
 
 func visible2on():
-	Puzzleswitch.rockgone  = true
+	Puzzleswitch.rock2gone  = true
 	visibility()
 
 
 func visible2off():
-	Puzzleswitch.rockgone  = false
+	Puzzleswitch.rock2gone  = false
 	visibility()
 
 func visibility():
-	if Puzzleswitch.rockgone  == false:
+	if Puzzleswitch.rock2gone  == false:
 		$".".show()
 		$TileMapLayer.set_collision_enabled(true)
-		Puzzleswitch.rockgone = false
+		Puzzleswitch.rock2gone = false
 
 	else:
 		$".".hide()
 		$TileMapLayer.set_collision_enabled(false)
-		Puzzleswitch.rockgone = true
+		Puzzleswitch.rock2gone = true
+		print("hidden")

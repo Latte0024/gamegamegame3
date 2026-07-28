@@ -41,17 +41,19 @@ func _process(_delta):	#animation
 			speed =  800.0
 		else:
 			speed = 400.0
-		if Input.is_action_pressed("up") and icephysics == false or Input.is_action_pressed("up") and icephysics == true and moving == false:
-			_animated_sprite.play("walk up")
-		elif Input.is_action_pressed("down",) and icephysics == false or Input.is_action_pressed("down",) and icephysics == true and moving == false:
-			_animated_sprite.play("walk down")
-		elif Input.is_action_pressed("left",) and icephysics == false or Input.is_action_pressed("left",) and icephysics == true and moving == false:
-			_animated_sprite.play("walk left")
-		elif Input.is_action_pressed("right",) and icephysics == false or Input.is_action_pressed("right",) and icephysics == true and moving == false:
-			_animated_sprite.play("walk right")
+		if moving == true:
+			if Input.is_action_pressed("up") and icephysics == false or Input.is_action_pressed("up") and icephysics == true and moving == false:
+				_animated_sprite.play("walk up")
+			elif Input.is_action_pressed("down",) and icephysics == false or Input.is_action_pressed("down",) and icephysics == true and moving == false:
+				_animated_sprite.play("walk down")
+			elif Input.is_action_pressed("left",) and icephysics == false or Input.is_action_pressed("left",) and icephysics == true and moving == false:
+				_animated_sprite.play("walk left")
+			elif Input.is_action_pressed("right",) and icephysics == false or Input.is_action_pressed("right",) and icephysics == true and moving == false:
+				_animated_sprite.play("walk right")
+			else:
+				_animated_sprite.stop()
 		else:
 			_animated_sprite.stop()
-	
 
 
 

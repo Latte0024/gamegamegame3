@@ -1,10 +1,10 @@
 [gd_scene load_steps=17 format=4 uid="uid://b7owuarubdose"]
 
-[ext_resource type="Texture2D" uid="uid://ce80gqcs0n77g" path="res://textures/tilesets/Chapter 1/DW_Outside_A2.png" id="1_3acu4"]
+[ext_resource type="Texture2D" uid="uid://ce80gqcs0n77g" path="res://textures/tilesets/Chapter 1/DW_Ground.png" id="1_3acu4"]
 [ext_resource type="Texture2D" uid="uid://d1m3g1y050yue" path="res://textures/tilesets/houses/CH1/tiles.png" id="1_xwyoq"]
-[ext_resource type="Texture2D" uid="uid://b3iwlwp3k0e3s" path="res://textures/tilesets/Chapter 1/DW_Outside_A1.png" id="2_gvrgn"]
+[ext_resource type="Texture2D" uid="uid://b3iwlwp3k0e3s" path="res://textures/tilesets/Chapter 1/DW_Water.png" id="2_gvrgn"]
 [ext_resource type="Texture2D" uid="uid://us8stiu3g8v8" path="res://textures/tilesets/houses/CH1/furniture.png" id="2_wy4ts"]
-[ext_resource type="Texture2D" uid="uid://uddmsd2awkg6" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_A2.png" id="3_3acu4"]
+[ext_resource type="Texture2D" uid="uid://uddmsd2awkg6" path="res://textures/tilesets/Chapter 2/CH2DW_Ground.png" id="3_3acu4"]
 [ext_resource type="PackedScene" uid="uid://xwlsd76ixvvk" path="res://scenes/switcher.tscn" id="4_gvrgn"]
 [ext_resource type="PackedScene" uid="uid://oyngbaearmvw" path="res://characters/player/player.tscn" id="5_lfwhc"]
 

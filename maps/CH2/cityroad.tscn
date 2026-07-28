@@ -1,11 +1,11 @@
 [gd_scene load_steps=18 format=4 uid="uid://bwwtu2rpnmsb"]
 
-[ext_resource type="Texture2D" uid="uid://ly42h3tp8atm" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_A1.png" id="1_fawlg"]
-[ext_resource type="Texture2D" uid="uid://uddmsd2awkg6" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_A2.png" id="2_wg3xl"]
-[ext_resource type="Texture2D" uid="uid://bn85vj6t6u56a" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_A4.png" id="3_rcg0f"]
-[ext_resource type="Texture2D" uid="uid://cyef2wtilqw6y" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_B.png" id="4_xpdt2"]
-[ext_resource type="Texture2D" uid="uid://csg3hpmonau5m" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_C - GhostShip.png" id="5_u75r4"]
-[ext_resource type="Texture2D" uid="uid://jrvlq53mahla" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_C - Train.png" id="6_byabp"]
+[ext_resource type="Texture2D" uid="uid://ly42h3tp8atm" path="res://textures/tilesets/Chapter 2/CH2DW_Water.png" id="1_fawlg"]
+[ext_resource type="Texture2D" uid="uid://uddmsd2awkg6" path="res://textures/tilesets/Chapter 2/CH2DW_Ground.png" id="2_wg3xl"]
+[ext_resource type="Texture2D" uid="uid://bn85vj6t6u56a" path="res://textures/tilesets/Chapter 2/CH2DW_Cliffs.png" id="3_rcg0f"]
+[ext_resource type="Texture2D" uid="uid://cyef2wtilqw6y" path="res://textures/tilesets/Chapter 2/CH2DW_Assets.png" id="4_xpdt2"]
+[ext_resource type="Texture2D" uid="uid://csg3hpmonau5m" path="res://textures/tilesets/Chapter 2/CH2DW_PirateShip.png" id="5_u75r4"]
+[ext_resource type="Texture2D" uid="uid://jrvlq53mahla" path="res://textures/tilesets/Chapter 2/CH2DW_Train.png" id="6_byabp"]
 [ext_resource type="Script" uid="uid://leypjrc6exs3" path="res://scripts/system/switcherArea.gd" id="7_edm0o"]
 [ext_resource type="PackedScene" uid="uid://oyngbaearmvw" path="res://characters/player/player.tscn" id="8_is01f"]
 

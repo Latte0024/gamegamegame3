@@ -1,11 +1,12 @@
-[gd_scene load_steps=51 format=3 uid="uid://d34q6b1jrqbgh"]
+[gd_scene load_steps=56 format=3 uid="uid://d34q6b1jrqbgh"]
 
 [ext_resource type="Script" uid="uid://1l5k73dggl7n" path="res://scripts/system/rockswitch1.gd" id="1_u1wj2"]
-[ext_resource type="Texture2D" uid="uid://c3jms2u3et888" path="res://textures/tilesets/Chapter 1/DW_NOutside_C.png" id="2_2p1xv"]
-[ext_resource type="Script" uid="uid://b4igwri2pj6ti" path="res://scripts/system/rock.gd" id="2_tpt5k"]
-[ext_resource type="Texture2D" uid="uid://jrvlq53mahla" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_C - Train.png" id="2_waa3b"]
+[ext_resource type="Texture2D" uid="uid://c3jms2u3et888" path="res://textures/tilesets/Chapter 1/DW_NuclearAssets.png" id="2_2p1xv"]
+[ext_resource type="Script" uid="uid://b4igwri2pj6ti" path="res://scripts/system/rock_1.gd" id="2_tpt5k"]
+[ext_resource type="Texture2D" uid="uid://jrvlq53mahla" path="res://textures/tilesets/Chapter 2/CH2DW_Train.png" id="2_waa3b"]
 [ext_resource type="Script" uid="uid://gg5ku14h72n5" path="res://scripts/system/rockswitch_2.gd" id="5_47hdv"]
 [ext_resource type="Script" uid="uid://d4a3jwniuof2w" path="res://scripts/system/rockswitch_4.gd" id="5_mlw67"]
+[ext_resource type="Script" uid="uid://dysfjrhb7n2yg" path="res://scripts/system/rockswitch_5.gd" id="6_rnml7"]
 [ext_resource type="Script" uid="uid://xi1iknaajjha" path="res://scripts/system/rock_2.gd" id="6_v7xsd"]
 [ext_resource type="PackedScene" uid="uid://oyngbaearmvw" path="res://characters/player/player.tscn" id="7_v7xsd"]
 [ext_resource type="Script" uid="uid://b2u8erag4hjrv" path="res://scripts/system/rockswitch_3.gd" id="8_oinu4"]
@@ -13,21 +14,23 @@
 [ext_resource type="Script" uid="uid://b2a8juhcksof6" path="res://scripts/system/rock_4.gd" id="10_0hi7g"]
 [ext_resource type="Script" uid="uid://urnm4w8h465a" path="res://scripts/system/pirateswitch_1.gd" id="11_uq4se"]
 [ext_resource type="Script" uid="uid://cotljmvkec123" path="res://scripts/system/pirateswitch_2.gd" id="12_016jr"]
+[ext_resource type="Script" uid="uid://jsrkh6sicyar" path="res://scripts/system/rock_5.gd" id="12_683o8"]
 [ext_resource type="Script" uid="uid://b66tbga5jnkrx" path="res://scripts/system/pirate_1.gd" id="12_jd3k2"]
 [ext_resource type="Script" uid="uid://bykn8mtm8f0xb" path="res://scripts/system/pirateswitch_3.gd" id="13_s6uw0"]
 [ext_resource type="Script" uid="uid://c7l1fp8n2en54" path="res://scripts/system/pirateswitch_4.gd" id="14_du2v4"]
 [ext_resource type="Script" uid="uid://dm5pkc2tb74eu" path="res://scripts/system/pirate_2.gd" id="16_5sib6"]
-[ext_resource type="Texture2D" uid="uid://rbeptii3wyk5" path="res://textures/tilesets/Chapter 1/DW_Outside_B.png" id="16_i1min"]
+[ext_resource type="Texture2D" uid="uid://rbeptii3wyk5" path="res://textures/tilesets/Chapter 1/DW_Assets1.png" id="16_i1min"]
 [ext_resource type="Script" uid="uid://bqd8y0hev5j7a" path="res://scripts/system/pirate_3.gd" id="17_e4cmd"]
 [ext_resource type="Script" uid="uid://b5m5uyn28fv13" path="res://scripts/system/pirate_4.gd" id="18_e4cmd"]
 [ext_resource type="Script" uid="uid://bcmqx03hcdpjd" path="res://scripts/system/antipirate_1.gd" id="19_0qatm"]
 [ext_resource type="Script" uid="uid://cd5hsb8ksk6d7" path="res://scripts/system/antipirate_2.gd" id="20_ownrw"]
 [ext_resource type="Script" uid="uid://hntg8ftka2sr" path="res://scripts/system/jumppad.gd" id="21_ngoro"]
+[ext_resource type="Script" uid="uid://l5uybhop4w50" path="res://scripts/system/tempswitch_1.gd" id="22_el0bm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4a7y"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whyy7"]
 size = Vector2(48, 96)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e4cmd"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_whyy7"]
 texture = ExtResource("2_waa3b")
 texture_region_size = Vector2i(48, 48)
 0:0/0 = 0
@@ -236,7 +239,7 @@ texture_region_size = Vector2i(48, 48)
 
 [sub_resource type="TileSet" id="TileSet_47hdv"]
 tile_size = Vector2i(48, 48)
-sources/0 = SubResource("TileSetAtlasSource_e4cmd")
+sources/0 = SubResource("TileSetAtlasSource_whyy7")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47hdv"]
 size = Vector2(48, 96)
@@ -247,10 +250,10 @@ size = Vector2(48, 96)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jd3k2"]
 size = Vector2(48, 96)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tpt5k"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7lpqp"]
 size = Vector2(48, 48)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ugf4s"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7lpqp"]
 texture = ExtResource("2_2p1xv")
 texture_region_size = Vector2i(48, 48)
 13:6/0 = 0
@@ -259,7 +262,7 @@ texture_region_size = Vector2i(48, 48)
 [sub_resource type="TileSet" id="TileSet_ugf4s"]
 tile_size = Vector2i(48, 48)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ugf4s")
+sources/0 = SubResource("TileSetAtlasSource_7lpqp")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v7xsd"]
 size = Vector2(48, 48)
@@ -285,7 +288,7 @@ size = Vector2(48, 96)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_683o8"]
 size = Vector2(48, 95)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i1min"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_683o8"]
 texture = ExtResource("2_waa3b")
 texture_region_size = Vector2i(48, 48)
 0:0/0 = 0
@@ -492,7 +495,7 @@ texture_region_size = Vector2i(48, 48)
 0:17/0 = 0
 0:18/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_el0bm"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ja53q"]
 texture = ExtResource("16_i1min")
 texture_region_size = Vector2i(48, 48)
 1:0/0 = 0
@@ -512,9 +515,7 @@ texture_region_size = Vector2i(48, 48)
 14:1/0 = 0
 0:2/0 = 0
 1:2/0 = 0
-1:2/0/z_index = -1
 2:2/0 = 0
-2:2/0/z_index = -1
 5:2/0 = 0
 6:2/0 = 0
 7:2/0 = 0
@@ -586,8 +587,8 @@ texture_region_size = Vector2i(48, 48)
 
 [sub_resource type="TileSet" id="TileSet_uq4se"]
 tile_size = Vector2i(48, 48)
-sources/0 = SubResource("TileSetAtlasSource_i1min")
-sources/1 = SubResource("TileSetAtlasSource_el0bm")
+sources/0 = SubResource("TileSetAtlasSource_683o8")
+sources/1 = SubResource("TileSetAtlasSource_ja53q")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ownrw"]
 size = Vector2(48, 142)
@@ -603,6 +604,12 @@ size = Vector2(48, 142)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rnml7"]
 size = Vector2(48, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4a7y"]
+size = Vector2(48, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tpt5k"]
+size = Vector2(48, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hi7g"]
 size = Vector2(48, 48)
@@ -621,7 +628,7 @@ metadata/_edit_group_ = true
 
 [node name="switchhitbox" type="CollisionShape2D" parent="ROCKSWITCH/rockswitch1"]
 position = Vector2(24, 0)
-shape = SubResource("RectangleShape2D_k4a7y")
+shape = SubResource("RectangleShape2D_whyy7")
 
 [node name="Timer" type="Timer" parent="ROCKSWITCH/rockswitch1"]
 
@@ -690,6 +697,25 @@ tile_set = SubResource("TileSet_47hdv")
 tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 1, 0, 16, 0, 0, 0)
 tile_set = SubResource("TileSet_47hdv")
 
+[node name="rockswitch5" type="Area2D" parent="ROCKSWITCH"]
+position = Vector2(626, 701)
+script = ExtResource("6_rnml7")
+metadata/_edit_group_ = true
+
+[node name="switchhitbox" type="CollisionShape2D" parent="ROCKSWITCH/rockswitch5"]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_jd3k2")
+
+[node name="Timer" type="Timer" parent="ROCKSWITCH/rockswitch5"]
+
+[node name="on" type="TileMapLayer" parent="ROCKSWITCH/rockswitch5"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 2, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="off" type="TileMapLayer" parent="ROCKSWITCH/rockswitch5"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 1, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
 [node name="ROCK" type="Node2D" parent="."]
 
 [node name="rock1" type="Area2D" parent="ROCK"]
@@ -698,7 +724,7 @@ script = ExtResource("2_tpt5k")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ROCK/rock1"]
-shape = SubResource("RectangleShape2D_tpt5k")
+shape = SubResource("RectangleShape2D_7lpqp")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="ROCK/rock1"]
 position = Vector2(24, 24)
@@ -740,6 +766,19 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_uq4se")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="ROCK/rock4"]
+position = Vector2(24, 24)
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 13, 0, 6, 0, 0, 0)
+tile_set = SubResource("TileSet_ugf4s")
+
+[node name="rock5" type="Area2D" parent="ROCK"]
+position = Vector2(566, 677)
+script = ExtResource("12_683o8")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ROCK/rock5"]
+shape = SubResource("RectangleShape2D_uq4se")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="ROCK/rock5"]
 position = Vector2(24, 24)
 tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 13, 0, 6, 0, 0, 0)
 tile_set = SubResource("TileSet_ugf4s")
@@ -922,6 +961,70 @@ tile_set = SubResource("TileSet_uq4se")
 [node name="Marker2D" type="Marker2D" parent="ANTIPIRATE/antipirate2"]
 position = Vector2(-259, -17)
 
+[node name="TEMPSWITCH" type="Node2D" parent="."]
+
+[node name="tempswitch1" type="Area2D" parent="TEMPSWITCH"]
+position = Vector2(332, 936)
+script = ExtResource("22_el0bm")
+metadata/_edit_group_ = true
+
+[node name="switchhitbox" type="CollisionShape2D" parent="TEMPSWITCH/tempswitch1"]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_k4a7y")
+
+[node name="Timer" type="Timer" parent="TEMPSWITCH/tempswitch1"]
+
+[node name="on" type="TileMapLayer" parent="TEMPSWITCH/tempswitch1"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 2, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="off" type="TileMapLayer" parent="TEMPSWITCH/tempswitch1"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 1, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="temprock1" type="Area2D" parent="TEMPSWITCH/tempswitch1"]
+position = Vector2(-60, -25)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TEMPSWITCH/tempswitch1/temprock1"]
+shape = SubResource("RectangleShape2D_tpt5k")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="TEMPSWITCH/tempswitch1/temprock1"]
+position = Vector2(24, 24)
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 13, 0, 6, 0, 0, 0)
+tile_set = SubResource("TileSet_ugf4s")
+
+[node name="tempswitch2" type="Area2D" parent="TEMPSWITCH"]
+position = Vector2(522, 936)
+script = ExtResource("22_el0bm")
+metadata/_edit_group_ = true
+
+[node name="switchhitbox" type="CollisionShape2D" parent="TEMPSWITCH/tempswitch2"]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_k4a7y")
+
+[node name="Timer" type="Timer" parent="TEMPSWITCH/tempswitch2"]
+
+[node name="on" type="TileMapLayer" parent="TEMPSWITCH/tempswitch2"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 2, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="off" type="TileMapLayer" parent="TEMPSWITCH/tempswitch2"]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 1, 0, 16, 0, 0, 0)
+tile_set = SubResource("TileSet_47hdv")
+
+[node name="temprock1" type="Area2D" parent="TEMPSWITCH/tempswitch2"]
+position = Vector2(-60, -25)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TEMPSWITCH/tempswitch2/temprock1"]
+shape = SubResource("RectangleShape2D_tpt5k")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="TEMPSWITCH/tempswitch2/temprock1"]
+position = Vector2(24, 24)
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 13, 0, 6, 0, 0, 0)
+tile_set = SubResource("TileSet_ugf4s")
+
 [node name="JUMPPAD" type="Node2D" parent="."]
 
 [node name="JUMPPAD1" type="Area2D" parent="JUMPPAD"]
@@ -961,6 +1064,7 @@ tile_set = SubResource("TileSet_uq4se")
 position = Vector2(-259, -17)
 
 [node name="Player" parent="." instance=ExtResource("7_v7xsd")]
+position = Vector2(205, 1074)
 metadata/_edit_group_ = true
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
@@ -983,6 +1087,9 @@ metadata/_edit_group_ = true
 [connection signal="area_entered" from="ROCKSWITCH/rockswitch4" to="ROCKSWITCH/rockswitch4" method="_on_area_entered"]
 [connection signal="area_exited" from="ROCKSWITCH/rockswitch4" to="ROCKSWITCH/rockswitch4" method="_on_area_exited"]
 [connection signal="timeout" from="ROCKSWITCH/rockswitch4/Timer" to="ROCKSWITCH/rockswitch4" method="_on_timer_timeout"]
+[connection signal="area_entered" from="ROCKSWITCH/rockswitch5" to="ROCKSWITCH/rockswitch5" method="_on_area_entered"]
+[connection signal="area_exited" from="ROCKSWITCH/rockswitch5" to="ROCKSWITCH/rockswitch5" method="_on_area_exited"]
+[connection signal="timeout" from="ROCKSWITCH/rockswitch5/Timer" to="ROCKSWITCH/rockswitch5" method="_on_timer_timeout"]
 [connection signal="area_entered" from="PIRATESWITCH/pirateswitch1" to="PIRATESWITCH/pirateswitch1" method="_on_area_entered"]
 [connection signal="area_exited" from="PIRATESWITCH/pirateswitch1" to="PIRATESWITCH/pirateswitch1" method="_on_area_exited"]
 [connection signal="timeout" from="PIRATESWITCH/pirateswitch1/Timer" to="PIRATESWITCH/pirateswitch1" method="_on_timer_timeout"]
@@ -1001,5 +1108,11 @@ metadata/_edit_group_ = true
 [connection signal="body_entered" from="PIRATE/pirate4" to="PIRATE/pirate4" method="_on_body_entered"]
 [connection signal="body_entered" from="ANTIPIRATE/antipirate1" to="ANTIPIRATE/antipirate1" method="_on_body_entered"]
 [connection signal="body_entered" from="ANTIPIRATE/antipirate2" to="ANTIPIRATE/antipirate2" method="_on_body_entered"]
+[connection signal="area_entered" from="TEMPSWITCH/tempswitch1" to="TEMPSWITCH/tempswitch1" method="_on_area_entered"]
+[connection signal="area_exited" from="TEMPSWITCH/tempswitch1" to="TEMPSWITCH/tempswitch1" method="_on_area_exited"]
+[connection signal="timeout" from="TEMPSWITCH/tempswitch1/Timer" to="TEMPSWITCH/tempswitch1" method="_on_timer_timeout"]
+[connection signal="area_entered" from="TEMPSWITCH/tempswitch2" to="TEMPSWITCH/tempswitch2" method="_on_area_entered"]
+[connection signal="area_exited" from="TEMPSWITCH/tempswitch2" to="TEMPSWITCH/tempswitch2" method="_on_area_exited"]
+[connection signal="timeout" from="TEMPSWITCH/tempswitch2/Timer" to="TEMPSWITCH/tempswitch2" method="_on_timer_timeout"]
 [connection signal="body_entered" from="JUMPPAD/JUMPPAD1" to="JUMPPAD/JUMPPAD1" method="_on_body_entered"]
 [connection signal="body_entered" from="JUMPPAD/JUMPPAD2" to="JUMPPAD/JUMPPAD2" method="_on_body_entered"]

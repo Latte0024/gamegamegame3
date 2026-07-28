@@ -1,6 +1,11 @@
 extends Node
 
-var rockgone : bool
+var rock1gone : bool
+var rock2gone : bool
+var rock3gone : bool
+var rock4gone : bool
+var rock5gone : bool
+
 var pirategone : bool
 
 signal Rockswitch1on
@@ -15,6 +20,10 @@ signal Rockswitch3off
 signal Rockswitch4on
 signal Rockswitch4off
 
+signal Rockswitch5on
+signal Rockswitch5off
+
+
 
 signal Pirateswitch1on
 signal Pirateswitch1off
@@ -27,3 +36,6 @@ signal Pirateswitch3off
 
 signal Pirateswitch4on
 signal Pirateswitch4off
+
+signal Pirateswitch5on
+signal Pirateswitch5off

@@ -1,10 +1,11 @@
-res://scenes/borderViewport.tscn
+res://maps/CH3/blighted_maze.tscn
 res://scripts/battle/resources/skills/heal.tres
 res://scripts/battle/resources/party/raul_placeholder.tres
 res://characters/player/player.gd
 res://scripts/battle/button.gd
+res://maps/CH3/teleporterpuzzle.tscn
+res://scenes/borderViewport.tscn
 res://characters/player/player.tscn
-res://maps/CH3/blighted_gardens.tscn
-res://maps/CH3/beforemaze.tscn
 res://scripts/system/switchandsuch.tscn
-res://scripts/system/jumppad.gd
+res://maps/CH3/campsite.tscn
+res://maps/CH3/blighted_gardens.tscn

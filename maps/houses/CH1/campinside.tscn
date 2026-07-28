@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d1m3g1y050yue" path="res://textures/tilesets/houses/CH1/tiles.png" id="1_f1ips"]
 [ext_resource type="Texture2D" uid="uid://us8stiu3g8v8" path="res://textures/tilesets/houses/CH1/furniture.png" id="2_7tv28"]
-[ext_resource type="Texture2D" uid="uid://uddmsd2awkg6" path="res://textures/tilesets/Chapter 2/CH2DW_Outside_A2.png" id="3_qe2ie"]
+[ext_resource type="Texture2D" uid="uid://uddmsd2awkg6" path="res://textures/tilesets/Chapter 2/CH2DW_Ground.png" id="3_qe2ie"]
 [ext_resource type="PackedScene" uid="uid://xwlsd76ixvvk" path="res://scenes/switcher.tscn" id="4_58l12"]
 [ext_resource type="PackedScene" uid="uid://oyngbaearmvw" path="res://characters/player/player.tscn" id="5_7c78g"]
 

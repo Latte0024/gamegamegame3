@@ -1,4 +1,6 @@
 Node2D
+AnimationPlayer
+AnimatedSprite2D
 TileMapLayer
 TextureButton
 HSeparator
@@ -8,8 +10,5 @@ VBoxContainer
 Button
 HBoxContainer
 HSplitContainer
-AnimationPlayer
 RichTextLabel
 NinePatchRect
-TextureProgressBar
-TextureRect
