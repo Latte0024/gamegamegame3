@@ -17553,9 +17553,18 @@ position = Vector2(24, 24)
 tile_map_data = PackedByteArray("AAD/////AAAIAA0AAAD///7/AAAIAAwAAAD//wAAAAAIAAwAAAD//wEAAAAIAA0AAADV/woAAAAIAAwAAADV/wsAAAAIAA0AAADU/woAAAAIAAwAAADU/wsAAAAIAA0AAABx/w4AAAAIAAwAAABx/w8AAAAIAA0AAABv/wwAAAAIAAwAAABv/w0AAAAIAA0AAACG//7/AAAIAAwAAACG////AAAIAA0AAACH/wAAAAAIAAwAAACH/wEAAAAIAA0AAAA=")
 tile_set = SubResource("TileSet_bcc22")
 
-[node name="TileMapLayer2" type="TileMapLayer" parent="rock2"]
+[node name="rock6" type="Area2D" parent="."]
+position = Vector2(7368, 361)
+script = ExtResource("8_mjbhc")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rock6"]
+position = Vector2(6, -69)
+shape = SubResource("RectangleShape2D_kakpk")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="rock6"]
 position = Vector2(24, 24)
-tile_map_data = PackedByteArray("AADV/woAAAAIAAwAAADV/wsAAAAIAA0AAADU/woAAAAIAAwAAADU/wsAAAAIAA0AAABx/w4AAAAIAAwAAABx/w8AAAAIAA0AAABv/wwAAAAIAAwAAABv/w0AAAAIAA0AAACG//7/AAAIAAwAAACG////AAAIAA0AAACH/wAAAAAIAAwAAACH/wEAAAAIAA0AAAD/////AAAIAAwAAAD//wAAAAAIAA0AAAA=")
+tile_map_data = PackedByteArray("AAD/////AAAIAAwAAAD//wAAAAAIAA0AAAA=")
 tile_set = SubResource("TileSet_bcc22")
 
 [node name="rock3" type="Area2D" parent="."]
@@ -17575,10 +17584,9 @@ tile_set = SubResource("TileSet_skorw")
 [node name="rock5" type="Area2D" parent="."]
 position = Vector2(1080, 5220)
 script = ExtResource("9_yk2ga")
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rock5"]
-position = Vector2(28, 73)
+position = Vector2(29, 121)
 shape = SubResource("RectangleShape2D_el8lh")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="rock5"]

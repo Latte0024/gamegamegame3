@@ -12012,8 +12012,17 @@ position = Vector2(24, 24)
 tile_map_data = PackedByteArray("AAD/////AAAIAAsAAAD///7/AAAIAAoAAAAQAP7/AAAIAAoAAAAQAP//AAAIAAsAAAA=")
 tile_set = SubResource("TileSet_7tl21")
 
-[node name="TileMapLayer2" type="TileMapLayer" parent="rock1/TileMapLayer"]
-tile_map_data = PackedByteArray("AAD/////AAAIAAoAAAD//wAAAAAIAAsAAAAQAP//AAAIAAoAAAAQAAAAAAAIAAsAAAA=")
+[node name="rock5" type="Area2D" parent="."]
+position = Vector2(2088, 2670)
+script = ExtResource("6_pckco")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rock5"]
+position = Vector2(19, -132)
+shape = SubResource("RectangleShape2D_l0b1b")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="rock5"]
+position = Vector2(24, 24)
+tile_map_data = PackedByteArray("AAD/////AAAIAAsAAAD///7/AAAIAAoAAAAQAP7/AAAIAAoAAAAQAP//AAAIAAsAAAA=")
 tile_set = SubResource("TileSet_7tl21")
 
 [node name="rock2" type="Area2D" parent="."]
@@ -12029,8 +12038,17 @@ position = Vector2(24, 24)
 tile_map_data = PackedByteArray("AAD/////AAAIAA0AAAD///7/AAAIAAwAAAD//wAAAAAIAAwAAAD//wEAAAAIAA0AAAA=")
 tile_set = SubResource("TileSet_milqn")
 
-[node name="TileMapLayer2" type="TileMapLayer" parent="rock2/TileMapLayer"]
-tile_map_data = PackedByteArray("AAD/////AAAIAAwAAAD//wAAAAAIAA0AAAD//wEAAAAIAAwAAAD//wIAAAAIAA0AAAA=")
+[node name="rock6" type="Area2D" parent="."]
+position = Vector2(648, 4353)
+script = ExtResource("14_pckco")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rock6"]
+position = Vector2(24, -135)
+shape = SubResource("RectangleShape2D_bhquw")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="rock6"]
+position = Vector2(24, 24)
+tile_map_data = PackedByteArray("AAD/////AAAIAA0AAAD///7/AAAIAAwAAAD//wAAAAAIAAwAAAD//wEAAAAIAA0AAAA=")
 tile_set = SubResource("TileSet_milqn")
 
 [node name="rock3" type="Area2D" parent="."]

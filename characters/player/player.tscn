@@ -1,9 +1,25 @@
-[gd_scene load_steps=25 format=3 uid="uid://oyngbaearmvw"]
+[gd_scene load_steps=29 format=3 uid="uid://oyngbaearmvw"]
 
 [ext_resource type="Script" uid="uid://w4k8oswfcrf5" path="res://characters/player/player.gd" id="1_xxgcw"]
 [ext_resource type="Texture2D" uid="uid://b8nkcoxmqqrh6" path="res://textures/characters/main-er_charaters/charlottenew.png" id="2_5dc8e"]
 [ext_resource type="Texture2D" uid="uid://cw25mm0xodffs" path="res://textures/system/fade.png" id="3_5dc8e"]
 [ext_resource type="Script" uid="uid://cv1cyo6piciyl" path="res://scripts/system/fadeplayer.gd" id="4_ixbpm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dc8e"]
+atlas = ExtResource("2_5dc8e")
+region = Rect2(48, 0, 48, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mkjs"]
+atlas = ExtResource("2_5dc8e")
+region = Rect2(48, 72, 48, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yybc7"]
+atlas = ExtResource("2_5dc8e")
+region = Rect2(48, 216, 48, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lv4bx"]
+atlas = ExtResource("2_5dc8e")
+region = Rect2(48, 144, 48, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ixbpm"]
 atlas = ExtResource("2_5dc8e")
@@ -71,6 +87,23 @@ region = Rect2(96, 216, 48, 72)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gqopd"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dc8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mkjs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yybc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lv4bx")
+}],
+"loop": true,
+"name": &"flying",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 0.3,
 "texture": SubResource("AtlasTexture_ixbpm")
@@ -165,7 +198,7 @@ _animated_sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gqopd")
-animation = &"walk down"
+animation = &"flying"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 21)

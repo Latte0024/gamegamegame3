@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://bwxrgu1t8edlv"]
+[gd_scene load_steps=55 format=4 uid="uid://bwxrgu1t8edlv"]
 
 [ext_resource type="Texture2D" uid="uid://ce80gqcs0n77g" path="res://textures/tilesets/Chapter 1/DW_Ground.png" id="1_8bnje"]
 [ext_resource type="Texture2D" uid="uid://rbeptii3wyk5" path="res://textures/tilesets/Chapter 1/DW_Assets1.png" id="2_6qsut"]
@@ -21,6 +21,7 @@
 [ext_resource type="Resource" uid="uid://jwdo22r48kxh" path="res://scripts/battle/resources/enemies/slime.tres" id="14_dypi7"]
 [ext_resource type="Script" uid="uid://b4igwri2pj6ti" path="res://scripts/system/rock_1.gd" id="14_mkr63"]
 [ext_resource type="Texture2D" uid="uid://jrvlq53mahla" path="res://textures/tilesets/Chapter 2/CH2DW_Train.png" id="16_0apqp"]
+[ext_resource type="Script" uid="uid://c6gf21sx83kug" path="res://scripts/system/choiceswitcherarea.gd" id="21_qowa1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0apqp"]
 texture = ExtResource("1_8bnje")
@@ -4728,6 +4729,9 @@ tile_size = Vector2i(48, 48)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_beour")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sa83c"]
+size = Vector2(157, 140.5)
+
 [node name="Forest" type="Node2D"]
 
 [node name="Layer 1" type="TileMapLayer" parent="."]
@@ -4873,6 +4877,16 @@ position = Vector2(24, 24)
 tile_map_data = PackedByteArray("AAD/////AAANAAYAAAA=")
 tile_set = SubResource("TileSet_4nh3p")
 
+[node name="sceneteleporter" type="Area2D" parent="."]
+position = Vector2(1198, 850)
+collision_mask = 2147483648
+script = ExtResource("21_qowa1")
+toScene = "res://maps/CH3/snowbook.tscn"
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sceneteleporter"]
+shape = SubResource("RectangleShape2D_sa83c")
+
 [node name="Player" parent="." instance=ExtResource("10_2efyf")]
 position = Vector2(1037, 1278)
 metadata/_edit_group_ = true
@@ -4896,3 +4910,4 @@ metadata/_edit_group_ = true
 [connection signal="area_entered" from="tempswitch1" to="tempswitch1" method="_on_area_entered"]
 [connection signal="area_exited" from="tempswitch1" to="tempswitch1" method="_on_area_exited"]
 [connection signal="timeout" from="tempswitch1/Timer" to="tempswitch1" method="_on_timer_timeout"]
+[connection signal="body_entered" from="sceneteleporter" to="sceneteleporter" method="_on_body_entered"]

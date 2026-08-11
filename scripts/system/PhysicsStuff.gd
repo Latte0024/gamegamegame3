@@ -1,5 +1,16 @@
 extends Node
 
+var following : bool
+var markerposition 
+
+
+signal FollowTrue
+signal FollowFalse
+
+
+
+
+
 
 signal icephysicsoff
 signal icephysicson

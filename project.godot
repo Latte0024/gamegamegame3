@@ -18,10 +18,10 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-Icephysics="*res://scripts/state/icephysics.gd"
 Fade="*res://scripts/system/fade.gd"
 Puzzleswitch="*res://scripts/system/puzzleswitches.gd"
 BattleGlobals="*res://scripts/battle/battleGlobals.gd"
+PhysicsStuff="*res://scripts/system/physics_stuff.gd"
 
 [debug]
 
