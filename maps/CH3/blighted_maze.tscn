@@ -17614,7 +17614,7 @@ tile_map_data = PackedByteArray("AADp/xAAAAAJAAwAAADp/xEAAAAJAA0AAAA=")
 tile_set = SubResource("TileSet_co5ov")
 
 [node name="Player" parent="." instance=ExtResource("8_el8lh")]
-position = Vector2(5741, 2156)
+position = Vector2(694, 5427)
 metadata/_edit_group_ = true
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]

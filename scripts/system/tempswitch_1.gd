@@ -4,7 +4,8 @@ var inside : bool
 var on : bool
 var delay : bool
 
-
+func _ready():
+	$temprock1/TileMapLayer.set_collision_enabled(false)
 
 func _physics_process(delta):
 	interaction()

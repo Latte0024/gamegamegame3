@@ -4560,7 +4560,7 @@ tile_set = SubResource("TileSet_fqd1e")
 scale = Vector2(1, 1.00234)
 tile_set = SubResource("TileSet_fqd1e")
 
-[node name="switcher3" type="Area2D" parent="."]
+[node name="village" type="Area2D" parent="."]
 position = Vector2(6, 863)
 collision_mask = 2147483648
 script = ExtResource("13_7xrpo")
@@ -4568,11 +4568,22 @@ toScene = "res://maps/CH1/village.tscn"
 pos = Vector2(1369, 1070)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="switcher3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="village"]
+shape = SubResource("RectangleShape2D_pt1nm")
+
+[node name="train" type="Area2D" parent="."]
+position = Vector2(1002, 870)
+collision_mask = 2147483648
+script = ExtResource("13_7xrpo")
+toScene = "res://maps/CH1/train.tscn"
+pos = Vector2(70, 440)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="train"]
 shape = SubResource("RectangleShape2D_pt1nm")
 
 [node name="Player" parent="." instance=ExtResource("11_b4u2i")]
-position = Vector2(64, 845)
+position = Vector2(956, 847)
 metadata/_edit_group_ = true
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
@@ -4582,4 +4593,5 @@ limit_right = 1008
 limit_bottom = 1008
 limit_smoothed = true
 
-[connection signal="body_entered" from="switcher3" to="switcher3" method="_on_body_entered"]
+[connection signal="body_entered" from="village" to="village" method="_on_body_entered"]
+[connection signal="body_entered" from="train" to="train" method="_on_body_entered"]

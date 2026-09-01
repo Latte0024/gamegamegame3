@@ -4768,7 +4768,7 @@ position = Vector2(2, 718)
 collision_mask = 2147483648
 script = ExtResource("12_ltkoa")
 toScene = "res://maps/CH1/camp_road.tscn"
-pos = Vector2(913, 327)
+pos = Vector2(1515, 465)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="camp_road"]
@@ -4888,7 +4888,7 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_sa83c")
 
 [node name="Player" parent="." instance=ExtResource("10_2efyf")]
-position = Vector2(1037, 1278)
+position = Vector2(53, 739)
 metadata/_edit_group_ = true
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]

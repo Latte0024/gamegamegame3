@@ -1,10 +1,10 @@
 res://scripts/system
+res://maps/CH4
+res://maps/CH1
 res://textures/tilesets/Chapter 1
 res://maps/CH3
-res://maps/CH4
 res://textures/characters/main-er_charaters
 res://textures/tilesets/Chapter 3
-res://maps/CH1
 res://maps/CH2
 res://scripts/battle/scenes
 res://scripts/battle
