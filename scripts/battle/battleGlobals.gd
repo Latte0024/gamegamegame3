@@ -21,6 +21,6 @@ signal started
 
 ## not the best implementation but whatever
 
-var partyHealth:Array[int] = [66,54,88]
+var partyHealth:Array[int] = [1,1,1]
 var partyEnergy:Array[int] = [100,15,50]
 var partyLevel:int =  5

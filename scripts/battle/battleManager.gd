@@ -110,6 +110,7 @@ func _init_battle() -> void:
 		partyStatus.battleHandler = self
 		partyStatus.health = BattleGlobals.partyHealth[member]
 		partyStatus.energy = BattleGlobals.partyEnergy[member]
+		partyStatus.ownIndex = member
 		$ui/party.add_child(partyStatus)
 		partyStatus.name = BattleGlobals.party[member].name
 		partyStatus.healthbar.max_value = BattleGlobals.party[member].maxHealth
@@ -179,6 +180,8 @@ func _player_turn():
 		for e in skillmenu.get_child(0).get_children():
 			e.queue_free()
 	
+	
+	await get_tree().create_timer(.3).timeout
 	_enemy_turn()
 
 
@@ -210,11 +213,12 @@ func _enemy_check():
 		
 
 func _enemy_turn():
+	_enemy_check()
+	
 	if !canCycle:
 		print("i cant cycle im breaking enemy turn")
 		return
 		
-	_enemy_check()
 	
 	for i in $ui/btn.get_children():
 		i.set_focus_mode(FOCUS_NONE)
@@ -228,8 +232,9 @@ func _enemy_turn():
 	
 	if !$enemies.get_children().is_empty():
 		for enemy in $enemies.get_children().size():
+			await get_tree().create_timer(.3).timeout
 			$ui/party.get_children().pick_random().damage($enemies.get_child(enemy).damageVal,$enemies.get_child(enemy).name)
-	
+	await get_tree().create_timer(.3).timeout
 	_player_turn()
 
 #fleeing should cost either HP or an item being stolen,do it later, delete this text 
