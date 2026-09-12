@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="partyMember" load_steps=8 format=3 uid="uid://rhwylvg3flcu"]
+
+[ext_resource type="Script" uid="uid://da34dsvtsvir0" path="res://scripts/battle/classes/partyMember.gd" id="1_jjoca"]
+[ext_resource type="Script" uid="uid://df5ublabgw4w1" path="res://scripts/battle/classes/skill.gd" id="2_6oj57"]
+[ext_resource type="Resource" uid="uid://cxucs0u003efc" path="res://scripts/battle/resources/skills/heal.tres" id="3_xux35"]
+[ext_resource type="Texture2D" uid="uid://bu1g584igvuxl" path="res://textures/characters/dialogue_battle_sprites.png/Mike/neutral.png" id="4_37mtk"]
+
+[sub_resource type="Resource" id="Resource_elu81"]
+script = ExtResource("2_6oj57")
+skillName = "raul beam"
+skillDesc = "raul evaporates everyone"
+targeting = 4
+effect = 500
+cost = -1
+scaling = 1.0
+metadata/_custom_type_script = "uid://df5ublabgw4w1"
+
+[sub_resource type="Resource" id="Resource_t080i"]
+script = ExtResource("2_6oj57")
+skillName = "alalalallala"
+skillDesc = "hujuj mi lesz itt"
+targeting = 0
+effect = 600
+cost = 0
+scaling = 0.0
+metadata/_custom_type_script = "uid://df5ublabgw4w1"
+
+[sub_resource type="Resource" id="Resource_4drkl"]
+script = ExtResource("2_6oj57")
+skillName = "nothingburger"
+skillDesc = "nothingburger"
+targeting = 0
+effect = 0
+cost = 0
+scaling = 0.0
+metadata/_custom_type_script = "uid://df5ublabgw4w1"
+
+[resource]
+script = ExtResource("1_jjoca")
+name = "Mike"
+texture = ExtResource("4_37mtk")
+maxHealth = 200
+maxEnergy = 100
+skills = Array[ExtResource("2_6oj57")]([SubResource("Resource_elu81"), ExtResource("3_xux35"), SubResource("Resource_t080i"), SubResource("Resource_4drkl")])
+attack = 10
+atkScaling = 0.2
+metadata/_custom_type_script = "uid://da34dsvtsvir0"

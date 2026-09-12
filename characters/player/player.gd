@@ -3,7 +3,6 @@ class_name player
 
 @export var _animated_sprite : AnimatedSprite2D
 @export var speed = 400.0
-@export var jump_velocity = -400
 @export var moving : bool
 @export var pos : Vector2
 @export var oldpos : Vector2

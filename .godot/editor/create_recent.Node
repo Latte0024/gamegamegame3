@@ -1,11 +1,11 @@
 TileMapLayer
 CollisionShape2D
+Area2D
 RigidBody2D
 Node2D
 DirectionalLight2D
 PointLight2D
 LightOccluder2D
-Area2D
 AnimationPlayer
 AnimatedSprite2D
 TextureButton

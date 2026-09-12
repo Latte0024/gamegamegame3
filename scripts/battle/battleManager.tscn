@@ -148,7 +148,8 @@ layout_mode = 2
 [node name="desc" type="Label" parent="ui/status/margin/skills/summary"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "raul fucking kills you"
+text = "spontaneous combustion
+"
 horizontal_alignment = 1
 autowrap_mode = 2
 clip_text = true

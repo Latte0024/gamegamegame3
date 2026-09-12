@@ -5,7 +5,7 @@ extends Control
 @onready var skillmenu = $ui/status/margin/skills
 
 var canCycle:bool = true
-## im killing ymslef
+
 
 ## who the skill tagets
 enum target {
@@ -161,7 +161,7 @@ func _player_turn():
 		$ui/party.get_children()[member].anim.play("select")
 		
 		
-		## if skills arent empty before drawing, kill them brutally with rocks
+		
 		if !skillmenu.get_child(0).get_children().is_empty():
 			for skillbtn in skillmenu.get_child(0).get_children():
 				skillbtn.queue_free()
@@ -204,8 +204,8 @@ func _enemy_check():
 		checked = true
 		text.newline()
 		text.newline()
-		text.append_text("[i] YOU WIN ! YOU GAIN JACK SHIT FUCKER ! [/i]")
-		await get_tree().create_timer(5).timeout
+		text.append_text("[i] YOU WIN ! [/i]")
+		await get_tree().create_timer(3).timeout
 		_battle_end()
 		
 
@@ -232,9 +232,13 @@ func _enemy_turn():
 	
 	_player_turn()
 
+#fleeing should cost either HP or an item being stolen,do it later, delete this text 
 
 func _on_flee() -> void:
-	playerActed.emit()
+
+	
+	text.append_text("[i] YOU GOT AWAY SAFELY ! [/i]")
+	await get_tree().create_timer(1).timeout
 	_battle_end()
 
 
@@ -387,11 +391,12 @@ func _target_select(targeting:target, effect:int, scaling:float, cost:int):
 	recentAction = ""
 	
 	
-
+#items and stuff
 
 func _on_stuff_pressed() -> void:
 	$ui/party.get_child(onTurnIndex).damage(-15,$ui/party.get_child(onTurnIndex).name)
 	playerActed.emit()
+
 
 
 func _on_skill_pressed() -> void:

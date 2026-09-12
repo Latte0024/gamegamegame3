@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=4 uid="uid://d34q6b1jrqbgh"]
+[gd_scene load_steps=91 format=4 uid="uid://d34q6b1jrqbgh"]
 
 [ext_resource type="Texture2D" uid="uid://ddw20l8elevlm" path="res://textures/tilesets/Chapter 3/CH3DW_Assets.png" id="1_7lpqp"]
 [ext_resource type="Script" uid="uid://1l5k73dggl7n" path="res://scripts/system/rockswitch1.gd" id="1_u1wj2"]
@@ -33,6 +33,8 @@
 [ext_resource type="Script" uid="uid://couyf1nw1qcbi" path="res://scripts/system/rotate.gd" id="28_6yedf"]
 [ext_resource type="Script" uid="uid://c6gf21sx83kug" path="res://scripts/system/choiceswitcherarea.gd" id="29_otjm1"]
 [ext_resource type="Script" uid="uid://bhmyec31voapq" path="res://scripts/system/jumppad_2.gd" id="31_ixuuc"]
+[ext_resource type="Script" uid="uid://cepgi7doxj03k" path="res://scripts/battle/bullet.gd" id="33_d1k3l"]
+[ext_resource type="Texture2D" uid="uid://c06pygtvbo3mw" path="res://textures/bullets/bullets.png" id="34_faht3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_57qap"]
 texture = ExtResource("1_7lpqp")
@@ -7460,6 +7462,120 @@ sources/0 = SubResource("TileSetAtlasSource_faht3")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_esqro"]
 size = Vector2(48, 48)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74mj7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2fam5"]
+texture = ExtResource("34_faht3")
+texture_region_size = Vector2i(48, 48)
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+0:4/0 = 0
+0:5/0 = 0
+0:6/0 = 0
+0:7/0 = 0
+1:0/0 = 0
+1:1/0 = 0
+1:2/0 = 0
+1:3/0 = 0
+1:4/0 = 0
+1:5/0 = 0
+1:6/0 = 0
+1:7/0 = 0
+2:0/0 = 0
+2:1/0 = 0
+2:2/0 = 0
+2:3/0 = 0
+2:4/0 = 0
+2:5/0 = 0
+2:6/0 = 0
+2:7/0 = 0
+3:0/0 = 0
+3:1/0 = 0
+3:2/0 = 0
+3:3/0 = 0
+3:4/0 = 0
+3:5/0 = 0
+3:6/0 = 0
+3:7/0 = 0
+4:0/0 = 0
+4:1/0 = 0
+4:2/0 = 0
+4:3/0 = 0
+4:4/0 = 0
+4:5/0 = 0
+4:6/0 = 0
+4:7/0 = 0
+5:0/0 = 0
+5:1/0 = 0
+5:2/0 = 0
+5:3/0 = 0
+5:4/0 = 0
+5:5/0 = 0
+5:6/0 = 0
+5:7/0 = 0
+6:0/0 = 0
+6:1/0 = 0
+6:2/0 = 0
+6:3/0 = 0
+6:4/0 = 0
+6:5/0 = 0
+6:6/0 = 0
+6:7/0 = 0
+7:0/0 = 0
+7:1/0 = 0
+7:2/0 = 0
+7:3/0 = 0
+7:4/0 = 0
+7:5/0 = 0
+7:6/0 = 0
+7:7/0 = 0
+8:0/0 = 0
+8:1/0 = 0
+8:2/0 = 0
+8:3/0 = 0
+8:4/0 = 0
+8:5/0 = 0
+8:6/0 = 0
+8:7/0 = 0
+9:0/0 = 0
+9:1/0 = 0
+9:2/0 = 0
+9:3/0 = 0
+9:4/0 = 0
+9:5/0 = 0
+9:6/0 = 0
+9:7/0 = 0
+10:0/0 = 0
+10:1/0 = 0
+10:2/0 = 0
+10:3/0 = 0
+10:4/0 = 0
+10:5/0 = 0
+10:6/0 = 0
+10:7/0 = 0
+11:0/0 = 0
+11:1/0 = 0
+11:2/0 = 0
+11:3/0 = 0
+11:4/0 = 0
+11:5/0 = 0
+11:6/0 = 0
+11:7/0 = 0
+12:0/0 = 0
+12:1/0 = 0
+12:2/0 = 0
+12:3/0 = 0
+12:4/0 = 0
+12:5/0 = 0
+12:6/0 = 0
+12:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2jt65"]
+tile_size = Vector2i(48, 48)
+sources/0 = SubResource("TileSetAtlasSource_2fam5")
+
 [node name="switchandsuch" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [3402.0]
 
@@ -7962,6 +8078,18 @@ shape = SubResource("RectangleShape2D_esqro")
 position = Vector2(24, 24)
 tile_map_data = PackedByteArray("AAD/////AQAOAAEAAAA=")
 tile_set = SubResource("TileSet_uq4se")
+
+[node name="bullet" type="Area2D" parent="."]
+position = Vector2(959, 1281)
+script = ExtResource("33_d1k3l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bullet"]
+shape = SubResource("RectangleShape2D_74mj7")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="bullet"]
+position = Vector2(-24, -24)
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_2jt65")
 
 [node name="Player" parent="." instance=ExtResource("7_v7xsd")]
 position = Vector2(801, 1342)

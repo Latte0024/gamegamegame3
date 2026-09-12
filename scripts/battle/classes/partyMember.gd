@@ -1,7 +1,7 @@
 extends Resource
 class_name partyMember
 
-@export_placeholder("Raul") var name : String
+@export_placeholder("member") var name : String
 @export var texture : Texture2D
 @export var maxHealth : int = 100
 @export var maxEnergy : int = 100

@@ -5,7 +5,7 @@ class_name skill
 @export_placeholder("Very cool skill") var skillName:String
 
 ## describes the skill in menu
-@export_placeholder("thid skill gets you mAD FUCKING BITCHES AND HUGE COCK") var skillDesc:String
+@export_placeholder("Very cool skill description") var skillDesc:String
 
 ## who the skill tagets
 enum target {
