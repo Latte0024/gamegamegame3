@@ -13,13 +13,13 @@
 [ext_resource type="Texture2D" uid="uid://bmxq2o7xlut8d" path="res://textures/tilesets/Chapter 1/DW_VillageCont.png" id="9_aymyv"]
 [ext_resource type="PackedScene" uid="uid://oyngbaearmvw" path="res://characters/player/player.tscn" id="10_2efyf"]
 [ext_resource type="Script" uid="uid://leypjrc6exs3" path="res://scripts/system/switcherArea.gd" id="12_ltkoa"]
-[ext_resource type="Script" uid="uid://l5uybhop4w50" path="res://scripts/system/tempswitch_1.gd" id="13_0fn0q"]
-[ext_resource type="Script" uid="uid://1l5k73dggl7n" path="res://scripts/system/rockswitch1.gd" id="13_5vjj7"]
+[ext_resource type="Script" uid="uid://l5uybhop4w50" path="res://scripts/puzzles/tempswitch_1.gd" id="13_0fn0q"]
+[ext_resource type="Script" uid="uid://1l5k73dggl7n" path="res://scripts/puzzles/rockswitch1.gd" id="13_5vjj7"]
 [ext_resource type="Script" uid="uid://dsv06g22ujcux" path="res://scripts/battle/classes/enemyData.gd" id="13_duu6m"]
 [ext_resource type="PackedScene" uid="uid://4glku36ur4f6" path="res://scripts/battle/encounter.tscn" id="13_je5dx"]
 [ext_resource type="Texture2D" uid="uid://c3jms2u3et888" path="res://textures/tilesets/Chapter 1/DW_NuclearAssets.png" id="14_a4qnj"]
 [ext_resource type="Resource" uid="uid://jwdo22r48kxh" path="res://scripts/battle/resources/enemies/slime.tres" id="14_dypi7"]
-[ext_resource type="Script" uid="uid://b4igwri2pj6ti" path="res://scripts/system/rock_1.gd" id="14_mkr63"]
+[ext_resource type="Script" uid="uid://b4igwri2pj6ti" path="res://scripts/puzzles/rock_1.gd" id="14_mkr63"]
 [ext_resource type="Texture2D" uid="uid://jrvlq53mahla" path="res://textures/tilesets/Chapter 2/CH2DW_Train.png" id="16_0apqp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0apqp"]
@@ -4275,7 +4275,7 @@ size = Vector2(92, 10)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0apqp"]
 size = Vector2(48, 48)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0fn0q"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kcidp"]
 texture = ExtResource("14_a4qnj")
 texture_region_size = Vector2i(48, 48)
 13:6/0 = 0
@@ -4284,7 +4284,7 @@ texture_region_size = Vector2i(48, 48)
 [sub_resource type="TileSet" id="TileSet_duu6m"]
 tile_size = Vector2i(48, 48)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_0fn0q")
+sources/0 = SubResource("TileSetAtlasSource_kcidp")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_je5dx"]
 size = Vector2(48, 96)
@@ -4811,7 +4811,7 @@ position = Vector2(915, 315)
 enemyPool = Array[ExtResource("13_duu6m")]([ExtResource("14_dypi7"), ExtResource("14_dypi7"), ExtResource("14_dypi7")])
 
 [node name="rock" type="Area2D" parent="."]
-position = Vector2(922, 940)
+position = Vector2(1041, 1140)
 script = ExtResource("14_mkr63")
 metadata/_edit_group_ = true
 

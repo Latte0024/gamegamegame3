@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://bkhhg0w4d2edm"]
+
+[ext_resource type="Script" uid="uid://cwilvmfrdi0lw" path="res://scripts/battle/bullets/markerbullet.gd" id="1_2p6pr"]
+[ext_resource type="Texture2D" uid="uid://c06pygtvbo3mw" path="res://textures/bullets/bullets.png" id="2_r3vwg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rt4j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcidp"]
+atlas = ExtResource("2_r3vwg")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yduib"]
+atlas = ExtResource("2_r3vwg")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_beour"]
+atlas = ExtResource("2_r3vwg")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pk2mn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcidp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yduib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_beour")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qyc6q"]
+radius = 134.093
+
+[node name="Node2D" type="Node2D"]
+
+[node name="markerbullet" type="Area2D" parent="."]
+collision_layer = 32768
+script = ExtResource("1_2p6pr")
+damage = 100
+followingP = 0.1
+followingM = 0.2
+time = 3
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="markerbullet"]
+shape = SubResource("RectangleShape2D_7rt4j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="markerbullet"]
+sprite_frames = SubResource("SpriteFrames_pk2mn")
+autoplay = "default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="markerbullet"]
+
+[node name="range" type="Area2D" parent="markerbullet"]
+collision_layer = 32768
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="markerbullet/range"]
+shape = SubResource("CircleShape2D_qyc6q")
+
+[node name="Marker2D" type="Marker2D" parent="markerbullet"]
+position = Vector2(259, 226)
+
+[connection signal="area_entered" from="markerbullet" to="markerbullet" method="_on_area_entered"]

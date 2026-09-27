@@ -4,6 +4,7 @@ extends Control
 @onready var text = $ui/status/margin/battleLog
 @onready var skillmenu = $ui/status/margin/skills
 
+
 var canCycle:bool = true
 
 
@@ -45,6 +46,7 @@ var checked = false
 var onTurnIndex:int
 
 func _ready() -> void:
+
 	BattleGlobals.started.connect(_init_battle)
 	
 	
@@ -54,8 +56,8 @@ func _ready() -> void:
 	for child in $ui/party.get_children():
 		child.queue_free()
 
-
 func _process(delta: float) -> void:
+	_characterdead()
 	if Input.is_action_just_pressed("ui_accept"):
 		recentAction = "space"
 		actionPressed.emit()
@@ -63,7 +65,9 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		recentAction = "escape"
 		actionPressed.emit()
-		
+
+	
+	
 	if Input.is_action_just_pressed("ui_cancel") and skillmenu.visible:
 		for i in $ui/btn.get_children():
 			i.set_focus_mode(FOCUS_ALL)
@@ -115,19 +119,31 @@ func _init_battle() -> void:
 		partyStatus.name = BattleGlobals.party[member].name
 		partyStatus.healthbar.max_value = BattleGlobals.party[member].maxHealth
 		partyStatus.energybar.max_value = BattleGlobals.party[member].maxEnergy
-		
 	
+
 	_player_turn()
-	
+
 
 
 func _player_turn():
+	print (onTurnIndex)
+	print (BattleGlobals.dead[0])
+	print (BattleGlobals.dead[1])
+	print (BattleGlobals.dead[2])
+
+	_characterdead()
+#return later
+
+
+		
 	if !canCycle:
 		print("i cant cycle im breaking player turn")
 		return
 		
 	_enemy_check()
 	print("enemy check at start of player turn")
+
+	
 	
 	for i in $ui/btn.get_children():
 		i.set_focus_mode(FOCUS_ALL)
@@ -144,7 +160,7 @@ func _player_turn():
 		_enemy_check()
 		print("enemy check in party loop")
 		
-
+	
 		
 		
 		for i in $ui/btn.get_children():
@@ -161,8 +177,9 @@ func _player_turn():
 		onTurnIndex = member
 		$ui/party.get_children()[member].anim.play("select")
 		
-		
-		
+
+
+	
 		if !skillmenu.get_child(0).get_children().is_empty():
 			for skillbtn in skillmenu.get_child(0).get_children():
 				skillbtn.queue_free()
@@ -188,6 +205,7 @@ func _player_turn():
 func _enemy_check():
 	if !canCycle:
 		return
+
 	
 	await get_tree().create_timer(.3).timeout
 	if $enemies.get_children().is_empty() and !checked:
@@ -230,9 +248,19 @@ func _enemy_turn():
 	
 	print("enemy check at start of enemy turn")
 	
+
+	if BattleGlobals.partyHealth[0] <= 0 and BattleGlobals.partyHealth[1] <= 0 and BattleGlobals.partyHealth[2] <= 0:
+		text.append_text("[i] YOU LOSE ! [/i]")
+		await get_tree().create_timer(3).timeout
+		_battle_end()
+		queue_free()
+
 	if !$enemies.get_children().is_empty():
 		for enemy in $enemies.get_children().size():
 			await get_tree().create_timer(.3).timeout
+
+
+
 			$ui/party.get_children().pick_random().damage($enemies.get_child(enemy).damageVal,$enemies.get_child(enemy).name)
 	await get_tree().create_timer(.3).timeout
 	_player_turn()
@@ -245,6 +273,34 @@ func _on_flee() -> void:
 	text.append_text("[i] YOU GOT AWAY SAFELY ! [/i]")
 	await get_tree().create_timer(1).timeout
 	_battle_end()
+
+#var partyHealth:Array[int] = [11,1,1]
+
+func _characterdead():
+	
+	if BattleGlobals.partyHealth[0] <= 0 and onTurnIndex == 0:
+		BattleGlobals.dead[0] = true
+		playerActed.emit()
+	else:
+		BattleGlobals.dead[0] = false
+
+	if BattleGlobals.partyHealth[1] <= 0 and onTurnIndex == 1:
+		BattleGlobals.dead[1] = true
+		playerActed.emit()
+	else:
+		BattleGlobals.dead[1] = false
+
+	if BattleGlobals.partyHealth[2] <= 0 and onTurnIndex == 2:
+		BattleGlobals.dead[2] = true
+		playerActed.emit()
+	else:
+		BattleGlobals.dead[2] = false
+
+
+
+
+
+
 
 
 func _on_fight() -> void:
@@ -265,6 +321,7 @@ func _battle_end():
 		child.queue_free()
 	
 	for child in $ui/party.get_children():
+		print("queue free",  child.name)
 		child.queue_free()
 		
 		

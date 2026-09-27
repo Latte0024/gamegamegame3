@@ -10,6 +10,9 @@ class_name player
 @export var inpirate : bool
 @export var monsters : Array[enemyData]
 
+
+
+
 var forcefollow : bool
 
 var target 
@@ -34,7 +37,8 @@ func _physics_process(delta):
 	get_input()
 	move_and_slide()
 	shade()
-	
+
+
 
 	pos = global_position
 	if pos - oldpos:
@@ -42,15 +46,22 @@ func _physics_process(delta):
 	else:
 		moving = false
 	oldpos = pos
+	
+	BattleGlobals.partyLocation = pos
+
 
 
 	
-func _process(_delta):	#animation
+func _process(_delta):
 		if Input.is_action_pressed("sprint"):
 			speed =  800.0
 		else:
 			speed = 400.0
+			
 
+
+
+	#animation
 		if moving == true and forcefollow == false:
 			if Input.is_action_pressed("up"):
 				_animated_sprite.play("walk up")
@@ -104,7 +115,8 @@ func shade():
 	if PhysicsStuff.following == true:
 		
 		print(PhysicsStuff.markerposition)
-		global_position = global_position.move_toward(target , 10)
+		global_position = global_position.move_toward(target , 20)
+		
 		$CollisionShape2D.disabled = true
 
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://4glku36ur4f6"]
 
-[ext_resource type="Script" uid="uid://d3e5pg8woq0g0" path="res://scripts/battle/encouter.gd" id="1_wnqlw"]
+[ext_resource type="Script" uid="uid://d3e5pg8woq0g0" path="res://scripts/battle/encounter.gd" id="1_wnqlw"]
 [ext_resource type="Texture2D" uid="uid://bx14s1lo6ys85" path="res://textures/enemies/slime.png" id="5_6k1ui"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e13b6"]

@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=3 uid="uid://ds617drpgd2hq"]
+
+[ext_resource type="Script" uid="uid://ulyoyhxjycqc" path="res://scripts/battle/bullets/bullet.gd" id="1_ym04f"]
+[ext_resource type="Texture2D" uid="uid://c06pygtvbo3mw" path="res://textures/bullets/bullets.png" id="2_bojie"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ixql"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0fr3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcidp"]
+atlas = ExtResource("2_bojie")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yduib"]
+atlas = ExtResource("2_bojie")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_beour"]
+atlas = ExtResource("2_bojie")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_teudk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcidp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yduib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_beour")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBullet" type="RigidBody2D" parent="."]
+position = Vector2(411, 259)
+collision_layer = 32768
+gravity_scale = -0.5
+script = ExtResource("1_ym04f")
+speed = 4.0
+velocity = Vector2(0, 5)
+time = 100
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBullet"]
+shape = SubResource("RectangleShape2D_8ixql")
+
+[node name="bullet" type="Area2D" parent="RigidBullet"]
+collision_layer = 32768
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBullet/bullet"]
+physics_interpolation_mode = 2
+shape = SubResource("RectangleShape2D_h0fr3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBullet/bullet"]
+sprite_frames = SubResource("SpriteFrames_teudk")
+autoplay = "default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RigidBullet/bullet"]
+
+[connection signal="area_entered" from="RigidBullet/bullet" to="RigidBullet" method="_on_bullet_area_entered"]

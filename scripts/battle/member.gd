@@ -5,7 +5,7 @@ extends VBoxContainer
 @export var portrait:Texture2D
 @export var health:int
 @export var energy:int
-
+@export var dead : bool
 
 @onready var healthbar = $health/bar
 @onready var healthtext = $health/text
@@ -49,7 +49,6 @@ func damage(value:float, who:String):
 			battleHandler.text.append_text(str(self.name, " downed themselves!"))
 		else:
 			battleHandler.text.append_text(str(self.name, " was slain!"))
-		self.queue_free()
 
 
 func updateStats(stat:String,value):

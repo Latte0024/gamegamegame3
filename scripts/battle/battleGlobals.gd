@@ -6,6 +6,7 @@ extends Node
 ## and if any arrays have duplicate names they will both dissapear if you only encounter one of them
 ## [br][br]
 ## naming convention i use: encounter + name of room + number of encounter
+## = written by zeronic
 
 var defeatedEncounters:Array[String] = []
 
@@ -21,6 +22,8 @@ signal started
 
 ## not the best implementation but whatever
 
-var partyHealth:Array[int] = [1,1,1]
+var partyHealth:Array[int] = [11,1,1]
 var partyEnergy:Array[int] = [100,15,50]
 var partyLevel:int =  5
+var dead: Array[bool] = [false, false, false]
+var partyLocation : Vector2

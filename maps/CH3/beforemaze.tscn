@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b3j6k0osg6ih6" path="res://textures/tilesets/Chapter 1/DW_Cliffs.png" id="4_h52wg"]
 [ext_resource type="PackedScene" uid="uid://oyngbaearmvw" path="res://characters/player/player.tscn" id="5_1cl0j"]
 [ext_resource type="Texture2D" uid="uid://r0ha57l3o6nn" path="res://textures/tilesets/Chapter 1/DW_Fairytrees.png" id="5_stma1"]
-[ext_resource type="Script" uid="uid://hntg8ftka2sr" path="res://scripts/system/jumppad.gd" id="7_72411"]
+[ext_resource type="Script" uid="uid://hntg8ftka2sr" path="res://scripts/puzzles/jumppad.gd" id="7_72411"]
 [ext_resource type="Texture2D" uid="uid://jrvlq53mahla" path="res://textures/tilesets/Chapter 2/CH2DW_Train.png" id="8_1cl0j"]
 [ext_resource type="Script" uid="uid://leypjrc6exs3" path="res://scripts/system/switcherArea.gd" id="8_f4l7s"]
 

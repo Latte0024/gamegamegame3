@@ -27,10 +27,10 @@ metadata/_custom_type_script = "uid://df5ublabgw4w1"
 
 [sub_resource type="Resource" id="Resource_4drkl"]
 script = ExtResource("2_4udi1")
-skillName = "nothingburger"
-skillDesc = "nothingburger"
-targeting = 0
-effect = 0
+skillName = "party heal"
+skillDesc = "party heal"
+targeting = 2
+effect = -100
 cost = 0
 scaling = 0.0
 metadata/_custom_type_script = "uid://df5ublabgw4w1"

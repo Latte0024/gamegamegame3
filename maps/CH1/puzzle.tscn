@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b3j6k0osg6ih6" path="res://textures/tilesets/Chapter 1/DW_Cliffs.png" id="4_1jn7b"]
 [ext_resource type="Texture2D" uid="uid://c3jms2u3et888" path="res://textures/tilesets/Chapter 1/DW_NuclearAssets.png" id="5_uapf6"]
 [ext_resource type="Script" uid="uid://cmddhxt35ne7c" path="res://scripts/state/icephysics.gd" id="6_ckq5k"]
-[ext_resource type="Script" uid="uid://hntg8ftka2sr" path="res://scripts/system/jumppad.gd" id="6_krl0g"]
+[ext_resource type="Script" uid="uid://hntg8ftka2sr" path="res://scripts/puzzles/jumppad.gd" id="6_krl0g"]
 [ext_resource type="PackedScene" uid="uid://oyngbaearmvw" path="res://characters/player/player.tscn" id="6_x3ov0"]
 [ext_resource type="Texture2D" uid="uid://jrvlq53mahla" path="res://textures/tilesets/Chapter 2/CH2DW_Train.png" id="7_f3c5w"]
 [ext_resource type="Script" uid="uid://leypjrc6exs3" path="res://scripts/system/switcherArea.gd" id="8_cbi0a"]

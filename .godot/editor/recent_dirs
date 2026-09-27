@@ -1,3 +1,8 @@
+res://scripts/battle/bullets
+res://scripts/battle/bullets/
+res://textures/bullets
+res://scripts/puzzles
+res://scenes/bullets
 res://textures/characters/dialogue_battle_sprites.png/Zuri
 res://textures/characters/dialogue_battle_sprites.png/Mike
 res://textures/characters/dialogue_battle_sprites.png/Charlotte
@@ -15,8 +20,3 @@ res://scripts/battle/scenes
 res://scripts/battle/resources/skills/
 res://scripts/battle/resources/party/
 res://scripts/battle/resources/enemies/
-res://scripts/battle/classes
-res://textures/enemies
-res://maps/houses/CH1
-res://textures/backgrounds/gamebackground
-res://maps

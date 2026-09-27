@@ -1,3 +1,4 @@
+Resource
 skill
 partyMember
 enemyData

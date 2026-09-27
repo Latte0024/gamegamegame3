@@ -19,9 +19,9 @@ config/icon="res://icon.svg"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Fade="*res://scripts/system/fade.gd"
-Puzzleswitch="*res://scripts/system/puzzleswitches.gd"
+Puzzleswitch="*res://scripts/puzzles/puzzleswitches.gd"
 BattleGlobals="*res://scripts/battle/battleGlobals.gd"
-PhysicsStuff="*res://scripts/system/physics_stuff.gd"
+PhysicsStuff="*res://scripts/puzzles/physics_stuff.gd"
 
 [debug]
 
