@@ -49,6 +49,8 @@ func damage(value:float, who:String):
 			battleHandler.text.append_text(str(self.name, " downed themselves!"))
 		else:
 			battleHandler.text.append_text(str(self.name, " was slain!"))
+	
+
 
 
 func updateStats(stat:String,value):
@@ -63,3 +65,8 @@ func updateStats(stat:String,value):
 			BattleGlobals.partyEnergy.set(ownIndex,energy)
 			energybar.value = energy
 			energytext.text = str(energy)
+
+
+func checking():
+	if healthbar.value != BattleGlobals.partyHealth[0]:
+		updateStats("health",100)

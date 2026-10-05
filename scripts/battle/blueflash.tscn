@@ -1,0 +1,146 @@
+[gd_scene load_steps=19 format=3 uid="uid://dasdp4uvhailm"]
+
+[ext_resource type="Texture2D" uid="uid://bvr1fentm6bs0" path="res://textures/system/battle/camera.png" id="1_38krh"]
+[ext_resource type="PackedScene" uid="uid://oyngbaearmvw" path="res://characters/player/player.tscn" id="1_ntmrv"]
+[ext_resource type="Script" uid="uid://d4erp5b2illrf" path="res://scripts/battle/bullets/spawner.gd" id="2_cgkgc"]
+[ext_resource type="Texture2D" uid="uid://c06pygtvbo3mw" path="res://textures/bullets/bullets.png" id="3_26cnb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38krh"]
+atlas = ExtResource("1_38krh")
+region = Rect2(0, 0, 816, 624)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08psi"]
+atlas = ExtResource("1_38krh")
+region = Rect2(816, 0, 816, 624)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgkgc"]
+atlas = ExtResource("1_38krh")
+region = Rect2(0, 624, 816, 624)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crd3k"]
+atlas = ExtResource("1_38krh")
+region = Rect2(816, 1872, 816, 624)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulk25"]
+atlas = ExtResource("1_38krh")
+region = Rect2(0, 1872, 816, 624)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abgyo"]
+atlas = ExtResource("1_38krh")
+region = Rect2(0, 1248, 816, 624)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26cnb"]
+atlas = ExtResource("1_38krh")
+region = Rect2(0, 1248, 816, 624)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipfd4"]
+atlas = ExtResource("1_38krh")
+region = Rect2(0, 1872, 816, 624)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrwvp"]
+atlas = ExtResource("1_38krh")
+region = Rect2(816, 1872, 816, 624)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_26cnb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38krh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08psi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgkgc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_crd3k")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_ulk25")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_abgyo")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_26cnb")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_ipfd4")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_nrwvp")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgkgc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amavj"]
+atlas = ExtResource("3_26cnb")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuf4p"]
+atlas = ExtResource("3_26cnb")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ipfd4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amavj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fuf4p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="blueflash" type="Node2D"]
+process_mode = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(418, 312)
+sprite_frames = SubResource("SpriteFrames_26cnb")
+animation = &"down"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_ntmrv")]
+position = Vector2(394, 291)
+metadata/_edit_group_ = true
+
+[node name="spawner" type="CharacterBody2D" parent="."]
+position = Vector2(394, 89)
+scale = Vector2(0.695049, -0.902128)
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("2_cgkgc")
+repeat = 3
+delay = 0.2
+amount = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spawner"]
+shape = SubResource("RectangleShape2D_cgkgc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="spawner"]
+sprite_frames = SubResource("SpriteFrames_ipfd4")
+autoplay = "default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="spawner/AnimatedSprite2D"]
+
+[connection signal="draw" from="spawner" to="spawner" method="_on_draw"]

@@ -40,13 +40,16 @@ animations = [{
 [node name="Node2D" type="Node2D"]
 
 [node name="RigidBullet" type="RigidBody2D" parent="."]
-position = Vector2(411, 259)
+process_mode = 3
 collision_layer = 32768
-gravity_scale = -0.5
+collision_mask = 0
+gravity_scale = -0.2
 script = ExtResource("1_ym04f")
+damage = 10
 speed = 4.0
-velocity = Vector2(0, 5)
-time = 100
+velocity = Vector2(1, 1)
+time = 10
+random = true
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBullet"]

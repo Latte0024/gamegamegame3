@@ -9,4 +9,5 @@ name = "slime"
 texture = ExtResource("2_7jgg3")
 health = 30
 damage = 10
+delay = 0.3
 metadata/_custom_type_script = "uid://dsv06g22ujcux"

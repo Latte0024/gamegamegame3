@@ -6,30 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://oyngbaearmvw" path="res://characters/player/player.tscn" id="3_qlmh0"]
 [ext_resource type="Texture2D" uid="uid://c3jms2u3et888" path="res://textures/tilesets/Chapter 1/DW_NuclearAssets.png" id="4_ra5su"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hcib4"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_amavj"]
-atlas = ExtResource("2_qlmh0")
-region = Rect2(0, 48, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fuf4p"]
-atlas = ExtResource("2_qlmh0")
-region = Rect2(48, 48, 48, 48)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_36v8l"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_amavj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fuf4p")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikkt7"]
 size = Vector2(48, 48)
 
@@ -48,22 +24,31 @@ tile_size = Vector2i(48, 48)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hcib4")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7tnoq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amavj"]
+atlas = ExtResource("2_qlmh0")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuf4p"]
+atlas = ExtResource("2_qlmh0")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ra5su"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amavj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fuf4p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D"]
-
-[node name="spawner" type="CharacterBody2D" parent="."]
-position = Vector2(567, 621)
-collision_layer = 0
-collision_mask = 0
-script = ExtResource("1_ikkt7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="spawner"]
-shape = SubResource("RectangleShape2D_hcib4")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="spawner"]
-sprite_frames = SubResource("SpriteFrames_36v8l")
-autoplay = "default"
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="spawner/AnimatedSprite2D"]
 
 [node name="rock" type="Area2D" parent="."]
 position = Vector2(407, 988)
@@ -80,8 +65,27 @@ position = Vector2(24, 24)
 tile_map_data = PackedByteArray("AAD/////AAANAAYAAAD9/wEAAAACAAgAAAD+/wEAAAABAAgAAAD+/wIAAAABAAgAAAD//wIAAAABAAgAAAAAAAIAAAABAAgAAAABAAIAAAABAAgAAAACAAIAAAABAAgAAAAGAPz/AAABAAgAAAAHAPz/AAABAAgAAAAHAPv/AAABAAgAAAD8/wEAAAACAAgAAAD7/wEAAAACAAgAAAD6/wAAAAACAAgAAAD5/wAAAAACAAgAAAD5////AAACAAgAAAD5//7/AAACAAgAAAD4//3/AAACAAgAAAD4//z/AAACAAgAAAD4//v/AAACAAgAAAD4//r/AAACAAgAAAAKAO//AAACAAgAAAALAO//AAACAAgAAAAMAO//AAACAAgAAAANAO//AAACAAgAAAAOAPD/AAACAAgAAAAPAPH/AAACAAgAAAAPAPL/AAACAAgAAAAPAPP/AAACAAgAAAAPAPT/AAACAAgAAAAPAPX/AAACAAgAAAAPAPb/AAACAAgAAAAPAPf/AAACAAgAAAAOAPf/AAACAAgAAAAOAPj/AAACAAgAAAANAPj/AAACAAgAAAANAPn/AAACAAgAAAAMAPn/AAACAAgAAAALAPr/AAACAAgAAAAKAPr/AAACAAgAAAAKAPv/AAACAAgAAAAJAPv/AAACAAgAAAAIAPv/AAACAAgAAAADAAIAAAACAAgAAAAEAAIAAAACAAgAAAAFAAIAAAACAAgAAAAGAAIAAAACAAgAAAAHAAIAAAACAAgAAAAHAAEAAAACAAgAAAAIAAEAAAACAAgAAAAIAAAAAAACAAgAAAAHAP//AAACAAgAAAAHAP7/AAACAAgAAAAHAP3/AAACAAgAAAAJAO7/AAACAAgAAAAIAO7/AAACAAgAAAAHAO7/AAACAAgAAAAGAO7/AAACAAgAAAAFAO7/AAACAAgAAAAEAO7/AAACAAgAAAADAO7/AAACAAgAAAACAO3/AAACAAgAAAABAO3/AAACAAgAAAAAAO3/AAACAAgAAAD//+3/AAACAAgAAAD+/+3/AAACAAgAAAD+/+7/AAACAAgAAAD9/+7/AAACAAgAAAD8/+7/AAACAAgAAAD8/+//AAACAAgAAAD7/+//AAACAAgAAAD7//D/AAACAAgAAAD6//H/AAACAAgAAAD6//L/AAACAAgAAAD6//P/AAACAAgAAAD5//T/AAACAAgAAAD5//X/AAACAAgAAAD5//b/AAACAAgAAAD4//f/AAACAAgAAAD4//j/AAACAAgAAAD4//n/AAACAAgAAAA=")
 tile_set = SubResource("TileSet_amavj")
 
+[node name="spawner" type="CharacterBody2D" parent="."]
+position = Vector2(394, 89)
+scale = Vector2(0.695049, -0.902128)
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_ikkt7")
+repeat = 3
+delay = 0.2
+amount = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spawner"]
+shape = SubResource("RectangleShape2D_7tnoq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="spawner"]
+sprite_frames = SubResource("SpriteFrames_ra5su")
+autoplay = "default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="spawner/AnimatedSprite2D"]
+
 [node name="Player" parent="." instance=ExtResource("3_qlmh0")]
-position = Vector2(383, 853)
+position = Vector2(567, 853)
 metadata/_edit_group_ = true
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
@@ -91,3 +95,5 @@ limit_right = 5200
 limit_bottom = 5200
 limit_smoothed = true
 metadata/_edit_group_ = true
+
+[connection signal="draw" from="spawner" to="spawner" method="_on_draw"]

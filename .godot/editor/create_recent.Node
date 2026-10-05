@@ -1,14 +1,14 @@
 AnimationPlayer
 AnimatedSprite2D
+HBoxContainer
+TextureRect
+TileMapLayer
 CollisionShape2D
 CharacterBody2D
 RigidBody2D
 Marker2D
 Timer
 Area2D
-TileMapLayer
 Node2D
 DirectionalLight2D
 PointLight2D
-LightOccluder2D
-TextureButton

@@ -10,7 +10,7 @@ class_name player
 @export var inpirate : bool
 @export var monsters : Array[enemyData]
 
-
+var nomove : bool
 
 
 var forcefollow : bool
@@ -20,12 +20,15 @@ var target
 
 
 func get_input():
-	if forcefollow == true:
+	while forcefollow == true:
 		return
-	else:
-		if  icephysics == false or icephysics == true and moving == false:
-			var input_direction = Input.get_vector("left", "right", "up", "down")
-			velocity = input_direction * speed
+	
+
+	
+	
+	if  icephysics == false or icephysics == true and moving == false:
+		var input_direction = Input.get_vector("left", "right", "up", "down")
+		velocity = input_direction * speed
 
 
 
@@ -84,6 +87,8 @@ func _process(_delta):
 func _ready():
 	PhysicsStuff.connect("icephysicsoff", iceoff)
 	PhysicsStuff.connect("icephysicson", iceon)
+
+
 
 	iceon()
 	iceoff()

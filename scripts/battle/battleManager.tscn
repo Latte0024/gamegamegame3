@@ -1,13 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://p1xw2rpfph8i"]
+[gd_scene load_steps=16 format=3 uid="uid://p1xw2rpfph8i"]
 
 [ext_resource type="Script" uid="uid://by8l0pgalpsur" path="res://scripts/battle/battleManager.gd" id="1_sy4si"]
 [ext_resource type="Texture2D" uid="uid://r6mn0y5bmhnw" path="res://textures/backgrounds/battlebackground/background.png" id="1_yjgn1"]
 [ext_resource type="PackedScene" uid="uid://bdvfpo2lwkqve" path="res://scripts/battle/scenes/enemy.tscn" id="3_sy4si"]
 [ext_resource type="PackedScene" uid="uid://dmtx881ue7s5u" path="res://scripts/battle/scenes/member.tscn" id="4_plmrm"]
+[ext_resource type="Script" uid="uid://c8blm2my1axoy" path="res://scripts/battle/blueflash.gd" id="5_jmigx"]
 [ext_resource type="Texture2D" uid="uid://c2d4wbxklletj" path="res://textures/system/battle/btn-fight.png" id="11_j75xd"]
 [ext_resource type="Texture2D" uid="uid://c40bciid7nvoa" path="res://textures/system/battle/btn-fight-sel.png" id="12_cf5bt"]
 [ext_resource type="Texture2D" uid="uid://dcsmmhxufytcu" path="res://textures/system/battle/btn-skill.png" id="13_kho12"]
 [ext_resource type="Texture2D" uid="uid://dpy2kyjkuxmnn" path="res://textures/system/battle/btn-skill-sel.png" id="14_jirhe"]
+[ext_resource type="PackedScene" uid="uid://dasdp4uvhailm" path="res://scripts/battle/blueflash.tscn" id="14_my7ul"]
 [ext_resource type="Texture2D" uid="uid://b77ypkm3jhsll" path="res://textures/system/battle/btn-stuff.png" id="15_tauwv"]
 [ext_resource type="Texture2D" uid="uid://bbhsq1gprhylw" path="res://textures/system/battle/btn-stuff-sel.png" id="16_wefmh"]
 [ext_resource type="Texture2D" uid="uid://cqmte8satrr6j" path="res://textures/system/battle/btn-flee.png" id="17_4gs7k"]
@@ -29,8 +31,8 @@ script = ExtResource("1_sy4si")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 816.0
+offset_bottom = 624.0
 texture = ExtResource("1_yjgn1")
 
 [node name="enemies" type="HBoxContainer" parent="."]
@@ -39,14 +41,36 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = -120.0
-offset_bottom = 120.0
+offset_top = -171.0
+offset_bottom = 69.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
 [node name="enemy" parent="enemies" instance=ExtResource("3_sy4si")]
 layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="blueflash" parent="HBoxContainer" instance=ExtResource("14_my7ul")]
+visible = false
+position = Vector2(-388, -292)
+script = ExtResource("5_jmigx")
+
+[node name="spawner" parent="HBoxContainer/blueflash" index="2"]
+repeat = 1
 
 [node name="ui" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -158,3 +182,5 @@ clip_text = true
 [connection signal="pressed" from="ui/btn/skill" to="." method="_on_skill_pressed"]
 [connection signal="pressed" from="ui/btn/stuff" to="." method="_on_stuff_pressed"]
 [connection signal="pressed" from="ui/btn/flee" to="." method="_on_flee"]
+
+[editable path="HBoxContainer/blueflash"]

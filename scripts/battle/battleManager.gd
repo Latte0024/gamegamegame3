@@ -3,6 +3,9 @@ extends Control
 
 @onready var text = $ui/status/margin/battleLog
 @onready var skillmenu = $ui/status/margin/skills
+var playerturn : bool
+
+var inbattle : bool
 
 
 var canCycle:bool = true
@@ -83,6 +86,10 @@ func _process(delta: float) -> void:
 		text.visible = true
 
 func _init_battle() -> void:
+
+	get_tree().paused = true
+	
+
 	text.text = ""
 	canCycle = true
 	checked = false
@@ -126,17 +133,19 @@ func _init_battle() -> void:
 
 
 func _player_turn():
-	print (onTurnIndex)
-	print (BattleGlobals.dead[0])
-	print (BattleGlobals.dead[1])
-	print (BattleGlobals.dead[2])
+	print("bmanager ", BattleGlobals.partyHealth[0])
+	playerturn = true
+	#print ("onTurnIndex" , onTurnIndex)
+	#print ("CharlotteDead" , BattleGlobals.dead[0])
+	#print ("MikeDead" , BattleGlobals.dead[1])
+	#print ("ZuriDead" , BattleGlobals.dead[2])
 
 	_characterdead()
 #return later
 
 
 		
-	if !canCycle:
+	if !canCycle and playerturn == true:
 		print("i cant cycle im breaking player turn")
 		return
 		
@@ -199,6 +208,7 @@ func _player_turn():
 	
 	
 	await get_tree().create_timer(.3).timeout
+	playerturn = false
 	_enemy_turn()
 
 
@@ -230,40 +240,77 @@ func _enemy_check():
 		_battle_end()
 		
 
+
+
+
+
+
 func _enemy_turn():
+	
+	
 	_enemy_check()
 	
-	if !canCycle:
-		print("i cant cycle im breaking enemy turn")
-		return
+	var a = randi_range(1, 2)
+	
+	
+	
+	
+	if a == 2 and playerturn == false:
 		
-	
-	for i in $ui/btn.get_children():
-		i.set_focus_mode(FOCUS_NONE)
-		i.disabled = true
 		
-	for i in $enemies.get_children():
-		i.set_focus_mode(FOCUS_NONE)
-		i.disabled = true
-	
-	print("enemy check at start of enemy turn")
-	
+		$HBoxContainer/blueflash.visible = true
+		$HBoxContainer/blueflash/AnimatedSprite2D.play("up")
+		await get_tree().create_timer(0.2).timeout
+		$HBoxContainer/blueflash/AnimatedSprite2D.play("default")
+		await get_tree().create_timer(5).timeout
+		$HBoxContainer/blueflash/AnimatedSprite2D.play("down")
+		await get_tree().create_timer(0.2).timeout
+		
+		$HBoxContainer/blueflash.visible = false
+		set_focus_mode(FOCUS_NONE)
+		_player_turn()
+	else:
 
-	if BattleGlobals.partyHealth[0] <= 0 and BattleGlobals.partyHealth[1] <= 0 and BattleGlobals.partyHealth[2] <= 0:
-		text.append_text("[i] YOU LOSE ! [/i]")
-		await get_tree().create_timer(3).timeout
-		_battle_end()
-		queue_free()
+		if !canCycle:
+			print("i cant cycle im breaking enemy turn")
+			return
+			
+		
+		
+		
+		
+		
+		
+		
+		for i in $ui/btn.get_children():
+			i.set_focus_mode(FOCUS_NONE)
+			i.disabled = true
+			
+			
+			
+		for i in $enemies.get_children():
+			i.set_focus_mode(FOCUS_NONE)
+			i.disabled = true
+		
+		print("enemy check at start of enemy turn")
+		
 
-	if !$enemies.get_children().is_empty():
-		for enemy in $enemies.get_children().size():
-			await get_tree().create_timer(.3).timeout
+		if BattleGlobals.partyHealth[0] <= 0 and BattleGlobals.partyHealth[1] <= 0 and BattleGlobals.partyHealth[2] <= 0:
+			text.append_text("[i] YOU LOSE ! [/i]")
+			await get_tree().create_timer(3).timeout
+			_battle_end()
+			queue_free()
+
+		if !$enemies.get_children().is_empty():
+			for enemy in $enemies.get_children().size():
+				await get_tree().create_timer(.3).timeout
 
 
 
-			$ui/party.get_children().pick_random().damage($enemies.get_child(enemy).damageVal,$enemies.get_child(enemy).name)
-	await get_tree().create_timer(.3).timeout
-	_player_turn()
+				$ui/party.get_children().pick_random().damage($enemies.get_child(enemy).damageVal,$enemies.get_child(enemy).name)
+		await get_tree().create_timer(.3).timeout
+		playerturn = true
+		_player_turn()
 
 #fleeing should cost either HP or an item being stolen,do it later, delete this text 
 
@@ -274,7 +321,7 @@ func _on_flee() -> void:
 	await get_tree().create_timer(1).timeout
 	_battle_end()
 
-#var partyHealth:Array[int] = [11,1,1]
+
 
 func _characterdead():
 	
@@ -309,6 +356,10 @@ func _on_fight() -> void:
 
 
 func _battle_end():
+	
+	get_tree().paused = false
+
+
 	
 	visible = false
 	
@@ -456,8 +507,9 @@ func _target_select(targeting:target, effect:int, scaling:float, cost:int):
 #items and stuff
 
 func _on_stuff_pressed() -> void:
-	$ui/party.get_child(onTurnIndex).damage(-15,$ui/party.get_child(onTurnIndex).name)
-	playerActed.emit()
+	if playerturn == true:
+		$ui/party.get_child(onTurnIndex).damage(-15,$ui/party.get_child(onTurnIndex).name)
+		playerActed.emit()
 
 
 
