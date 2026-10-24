@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3emxl7s7ay8b"]
+[gd_scene load_steps=9 format=3 uid="uid://c3emxl7s7ay8b"]
 
 [ext_resource type="Script" uid="uid://7m7v1fuqoj8k" path="res://scenes/border_viewport.gd" id="1_40ycd"]
 [ext_resource type="Texture2D" uid="uid://cpnwgw7uc0yi3" path="res://textures/backgrounds/titlescreen/background.png" id="1_fikng"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bwxrgu1t8edlv" path="res://maps/CH1/Forest.tscn" id="4_ljkjh"]
 [ext_resource type="PackedScene" uid="uid://p1xw2rpfph8i" path="res://scripts/battle/battleManager.tscn" id="5_qgpuv"]
 [ext_resource type="PackedScene" uid="uid://b0fumhrevvnp" path="res://scripts/system/menu.tscn" id="6_ljkjh"]
+[ext_resource type="PackedScene" uid="uid://d01r6wygg7lh8" path="res://scripts/system/textbox.tscn" id="7_dfdnm"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_8bnje"]
 viewport_path = NodePath("SubViewport")
@@ -54,6 +55,7 @@ script = ExtResource("3_q55kd")
 [node name="Forest" parent="SubViewport" instance=ExtResource("4_ljkjh")]
 
 [node name="battlemanager" parent="." instance=ExtResource("5_qgpuv")]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -78,3 +80,13 @@ offset_left = -408.0
 offset_top = -312.0
 offset_right = 408.0
 offset_bottom = 312.0
+
+[node name="textbox" parent="." instance=ExtResource("7_dfdnm")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_top = -88.0
+offset_bottom = -88.0
+grow_vertical = 0

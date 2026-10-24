@@ -1,39 +1,34 @@
 extends Area2D
 
 
+@export var rocknumber : int 
+@export var rockoffnumber : int 
+@export var delete : bool 
 
 
 
 
 
-
-
-func _ready():
-	if Puzzleswitch.rock1gone  == true:
-		queue_free()
-	else:
-		Puzzleswitch.connect("Rockswitch1on", visible1on)
-		Puzzleswitch.connect("Rockswitch1off", visible1off)
-
-
-
-
-func visible1on():
-	Puzzleswitch.rock1gone  = true
+func _process(_delta: float) -> void:
 	visibility()
+	deleting()
 
 
-func visible1off():
-	Puzzleswitch.rock1gone  = false
-	visibility()
+
+func deleting():
+		if delete == true and $".".visible == false:
+			queue_free()
+		
+
+
 
 func visibility():
-	if Puzzleswitch.rock1gone  == false:
-		$".".show()
-		$TileMapLayer.set_collision_enabled(true)
-		Puzzleswitch.rock1gone = false
-
-	else:
+	if Puzzleswitch.rocknumber == rocknumber:
 		$".".hide()
 		$TileMapLayer.set_collision_enabled(false)
-		Puzzleswitch.rock1gone = true
+
+
+		
+	elif Puzzleswitch.rockoffnumber == rockoffnumber :
+		$".".show()
+		$TileMapLayer.set_collision_enabled(true)

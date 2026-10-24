@@ -1,35 +1,33 @@
 extends Area2D
 
 
-func _ready():
-	if Puzzleswitch.pirategone  == true:
-		queue_free()
-	else:
-		Puzzleswitch.connect("Pirateswitch1on", visible1on)
-		Puzzleswitch.connect("Pirateswitch1off", visible1off)
+@export var selfnumber : int
+@export var selfoffnumber : int
+@export var delete : bool
 
-
-
-
-func visible1on():
-	Puzzleswitch.pirategone  = true
+func _process(_delta: float) -> void:
 	visibility()
+	deleting()
 
 
-func visible1off():
-	Puzzleswitch.pirategone  = false
-	visibility()
+
+func deleting():
+		if delete == true and $".".visible == false:
+			queue_free()
+		
 
 func visibility():
-	if Puzzleswitch.pirategone  == false:
-		$".".show()
-		$TileMapLayer.set_collision_enabled(true)
-		Puzzleswitch.pirategone = false
-
-	else:
+	if Puzzleswitch.number == selfnumber:
 		$".".hide()
 		$TileMapLayer.set_collision_enabled(false)
-		Puzzleswitch.pirategone = true
+		
+
+		
+	elif Puzzleswitch.offnumber == selfoffnumber :
+		$".".show()
+		$TileMapLayer.set_collision_enabled(true)
+
+
 
 
 func _on_body_entered(body: Node2D) -> void:

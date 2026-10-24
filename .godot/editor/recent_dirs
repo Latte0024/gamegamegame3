@@ -1,3 +1,7 @@
+res://textures/system
+res://scripts/system
+res://characters/player
+res://textures/characters/main-er_charaters
 res://scripts/battle
 res://textures/system/battle
 res://scripts/battle/bullets
@@ -9,14 +13,10 @@ res://textures/characters/dialogue_battle_sprites.png/Zuri
 res://textures/characters/dialogue_battle_sprites.png/Mike
 res://textures/characters/dialogue_battle_sprites.png/Charlotte
 res://textures
-res://scripts/system
 res://maps/CH4
 res://maps/CH1
 res://textures/tilesets/Chapter 1
 res://maps/CH3
-res://textures/characters/main-er_charaters
 res://textures/tilesets/Chapter 3
 res://maps/CH2
 res://scripts/battle/scenes
-res://scripts/battle/resources/skills/
-res://scripts/battle/resources/party/

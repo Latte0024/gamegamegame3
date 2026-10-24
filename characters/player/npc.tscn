@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddx3ad7fteuha"]
+
+[ext_resource type="Script" uid="uid://dmygpaej4clt3" path="res://characters/player/npc.gd" id="1_88ae0"]
+[ext_resource type="Texture2D" uid="uid://bxxrnoedr0wql" path="res://textures/characters/main-er_charaters/fishwhatever.png" id="1_uuaap"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88ae0"]
+atlas = ExtResource("1_uuaap")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h48rm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88ae0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xelww"]
+size = Vector2(34, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hmgmn"]
+size = Vector2(253, 212)
+
+[node name="npc" type="CharacterBody2D"]
+script = ExtResource("1_88ae0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_h48rm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 1)
+shape = SubResource("RectangleShape2D_xelww")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_hmgmn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

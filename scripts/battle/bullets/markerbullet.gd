@@ -10,6 +10,7 @@ extends Area2D
 
 
 func _process(delta: float) -> void:
+	PhysicsServer2D.set_active(true)
 	deleting()
 	targeting()
 
@@ -18,7 +19,7 @@ func _process(delta: float) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	print("area entered")
-	BattleGlobals.partyHealth[0] = BattleGlobals.partyHealth[0] + damage
+	BattleGlobals.ultimate = BattleGlobals.ultimate + damage
 	queue_free()
 
 

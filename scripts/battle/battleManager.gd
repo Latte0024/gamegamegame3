@@ -60,6 +60,7 @@ func _ready() -> void:
 		child.queue_free()
 
 func _process(delta: float) -> void:
+	
 	_characterdead()
 	if Input.is_action_just_pressed("ui_accept"):
 		recentAction = "space"
@@ -103,7 +104,11 @@ func _init_battle() -> void:
 		
 		var enemySprite = preload("res://scripts/battle/scenes/enemy.tscn").instantiate()
 		enemySprite.texture_normal = enemy.texture 
-		enemySprite.damageVal = enemy.damage 
+		enemySprite.damageVal1 = enemy.damage1
+		
+		enemySprite.damageVal2 = enemy.damage2
+		enemySprite.damageValall = enemy.damageall
+
 		enemySprite.battleHandler = self
 		$enemies.add_child(enemySprite)
 		enemySprite.name = enemy.name
@@ -133,7 +138,7 @@ func _init_battle() -> void:
 
 
 func _player_turn():
-	print("bmanager ", BattleGlobals.partyHealth[0])
+	
 	playerturn = true
 	#print ("onTurnIndex" , onTurnIndex)
 	#print ("CharlotteDead" , BattleGlobals.dead[0])
@@ -255,7 +260,7 @@ func _enemy_turn():
 	
 	
 	
-	if a == 2 and playerturn == false:
+	if a == 2 and playerturn == false and BattleGlobals.ultimate < 5:
 		
 		
 		$HBoxContainer/blueflash.visible = true
@@ -268,7 +273,9 @@ func _enemy_turn():
 		
 		$HBoxContainer/blueflash.visible = false
 		set_focus_mode(FOCUS_NONE)
+		print("bullet1234 " , BattleGlobals.ultimate)
 		_player_turn()
+		
 	else:
 
 		if !canCycle:
@@ -304,10 +311,34 @@ func _enemy_turn():
 		if !$enemies.get_children().is_empty():
 			for enemy in $enemies.get_children().size():
 				await get_tree().create_timer(.3).timeout
+				
+				var b = randi_range(1, 2)
+
+
+				if b == 1 and BattleGlobals.ultimate < 5:
+					$ui/party.get_children().pick_random().damage($enemies.get_child(enemy).damageVal1,$enemies.get_child(enemy).name)
+		
+				elif b == 2 and BattleGlobals.ultimate < 5:
+					$ui/party.get_children().pick_random().damage($enemies.get_child(enemy).damageVal2,$enemies.get_child(enemy).name)
 
 
 
-				$ui/party.get_children().pick_random().damage($enemies.get_child(enemy).damageVal,$enemies.get_child(enemy).name)
+
+
+				elif BattleGlobals.ultimate  >= 5:
+					for i in BattleGlobals.partyHealth:
+						$ui/party.get_child(0).damage($enemies.get_child(enemy).damageValall,$enemies.get_child(enemy).name)
+						BattleGlobals.ultimate = 0
+						
+						$ui/party.get_child(1).damage($enemies.get_child(enemy).damageValall,$enemies.get_child(enemy).name)
+						BattleGlobals.ultimate = 0
+						
+						$ui/party.get_child(2).damage($enemies.get_child(enemy).damageValall,$enemies.get_child(enemy).name)
+						BattleGlobals.ultimate = 0
+
+
+
+
 		await get_tree().create_timer(.3).timeout
 		playerturn = true
 		_player_turn()

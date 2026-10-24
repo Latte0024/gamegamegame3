@@ -7,7 +7,7 @@ var delay : bool
 func _ready():
 	$temprock1/TileMapLayer.set_collision_enabled(false)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	interaction()
 	texture()
 
@@ -28,11 +28,11 @@ func interaction():
 		return
 
 
-func _on_area_entered(area: Area2D):
+func _on_area_entered(_area: Area2D):
 	inside = true
 	
 
-func _on_area_exited(area: Area2D):
+func _on_area_exited(_area: Area2D):
 	inside = false
 
 

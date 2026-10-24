@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://d01r6wygg7lh8"]
+
+[ext_resource type="Script" uid="uid://vm3io1nwfea8" path="res://scripts/system/textbox.gd" id="1_gs21t"]
+[ext_resource type="Texture2D" uid="uid://doa8b6o1xwcv" path="res://textures/system/battle/battle-npr.png" id="2_axjkr"]
+[ext_resource type="Texture2D" uid="uid://djlal0gjlj5ed" path="res://textures/system/dialoguebox.png" id="3_wtc0c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cigtt"]
+atlas = ExtResource("3_wtc0c")
+region = Rect2(7.057, 7.137, 130, 130)
+
+[node name="textbox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gs21t")
+
+[node name="box" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(512, 160)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -80.0
+offset_right = 256.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("2_axjkr")
+region_rect = Rect2(0, 0, 24, 24)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="box"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0110294
+anchor_top = 0.0144231
+anchor_right = 0.733609
+anchor_bottom = 0.316987
+offset_left = 3.35294
+offset_top = 6.69231
+offset_right = 127.392
+offset_bottom = 100.282
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="box/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_cigtt")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="box/HBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="text" type="RichTextLabel" parent="box/HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "aaaaaaaaaaaaaaaaaaaa
+"
+scroll_active = false
+scroll_following = true

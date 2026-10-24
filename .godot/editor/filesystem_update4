@@ -1,4 +1,4 @@
-res://scripts/battle/blueflash.tscn
+res://scenes/borderViewport.tscn
 res://scripts/battle/resources/skills/heal.tres
 res://scripts/battle/resources/party/Charlotte.tres
 res://scripts/battle/resources/party/Mike.tres
@@ -7,14 +7,10 @@ res://characters/player/player.gd
 res://scripts/battle/resources/enemies/slime.tres
 res://scripts/battle/button.gd
 res://scripts/battle/bullets/spawner.gd
-res://scripts/battle/bullets/bullet.gd
 res://characters/player/player.tscn
-res://scenes/borderViewport.tscn
+res://characters/player/npc.tscn
+res://scripts/system/textbox.tscn
 res://maps/CH1/Forest.tscn
-res://scripts/puzzles/bulletsandsuch.tscn
-res://scripts/battle/bullets/rigidbullet.tscn
-res://scripts/battle/battleManager.tscn
-res://scripts/battle/battleManager.gd
-res://scripts/battle/member.gd
-res://scripts/battle/scenes/member.tscn
-res://scripts/battle/scenes/health.gd
+res://scripts/system/textbox.gd
+res://scripts/system/dialogue.gd
+res://characters/player/npc.gd

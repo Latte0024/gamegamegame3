@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=4 uid="uid://yh7vy3kxkojl"]
+[gd_scene load_steps=35 format=4 uid="uid://yh7vy3kxkojl"]
 
 [ext_resource type="Texture2D" uid="uid://ly42h3tp8atm" path="res://textures/tilesets/Chapter 2/CH2DW_Water.png" id="1_px0ak"]
 [ext_resource type="Texture2D" uid="uid://uddmsd2awkg6" path="res://textures/tilesets/Chapter 2/CH2DW_Ground.png" id="2_nkgu6"]
@@ -10,13 +10,7 @@
 [ext_resource type="Script" uid="uid://b66tbga5jnkrx" path="res://scripts/puzzles/pirate_1.gd" id="8_nkgu6"]
 [ext_resource type="Script" uid="uid://urnm4w8h465a" path="res://scripts/puzzles/pirateswitch_1.gd" id="8_t3m4h"]
 [ext_resource type="PackedScene" uid="uid://oyngbaearmvw" path="res://characters/player/player.tscn" id="8_v4gdj"]
-[ext_resource type="Script" uid="uid://cotljmvkec123" path="res://scripts/puzzles/pirateswitch_2.gd" id="9_mxd2s"]
-[ext_resource type="Script" uid="uid://bykn8mtm8f0xb" path="res://scripts/puzzles/pirateswitch_3.gd" id="10_40mbj"]
-[ext_resource type="Script" uid="uid://c7l1fp8n2en54" path="res://scripts/puzzles/pirateswitch_4.gd" id="11_6lwgj"]
-[ext_resource type="Script" uid="uid://dm5pkc2tb74eu" path="res://scripts/puzzles/pirate_2.gd" id="13_4lvmp"]
-[ext_resource type="Script" uid="uid://bqd8y0hev5j7a" path="res://scripts/puzzles/pirate_3.gd" id="14_rsrwv"]
-[ext_resource type="Script" uid="uid://bcmqx03hcdpjd" path="res://scripts/puzzles/antipirate_1.gd" id="15_40mbj"]
-[ext_resource type="Script" uid="uid://b5m5uyn28fv13" path="res://scripts/puzzles/pirate_4.gd" id="15_e7ja0"]
+[ext_resource type="Texture2D" uid="uid://rbeptii3wyk5" path="res://textures/tilesets/Chapter 1/DW_Assets1.png" id="8_w0hw3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t3m4h"]
 texture = ExtResource("1_px0ak")
@@ -2349,6 +2343,329 @@ sources/3 = SubResource("TileSetAtlasSource_6lwgj")
 sources/4 = SubResource("TileSetAtlasSource_4lvmp")
 sources/5 = SubResource("TileSetAtlasSource_rsrwv")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_osljh"]
+size = Vector2(27, 216)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eweth"]
+size = Vector2(9, 312)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ymgj"]
+size = Vector2(31, 95)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e4qhk"]
+texture = ExtResource("6_e4qhk")
+texture_region_size = Vector2i(48, 48)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+9:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+9:4/0 = 0
+11:4/0 = 0
+14:4/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+12:14/0 = 0
+13:14/0 = 0
+14:14/0 = 0
+15:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+11:15/0 = 0
+12:15/0 = 0
+13:15/0 = 0
+14:15/0 = 0
+15:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+0:17/0 = 0
+0:18/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j7xqf"]
+texture = ExtResource("8_w0hw3")
+texture_region_size = Vector2i(48, 48)
+1:0/0 = 0
+2:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+10:2/0 = 0
+13:2/0 = 0
+0:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+14:4/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_v4gdj"]
+tile_size = Vector2i(48, 48)
+sources/0 = SubResource("TileSetAtlasSource_e4qhk")
+sources/1 = SubResource("TileSetAtlasSource_j7xqf")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0hw3"]
+size = Vector2(141, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e4qhk"]
+size = Vector2(92, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4gdj"]
+size = Vector2(29, 91)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mxd2s"]
+size = Vector2(27, 88)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3m4h"]
 size = Vector2(48, 96)
 
@@ -2563,1723 +2880,14 @@ texture_region_size = Vector2i(48, 48)
 tile_size = Vector2i(48, 48)
 sources/0 = SubResource("TileSetAtlasSource_e7ja0")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_seox3"]
-size = Vector2(78, 48)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7xqf"]
+size = Vector2(91, 46)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cfcqb"]
-texture = ExtResource("6_e4qhk")
-texture_region_size = Vector2i(48, 48)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-11:0/0 = 0
-14:0/0 = 0
-15:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-12:1/0 = 0
-13:1/0 = 0
-14:1/0 = 0
-15:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-9:2/0 = 0
-11:2/0 = 0
-12:2/0 = 0
-13:2/0 = 0
-14:2/0 = 0
-15:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-13:3/0 = 0
-14:3/0 = 0
-15:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-9:4/0 = 0
-11:4/0 = 0
-14:4/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-11:5/0 = 0
-12:5/0 = 0
-13:5/0 = 0
-14:5/0 = 0
-15:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-11:6/0 = 0
-12:6/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-10:7/0 = 0
-11:7/0 = 0
-12:7/0 = 0
-13:7/0 = 0
-14:7/0 = 0
-15:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-10:8/0 = 0
-11:8/0 = 0
-12:8/0 = 0
-13:8/0 = 0
-14:8/0 = 0
-15:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-10:9/0 = 0
-11:9/0 = 0
-12:9/0 = 0
-13:9/0 = 0
-14:9/0 = 0
-15:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-10:10/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-13:10/0 = 0
-14:10/0 = 0
-15:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
-10:11/0 = 0
-11:11/0 = 0
-12:11/0 = 0
-13:11/0 = 0
-14:11/0 = 0
-15:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-5:12/0 = 0
-6:12/0 = 0
-7:12/0 = 0
-8:12/0 = 0
-10:12/0 = 0
-11:12/0 = 0
-12:12/0 = 0
-13:12/0 = 0
-14:12/0 = 0
-15:12/0 = 0
-0:13/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-3:13/0 = 0
-4:13/0 = 0
-6:13/0 = 0
-7:13/0 = 0
-8:13/0 = 0
-0:14/0 = 0
-1:14/0 = 0
-2:14/0 = 0
-3:14/0 = 0
-4:14/0 = 0
-5:14/0 = 0
-6:14/0 = 0
-7:14/0 = 0
-8:14/0 = 0
-9:14/0 = 0
-10:14/0 = 0
-11:14/0 = 0
-12:14/0 = 0
-13:14/0 = 0
-14:14/0 = 0
-15:14/0 = 0
-0:15/0 = 0
-1:15/0 = 0
-2:15/0 = 0
-3:15/0 = 0
-4:15/0 = 0
-6:15/0 = 0
-7:15/0 = 0
-8:15/0 = 0
-9:15/0 = 0
-10:15/0 = 0
-11:15/0 = 0
-12:15/0 = 0
-13:15/0 = 0
-14:15/0 = 0
-15:15/0 = 0
-0:16/0 = 0
-1:16/0 = 0
-2:16/0 = 0
-0:17/0 = 0
-0:18/0 = 0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40mbj"]
+size = Vector2(47, 88)
 
-[sub_resource type="TileSet" id="TileSet_oe5fo"]
-tile_size = Vector2i(48, 48)
-sources/0 = SubResource("TileSetAtlasSource_cfcqb")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bd6qm"]
-size = Vector2(73, 48)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rbjr7"]
-texture = ExtResource("6_e4qhk")
-texture_region_size = Vector2i(48, 48)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-11:0/0 = 0
-14:0/0 = 0
-15:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-12:1/0 = 0
-13:1/0 = 0
-14:1/0 = 0
-15:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-9:2/0 = 0
-11:2/0 = 0
-12:2/0 = 0
-13:2/0 = 0
-14:2/0 = 0
-15:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-13:3/0 = 0
-14:3/0 = 0
-15:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-9:4/0 = 0
-11:4/0 = 0
-14:4/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-11:5/0 = 0
-12:5/0 = 0
-13:5/0 = 0
-14:5/0 = 0
-15:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-11:6/0 = 0
-12:6/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-10:7/0 = 0
-11:7/0 = 0
-12:7/0 = 0
-13:7/0 = 0
-14:7/0 = 0
-15:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-10:8/0 = 0
-11:8/0 = 0
-12:8/0 = 0
-13:8/0 = 0
-14:8/0 = 0
-15:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-10:9/0 = 0
-11:9/0 = 0
-12:9/0 = 0
-13:9/0 = 0
-14:9/0 = 0
-15:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-10:10/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-13:10/0 = 0
-14:10/0 = 0
-15:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
-10:11/0 = 0
-11:11/0 = 0
-12:11/0 = 0
-13:11/0 = 0
-14:11/0 = 0
-15:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-5:12/0 = 0
-6:12/0 = 0
-7:12/0 = 0
-8:12/0 = 0
-10:12/0 = 0
-11:12/0 = 0
-12:12/0 = 0
-13:12/0 = 0
-14:12/0 = 0
-15:12/0 = 0
-0:13/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-3:13/0 = 0
-4:13/0 = 0
-6:13/0 = 0
-7:13/0 = 0
-8:13/0 = 0
-0:14/0 = 0
-1:14/0 = 0
-2:14/0 = 0
-3:14/0 = 0
-4:14/0 = 0
-5:14/0 = 0
-6:14/0 = 0
-7:14/0 = 0
-8:14/0 = 0
-9:14/0 = 0
-10:14/0 = 0
-11:14/0 = 0
-12:14/0 = 0
-13:14/0 = 0
-14:14/0 = 0
-15:14/0 = 0
-0:15/0 = 0
-1:15/0 = 0
-2:15/0 = 0
-3:15/0 = 0
-4:15/0 = 0
-6:15/0 = 0
-7:15/0 = 0
-8:15/0 = 0
-9:15/0 = 0
-10:15/0 = 0
-11:15/0 = 0
-12:15/0 = 0
-13:15/0 = 0
-14:15/0 = 0
-15:15/0 = 0
-0:16/0 = 0
-1:16/0 = 0
-2:16/0 = 0
-0:17/0 = 0
-0:18/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_hakvx"]
-tile_size = Vector2i(48, 48)
-sources/0 = SubResource("TileSetAtlasSource_rbjr7")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0u0fy"]
-size = Vector2(48, 96)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mbhg3"]
-texture = ExtResource("6_e4qhk")
-texture_region_size = Vector2i(48, 48)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-11:0/0 = 0
-14:0/0 = 0
-15:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-12:1/0 = 0
-13:1/0 = 0
-14:1/0 = 0
-15:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-9:2/0 = 0
-11:2/0 = 0
-12:2/0 = 0
-13:2/0 = 0
-14:2/0 = 0
-15:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-13:3/0 = 0
-14:3/0 = 0
-15:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-9:4/0 = 0
-11:4/0 = 0
-14:4/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-11:5/0 = 0
-12:5/0 = 0
-13:5/0 = 0
-14:5/0 = 0
-15:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-11:6/0 = 0
-12:6/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-10:7/0 = 0
-11:7/0 = 0
-12:7/0 = 0
-13:7/0 = 0
-14:7/0 = 0
-15:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-10:8/0 = 0
-11:8/0 = 0
-12:8/0 = 0
-13:8/0 = 0
-14:8/0 = 0
-15:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-10:9/0 = 0
-11:9/0 = 0
-12:9/0 = 0
-13:9/0 = 0
-14:9/0 = 0
-15:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-10:10/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-13:10/0 = 0
-14:10/0 = 0
-15:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
-10:11/0 = 0
-11:11/0 = 0
-12:11/0 = 0
-13:11/0 = 0
-14:11/0 = 0
-15:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-5:12/0 = 0
-6:12/0 = 0
-7:12/0 = 0
-8:12/0 = 0
-10:12/0 = 0
-11:12/0 = 0
-12:12/0 = 0
-13:12/0 = 0
-14:12/0 = 0
-15:12/0 = 0
-0:13/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-3:13/0 = 0
-4:13/0 = 0
-6:13/0 = 0
-7:13/0 = 0
-8:13/0 = 0
-0:14/0 = 0
-1:14/0 = 0
-2:14/0 = 0
-3:14/0 = 0
-4:14/0 = 0
-5:14/0 = 0
-6:14/0 = 0
-7:14/0 = 0
-8:14/0 = 0
-9:14/0 = 0
-10:14/0 = 0
-11:14/0 = 0
-12:14/0 = 0
-13:14/0 = 0
-14:14/0 = 0
-15:14/0 = 0
-0:15/0 = 0
-1:15/0 = 0
-2:15/0 = 0
-3:15/0 = 0
-4:15/0 = 0
-6:15/0 = 0
-7:15/0 = 0
-8:15/0 = 0
-9:15/0 = 0
-10:15/0 = 0
-11:15/0 = 0
-12:15/0 = 0
-13:15/0 = 0
-14:15/0 = 0
-15:15/0 = 0
-0:16/0 = 0
-1:16/0 = 0
-2:16/0 = 0
-0:17/0 = 0
-0:18/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_42mw0"]
-tile_size = Vector2i(48, 48)
-sources/0 = SubResource("TileSetAtlasSource_mbhg3")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_crlp5"]
-size = Vector2(31, 141)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d642c"]
-texture = ExtResource("6_e4qhk")
-texture_region_size = Vector2i(48, 48)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-11:0/0 = 0
-14:0/0 = 0
-15:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-12:1/0 = 0
-13:1/0 = 0
-14:1/0 = 0
-15:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-9:2/0 = 0
-11:2/0 = 0
-12:2/0 = 0
-13:2/0 = 0
-14:2/0 = 0
-15:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-13:3/0 = 0
-14:3/0 = 0
-15:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-9:4/0 = 0
-11:4/0 = 0
-14:4/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-11:5/0 = 0
-12:5/0 = 0
-13:5/0 = 0
-14:5/0 = 0
-15:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-11:6/0 = 0
-12:6/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-10:7/0 = 0
-11:7/0 = 0
-12:7/0 = 0
-13:7/0 = 0
-14:7/0 = 0
-15:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-10:8/0 = 0
-11:8/0 = 0
-12:8/0 = 0
-13:8/0 = 0
-14:8/0 = 0
-15:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-10:9/0 = 0
-11:9/0 = 0
-12:9/0 = 0
-13:9/0 = 0
-14:9/0 = 0
-15:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-10:10/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-13:10/0 = 0
-14:10/0 = 0
-15:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
-10:11/0 = 0
-11:11/0 = 0
-12:11/0 = 0
-13:11/0 = 0
-14:11/0 = 0
-15:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-5:12/0 = 0
-6:12/0 = 0
-7:12/0 = 0
-8:12/0 = 0
-10:12/0 = 0
-11:12/0 = 0
-12:12/0 = 0
-13:12/0 = 0
-14:12/0 = 0
-15:12/0 = 0
-0:13/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-3:13/0 = 0
-4:13/0 = 0
-6:13/0 = 0
-7:13/0 = 0
-8:13/0 = 0
-0:14/0 = 0
-1:14/0 = 0
-2:14/0 = 0
-3:14/0 = 0
-4:14/0 = 0
-5:14/0 = 0
-6:14/0 = 0
-7:14/0 = 0
-8:14/0 = 0
-9:14/0 = 0
-10:14/0 = 0
-11:14/0 = 0
-12:14/0 = 0
-13:14/0 = 0
-14:14/0 = 0
-15:14/0 = 0
-0:15/0 = 0
-1:15/0 = 0
-2:15/0 = 0
-3:15/0 = 0
-4:15/0 = 0
-6:15/0 = 0
-7:15/0 = 0
-8:15/0 = 0
-9:15/0 = 0
-10:15/0 = 0
-11:15/0 = 0
-12:15/0 = 0
-13:15/0 = 0
-14:15/0 = 0
-15:15/0 = 0
-0:16/0 = 0
-1:16/0 = 0
-2:16/0 = 0
-0:17/0 = 0
-0:18/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_86t8d"]
-tile_size = Vector2i(48, 48)
-sources/0 = SubResource("TileSetAtlasSource_d642c")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vhlv"]
-size = Vector2(145, 47)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_12pvl"]
-texture = ExtResource("6_e4qhk")
-texture_region_size = Vector2i(48, 48)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-11:0/0 = 0
-14:0/0 = 0
-15:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-12:1/0 = 0
-13:1/0 = 0
-14:1/0 = 0
-15:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-9:2/0 = 0
-11:2/0 = 0
-12:2/0 = 0
-13:2/0 = 0
-14:2/0 = 0
-15:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-13:3/0 = 0
-14:3/0 = 0
-15:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-9:4/0 = 0
-11:4/0 = 0
-14:4/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-11:5/0 = 0
-12:5/0 = 0
-13:5/0 = 0
-14:5/0 = 0
-15:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-11:6/0 = 0
-12:6/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-10:7/0 = 0
-11:7/0 = 0
-12:7/0 = 0
-13:7/0 = 0
-14:7/0 = 0
-15:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-10:8/0 = 0
-11:8/0 = 0
-12:8/0 = 0
-13:8/0 = 0
-14:8/0 = 0
-15:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-10:9/0 = 0
-11:9/0 = 0
-12:9/0 = 0
-13:9/0 = 0
-14:9/0 = 0
-15:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-10:10/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-13:10/0 = 0
-14:10/0 = 0
-15:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
-10:11/0 = 0
-11:11/0 = 0
-12:11/0 = 0
-13:11/0 = 0
-14:11/0 = 0
-15:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-5:12/0 = 0
-6:12/0 = 0
-7:12/0 = 0
-8:12/0 = 0
-10:12/0 = 0
-11:12/0 = 0
-12:12/0 = 0
-13:12/0 = 0
-14:12/0 = 0
-15:12/0 = 0
-0:13/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-3:13/0 = 0
-4:13/0 = 0
-6:13/0 = 0
-7:13/0 = 0
-8:13/0 = 0
-0:14/0 = 0
-1:14/0 = 0
-2:14/0 = 0
-3:14/0 = 0
-4:14/0 = 0
-5:14/0 = 0
-6:14/0 = 0
-7:14/0 = 0
-8:14/0 = 0
-9:14/0 = 0
-10:14/0 = 0
-11:14/0 = 0
-12:14/0 = 0
-13:14/0 = 0
-14:14/0 = 0
-15:14/0 = 0
-0:15/0 = 0
-1:15/0 = 0
-2:15/0 = 0
-3:15/0 = 0
-4:15/0 = 0
-6:15/0 = 0
-7:15/0 = 0
-8:15/0 = 0
-9:15/0 = 0
-10:15/0 = 0
-11:15/0 = 0
-12:15/0 = 0
-13:15/0 = 0
-14:15/0 = 0
-15:15/0 = 0
-0:16/0 = 0
-1:16/0 = 0
-2:16/0 = 0
-0:17/0 = 0
-0:18/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_xikq8"]
-tile_size = Vector2i(48, 48)
-sources/0 = SubResource("TileSetAtlasSource_12pvl")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5duc"]
-size = Vector2(35, 142)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdeqs"]
-texture = ExtResource("6_e4qhk")
-texture_region_size = Vector2i(48, 48)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-11:0/0 = 0
-14:0/0 = 0
-15:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-12:1/0 = 0
-13:1/0 = 0
-14:1/0 = 0
-15:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-9:2/0 = 0
-11:2/0 = 0
-12:2/0 = 0
-13:2/0 = 0
-14:2/0 = 0
-15:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-13:3/0 = 0
-14:3/0 = 0
-15:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-9:4/0 = 0
-11:4/0 = 0
-14:4/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-11:5/0 = 0
-12:5/0 = 0
-13:5/0 = 0
-14:5/0 = 0
-15:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-11:6/0 = 0
-12:6/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-10:7/0 = 0
-11:7/0 = 0
-12:7/0 = 0
-13:7/0 = 0
-14:7/0 = 0
-15:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-10:8/0 = 0
-11:8/0 = 0
-12:8/0 = 0
-13:8/0 = 0
-14:8/0 = 0
-15:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-10:9/0 = 0
-11:9/0 = 0
-12:9/0 = 0
-13:9/0 = 0
-14:9/0 = 0
-15:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-10:10/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-13:10/0 = 0
-14:10/0 = 0
-15:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
-10:11/0 = 0
-11:11/0 = 0
-12:11/0 = 0
-13:11/0 = 0
-14:11/0 = 0
-15:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-5:12/0 = 0
-6:12/0 = 0
-7:12/0 = 0
-8:12/0 = 0
-10:12/0 = 0
-11:12/0 = 0
-12:12/0 = 0
-13:12/0 = 0
-14:12/0 = 0
-15:12/0 = 0
-0:13/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-3:13/0 = 0
-4:13/0 = 0
-6:13/0 = 0
-7:13/0 = 0
-8:13/0 = 0
-0:14/0 = 0
-1:14/0 = 0
-2:14/0 = 0
-3:14/0 = 0
-4:14/0 = 0
-5:14/0 = 0
-6:14/0 = 0
-7:14/0 = 0
-8:14/0 = 0
-9:14/0 = 0
-10:14/0 = 0
-11:14/0 = 0
-12:14/0 = 0
-13:14/0 = 0
-14:14/0 = 0
-15:14/0 = 0
-0:15/0 = 0
-1:15/0 = 0
-2:15/0 = 0
-3:15/0 = 0
-4:15/0 = 0
-6:15/0 = 0
-7:15/0 = 0
-8:15/0 = 0
-9:15/0 = 0
-10:15/0 = 0
-11:15/0 = 0
-12:15/0 = 0
-13:15/0 = 0
-14:15/0 = 0
-15:15/0 = 0
-0:16/0 = 0
-1:16/0 = 0
-2:16/0 = 0
-0:17/0 = 0
-0:18/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_ijn6l"]
-tile_size = Vector2i(48, 48)
-sources/0 = SubResource("TileSetAtlasSource_vdeqs")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eemwo"]
-size = Vector2(48, 101)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4yw40"]
-texture = ExtResource("6_e4qhk")
-texture_region_size = Vector2i(48, 48)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-11:0/0 = 0
-14:0/0 = 0
-15:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-12:1/0 = 0
-13:1/0 = 0
-14:1/0 = 0
-15:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-9:2/0 = 0
-11:2/0 = 0
-12:2/0 = 0
-13:2/0 = 0
-14:2/0 = 0
-15:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-13:3/0 = 0
-14:3/0 = 0
-15:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-9:4/0 = 0
-11:4/0 = 0
-14:4/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-11:5/0 = 0
-12:5/0 = 0
-13:5/0 = 0
-14:5/0 = 0
-15:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-11:6/0 = 0
-12:6/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-10:7/0 = 0
-11:7/0 = 0
-12:7/0 = 0
-13:7/0 = 0
-14:7/0 = 0
-15:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-10:8/0 = 0
-11:8/0 = 0
-12:8/0 = 0
-13:8/0 = 0
-14:8/0 = 0
-15:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-10:9/0 = 0
-11:9/0 = 0
-12:9/0 = 0
-13:9/0 = 0
-14:9/0 = 0
-15:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-10:10/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-13:10/0 = 0
-14:10/0 = 0
-15:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
-10:11/0 = 0
-11:11/0 = 0
-12:11/0 = 0
-13:11/0 = 0
-14:11/0 = 0
-15:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-5:12/0 = 0
-6:12/0 = 0
-7:12/0 = 0
-8:12/0 = 0
-10:12/0 = 0
-11:12/0 = 0
-12:12/0 = 0
-13:12/0 = 0
-14:12/0 = 0
-15:12/0 = 0
-0:13/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-3:13/0 = 0
-4:13/0 = 0
-6:13/0 = 0
-7:13/0 = 0
-8:13/0 = 0
-0:14/0 = 0
-1:14/0 = 0
-2:14/0 = 0
-3:14/0 = 0
-4:14/0 = 0
-5:14/0 = 0
-6:14/0 = 0
-7:14/0 = 0
-8:14/0 = 0
-9:14/0 = 0
-10:14/0 = 0
-11:14/0 = 0
-12:14/0 = 0
-13:14/0 = 0
-14:14/0 = 0
-15:14/0 = 0
-0:15/0 = 0
-1:15/0 = 0
-2:15/0 = 0
-3:15/0 = 0
-4:15/0 = 0
-6:15/0 = 0
-7:15/0 = 0
-8:15/0 = 0
-9:15/0 = 0
-10:15/0 = 0
-11:15/0 = 0
-12:15/0 = 0
-13:15/0 = 0
-14:15/0 = 0
-15:15/0 = 0
-0:16/0 = 0
-1:16/0 = 0
-2:16/0 = 0
-0:17/0 = 0
-0:18/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_l2gem"]
-tile_size = Vector2i(48, 48)
-sources/0 = SubResource("TileSetAtlasSource_4yw40")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lvmp"]
-size = Vector2(48, 142)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ryl3"]
-texture = ExtResource("6_e4qhk")
-texture_region_size = Vector2i(48, 48)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-11:0/0 = 0
-14:0/0 = 0
-15:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-12:1/0 = 0
-13:1/0 = 0
-14:1/0 = 0
-15:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-9:2/0 = 0
-11:2/0 = 0
-12:2/0 = 0
-13:2/0 = 0
-14:2/0 = 0
-15:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-13:3/0 = 0
-14:3/0 = 0
-15:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-9:4/0 = 0
-11:4/0 = 0
-14:4/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-11:5/0 = 0
-12:5/0 = 0
-13:5/0 = 0
-14:5/0 = 0
-15:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-11:6/0 = 0
-12:6/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-10:7/0 = 0
-11:7/0 = 0
-12:7/0 = 0
-13:7/0 = 0
-14:7/0 = 0
-15:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-10:8/0 = 0
-11:8/0 = 0
-12:8/0 = 0
-13:8/0 = 0
-14:8/0 = 0
-15:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-10:9/0 = 0
-11:9/0 = 0
-12:9/0 = 0
-13:9/0 = 0
-14:9/0 = 0
-15:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-10:10/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-13:10/0 = 0
-14:10/0 = 0
-15:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
-10:11/0 = 0
-11:11/0 = 0
-12:11/0 = 0
-13:11/0 = 0
-14:11/0 = 0
-15:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-5:12/0 = 0
-6:12/0 = 0
-7:12/0 = 0
-8:12/0 = 0
-10:12/0 = 0
-11:12/0 = 0
-12:12/0 = 0
-13:12/0 = 0
-14:12/0 = 0
-15:12/0 = 0
-0:13/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-3:13/0 = 0
-4:13/0 = 0
-6:13/0 = 0
-7:13/0 = 0
-8:13/0 = 0
-0:14/0 = 0
-1:14/0 = 0
-2:14/0 = 0
-3:14/0 = 0
-4:14/0 = 0
-5:14/0 = 0
-6:14/0 = 0
-7:14/0 = 0
-8:14/0 = 0
-9:14/0 = 0
-10:14/0 = 0
-11:14/0 = 0
-12:14/0 = 0
-13:14/0 = 0
-14:14/0 = 0
-15:14/0 = 0
-0:15/0 = 0
-1:15/0 = 0
-2:15/0 = 0
-3:15/0 = 0
-4:15/0 = 0
-6:15/0 = 0
-7:15/0 = 0
-8:15/0 = 0
-9:15/0 = 0
-10:15/0 = 0
-11:15/0 = 0
-12:15/0 = 0
-13:15/0 = 0
-14:15/0 = 0
-15:15/0 = 0
-0:16/0 = 0
-1:16/0 = 0
-2:16/0 = 0
-0:17/0 = 0
-0:18/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_seox3"]
-tile_size = Vector2i(48, 48)
-sources/0 = SubResource("TileSetAtlasSource_7ryl3")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_osljh"]
-size = Vector2(27, 216)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eweth"]
-size = Vector2(9, 312)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6lwgj"]
+size = Vector2(120, 34)
 
 [node name="piratepuzzle" type="Node2D"]
 
@@ -4303,181 +2911,6 @@ tile_set = SubResource("TileSet_2rqyk")
 [node name="TileMapLayer5" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAA3AP//BQAOAAEAAAA2AP//BQAOAAEAAAA1AP//BQAOAAEAAAA0AP//BQAOAAEAAAAzAP//BQAOAAEAAAAyAP//BQAOAAEAAAAxAP//BQAOAAEAAAAwAP//BQAOAAEAAAAvAP//BQAOAAEAAAAuAP//BQAOAAEAAAAtAP//BQAOAAEAAAAsAP//BQAOAAEAAAArAP//BQAOAAEAAAAqAP//BQAOAAEAAAApAP//BQAOAAEAAAAoAP//BQAOAAEAAAAnAP//BQAOAAEAAAAmAP//BQAOAAEAAAAlAP//BQAOAAEAAAAkAP//BQAOAAEAAAAjAP//BQAOAAEAAAAiAP//BQAOAAEAAAAhAP//BQAOAAEAAAAgAP//BQAOAAEAAAAfAP//BQAOAAEAAAAeAP//BQAOAAEAAAAdAP//BQAOAAEAAAAcAP//BQAOAAEAAAAbAP//BQAOAAEAAAAaAP//BQAOAAEAAAAZAP//BQAOAAEAAAAYAP//BQAOAAEAAAAXAP//BQAOAAEAAAAWAP//BQAOAAEAAAAVAP//BQAOAAEAAAAUAP//BQAOAAEAAAATAP//BQAOAAEAAAASAP//BQAOAAEAAAARAP//BQAOAAEAAAAQAP//BQAOAAEAAAAPAP//BQAOAAEAAAAOAP//BQAOAAEAAAANAP//BQAOAAEAAAAMAP//BQAOAAEAAAALAP//BQAOAAEAAAAKAP//BQAOAAEAAAAJAP//BQAOAAEAAAAIAP//BQAOAAEAAAAHAP//BQAOAAEAAAAGAP//BQAOAAEAAAAFAP//BQAOAAEAAAAEAP//BQAOAAEAAAADAP//BQAOAAEAAAACAP//BQAOAAEAAAABAP//BQAOAAEAAAAAAP//BQAOAAEAAAD/////BQAOAAEAAAD//wAABQAOAAEAAAD//wEABQAOAAEAAAD//wIABQAOAAEAAAD//wMABQAOAAEAAAD//wQABQAOAAEAAAD//wUABQAOAAEAAAD//wYABQAOAAEAAAD//wcABQAOAAEAAAD//wgABQAOAAEAAAD//wkABQAOAAEAAAD//woABQAOAAEAAAD//wsABQAOAAEAAAD//wwABQAOAAEAAAD//w0ABQAOAAEAAAD//w4ABQAOAAEAAAD//w8ABQAOAAEAAAD//xAABQAOAAEAAAD//xEABQAOAAEAAAA3ABEABQAOAAEAAAA3ABAABQAOAAEAAAA3AA8ABQAOAAEAAAA3AA4ABQAOAAEAAAA3AA0ABQAOAAEAAAA3AAwABQAOAAEAAAA3AAsABQAOAAEAAAA3AAoABQAOAAEAAAA3AAkABQAOAAEAAAA3AAgABQAOAAEAAAA3AAcABQAOAAEAAAA3AAYABQAOAAEAAAA3AAUABQAOAAEAAAA3AAQABQAOAAEAAAA3AAMABQAOAAEAAAA3AAIABQAOAAEAAAA3AAEABQAOAAEAAAA3AAAABQAOAAEAAAA2ABEABQAOAAEAAAA1ABEABQAOAAEAAAA0ABEABQAOAAEAAAAzABEABQAOAAEAAAAyABEABQAOAAEAAAAxABEABQAOAAEAAAAwABEABQAOAAEAAAAvABEABQAOAAEAAAAuABEABQAOAAEAAAAtABEABQAOAAEAAAAsABEABQAOAAEAAAArABEABQAOAAEAAAAqABEABQAOAAEAAAApABEABQAOAAEAAAAoABEABQAOAAEAAAAnABEABQAOAAEAAAAmABEABQAOAAEAAAAlABEABQAOAAEAAAAkABEABQAOAAEAAAAjABEABQAOAAEAAAAiABEABQAOAAEAAAAhABEABQAOAAEAAAAgABEABQAOAAEAAAAfABEABQAOAAEAAAAeABEABQAOAAEAAAAdABEABQAOAAEAAAAcABEABQAOAAEAAAAbABEABQAOAAEAAAAaABEABQAOAAEAAAAZABEABQAOAAEAAAAYABEABQAOAAEAAAAXABEABQAOAAEAAAAWABEABQAOAAEAAAAVABEABQAOAAEAAAAUABEABQAOAAEAAAATABEABQAOAAEAAAASABEABQAOAAEAAAARABEABQAOAAEAAAAQABEABQAOAAEAAAAPABEABQAOAAEAAAAOABEABQAOAAEAAAANABEABQAOAAEAAAAMABEABQAOAAEAAAALABEABQAOAAEAAAAKABEABQAOAAEAAAAJABEABQAOAAEAAAAIABEABQAOAAEAAAAHABEABQAOAAEAAAAGABEABQAOAAEAAAAFABEABQAOAAEAAAAEABEABQAOAAEAAAADABEABQAOAAEAAAACABEABQAOAAEAAAABABEABQAOAAEAAAAAABEABQAOAAEAAAAcAAUAAwANAAIAAAAqAAwAAwANAAIAAAA=")
 tile_set = SubResource("TileSet_2rqyk")
-
-[node name="puzzle" type="Node2D" parent="."]
-
-[node name="pirateswitch1" type="Area2D" parent="puzzle"]
-position = Vector2(532, 96)
-script = ExtResource("8_t3m4h")
-metadata/_edit_group_ = true
-
-[node name="switchhitbox" type="CollisionShape2D" parent="puzzle/pirateswitch1"]
-position = Vector2(24, 0)
-shape = SubResource("RectangleShape2D_t3m4h")
-
-[node name="Timer" type="Timer" parent="puzzle/pirateswitch1"]
-
-[node name="on" type="TileMapLayer" parent="puzzle/pirateswitch1"]
-tile_map_data = PackedByteArray("AAAAAP//AAACABAAAAA=")
-tile_set = SubResource("TileSet_7ryl3")
-
-[node name="off" type="TileMapLayer" parent="puzzle/pirateswitch1"]
-tile_map_data = PackedByteArray("AAAAAP//AAABABAAAAA=")
-tile_set = SubResource("TileSet_7ryl3")
-
-[node name="pirateswitch2" type="Area2D" parent="puzzle"]
-position = Vector2(241, 768)
-script = ExtResource("9_mxd2s")
-metadata/_edit_group_ = true
-
-[node name="switchhitbox" type="CollisionShape2D" parent="puzzle/pirateswitch2"]
-position = Vector2(39, -24)
-shape = SubResource("RectangleShape2D_seox3")
-
-[node name="Timer" type="Timer" parent="puzzle/pirateswitch2"]
-
-[node name="on" type="TileMapLayer" parent="puzzle/pirateswitch2"]
-tile_map_data = PackedByteArray("AAAAAP//AAACABAAAAA=")
-tile_set = SubResource("TileSet_oe5fo")
-
-[node name="off" type="TileMapLayer" parent="puzzle/pirateswitch2"]
-tile_map_data = PackedByteArray("AAAAAP//AAABABAAAAA=")
-tile_set = SubResource("TileSet_oe5fo")
-
-[node name="pirateswitch3" type="Area2D" parent="puzzle"]
-position = Vector2(963, 624)
-script = ExtResource("10_40mbj")
-metadata/_edit_group_ = true
-
-[node name="switchhitbox" type="CollisionShape2D" parent="puzzle/pirateswitch3"]
-position = Vector2(11.5, -24)
-shape = SubResource("RectangleShape2D_bd6qm")
-
-[node name="Timer" type="Timer" parent="puzzle/pirateswitch3"]
-
-[node name="on" type="TileMapLayer" parent="puzzle/pirateswitch3"]
-tile_map_data = PackedByteArray("AAAAAP//AAACABAAAAA=")
-tile_set = SubResource("TileSet_hakvx")
-
-[node name="off" type="TileMapLayer" parent="puzzle/pirateswitch3"]
-tile_map_data = PackedByteArray("AAAAAP//AAABABAAAAA=")
-tile_set = SubResource("TileSet_hakvx")
-
-[node name="pirateswitch4" type="Area2D" parent="puzzle"]
-position = Vector2(286, 195)
-script = ExtResource("11_6lwgj")
-metadata/_edit_group_ = true
-
-[node name="switchhitbox" type="CollisionShape2D" parent="puzzle/pirateswitch4"]
-position = Vector2(24, 0)
-shape = SubResource("RectangleShape2D_0u0fy")
-
-[node name="Timer" type="Timer" parent="puzzle/pirateswitch4"]
-
-[node name="on" type="TileMapLayer" parent="puzzle/pirateswitch4"]
-tile_map_data = PackedByteArray("AAAAAP//AAACABAAAAA=")
-tile_set = SubResource("TileSet_42mw0")
-
-[node name="off" type="TileMapLayer" parent="puzzle/pirateswitch4"]
-tile_map_data = PackedByteArray("AAAAAP//AAABABAAAAA=")
-tile_set = SubResource("TileSet_42mw0")
-
-[node name="pirate1" type="Area2D" parent="puzzle"]
-position = Vector2(531, 190)
-script = ExtResource("8_nkgu6")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzle/pirate1"]
-position = Vector2(-29.5, 22.5)
-shape = SubResource("RectangleShape2D_crlp5")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="puzzle/pirate1"]
-tile_map_data = PackedByteArray("AAD/////AAAMAAEAAAA=")
-tile_set = SubResource("TileSet_86t8d")
-
-[node name="Marker2D" type="Marker2D" parent="puzzle/pirate1"]
-position = Vector2(923, 204)
-
-[node name="pirate2" type="Area2D" parent="puzzle"]
-position = Vector2(962, 512)
-script = ExtResource("13_4lvmp")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzle/pirate2"]
-position = Vector2(-72.5, -8.5)
-shape = SubResource("RectangleShape2D_2vhlv")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="puzzle/pirate2"]
-tile_map_data = PackedByteArray("AAD/////AAAMAAEAAAA=")
-tile_set = SubResource("TileSet_xikq8")
-
-[node name="Marker2D" type="Marker2D" parent="puzzle/pirate2"]
-position = Vector2(492, -115)
-
-[node name="pirate22" type="Area2D" parent="puzzle"]
-position = Vector2(912, 703)
-script = ExtResource("13_4lvmp")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzle/pirate22"]
-position = Vector2(-72.5, -8.5)
-shape = SubResource("RectangleShape2D_2vhlv")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="puzzle/pirate22"]
-tile_map_data = PackedByteArray("AAD/////AAAMAAEAAAA=")
-tile_set = SubResource("TileSet_xikq8")
-
-[node name="Marker2D" type="Marker2D" parent="puzzle/pirate22"]
-position = Vector2(540, -306)
-
-[node name="pirate3" type="Area2D" parent="puzzle"]
-position = Vector2(432, 190)
-script = ExtResource("14_rsrwv")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzle/pirate3"]
-position = Vector2(-30.5, 23)
-shape = SubResource("RectangleShape2D_e5duc")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="puzzle/pirate3"]
-tile_map_data = PackedByteArray("AAD/////AAAMAAEAAAA=")
-tile_set = SubResource("TileSet_ijn6l")
-
-[node name="Marker2D" type="Marker2D" parent="puzzle/pirate3"]
-position = Vector2(1021, 206)
-
-[node name="pirate4" type="Area2D" parent="puzzle"]
-position = Vector2(429, 617)
-script = ExtResource("15_e7ja0")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzle/pirate4"]
-position = Vector2(-24, -42.5)
-shape = SubResource("RectangleShape2D_eemwo")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="puzzle/pirate4"]
-tile_map_data = PackedByteArray("AAD/////AAAMAAEAAAA=")
-tile_set = SubResource("TileSet_l2gem")
-
-[node name="Marker2D" type="Marker2D" parent="puzzle/pirate4"]
-position = Vector2(1024, -221)
-
-[node name="antipirate1" type="Area2D" parent="puzzle"]
-visible = false
-position = Vector2(240, 191)
-script = ExtResource("15_40mbj")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzle/antipirate1"]
-position = Vector2(-24, 23)
-shape = SubResource("RectangleShape2D_4lvmp")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="puzzle/antipirate1"]
-tile_map_data = PackedByteArray("AAD/////AAAMAAEAAAA=")
-tile_set = SubResource("TileSet_seox3")
-
-[node name="Marker2D" type="Marker2D" parent="puzzle/antipirate1"]
-position = Vector2(1212, 203)
 
 [node name="3wayfork" type="Area2D" parent="."]
 position = Vector2(2624, 327)
@@ -4512,23 +2945,203 @@ limit_right = 2640
 limit_bottom = 816
 limit_smoothed = true
 
-[connection signal="area_entered" from="puzzle/pirateswitch1" to="puzzle/pirateswitch1" method="_on_area_entered"]
-[connection signal="area_exited" from="puzzle/pirateswitch1" to="puzzle/pirateswitch1" method="_on_area_exited"]
-[connection signal="timeout" from="puzzle/pirateswitch1/Timer" to="puzzle/pirateswitch1" method="_on_timer_timeout"]
-[connection signal="area_entered" from="puzzle/pirateswitch2" to="puzzle/pirateswitch2" method="_on_area_entered"]
-[connection signal="area_exited" from="puzzle/pirateswitch2" to="puzzle/pirateswitch2" method="_on_area_exited"]
-[connection signal="timeout" from="puzzle/pirateswitch2/Timer" to="puzzle/pirateswitch2" method="_on_timer_timeout"]
-[connection signal="area_entered" from="puzzle/pirateswitch3" to="puzzle/pirateswitch3" method="_on_area_entered"]
-[connection signal="area_exited" from="puzzle/pirateswitch3" to="puzzle/pirateswitch3" method="_on_area_exited"]
-[connection signal="timeout" from="puzzle/pirateswitch3/Timer" to="puzzle/pirateswitch3" method="_on_timer_timeout"]
-[connection signal="area_entered" from="puzzle/pirateswitch4" to="puzzle/pirateswitch4" method="_on_area_entered"]
-[connection signal="area_exited" from="puzzle/pirateswitch4" to="puzzle/pirateswitch4" method="_on_area_exited"]
-[connection signal="timeout" from="puzzle/pirateswitch4/Timer" to="puzzle/pirateswitch4" method="_on_timer_timeout"]
-[connection signal="body_entered" from="puzzle/pirate1" to="puzzle/pirate1" method="_on_body_entered"]
-[connection signal="body_entered" from="puzzle/pirate2" to="puzzle/pirate2" method="_on_body_entered"]
-[connection signal="body_entered" from="puzzle/pirate22" to="puzzle/pirate22" method="_on_body_entered"]
-[connection signal="body_entered" from="puzzle/pirate3" to="puzzle/pirate3" method="_on_body_entered"]
-[connection signal="body_entered" from="puzzle/pirate4" to="puzzle/pirate4" method="_on_body_entered"]
-[connection signal="body_entered" from="puzzle/antipirate1" to="puzzle/antipirate1" method="_on_body_entered"]
+[node name="pirateyellow1" type="Area2D" parent="."]
+position = Vector2(243, 189)
+script = ExtResource("8_nkgu6")
+selfnumber = 1
+selfoffnumber = 1
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pirateyellow1"]
+position = Vector2(-24, -0.5)
+shape = SubResource("RectangleShape2D_5ymgj")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="pirateyellow1"]
+tile_map_data = PackedByteArray("AAD/////AAAMAAEAAAA=")
+tile_set = SubResource("TileSet_v4gdj")
+
+[node name="Marker2D" type="Marker2D" parent="pirateyellow1"]
+position = Vector2(1089, 234)
+
+[node name="pirateyellow2" type="Area2D" parent="."]
+position = Vector2(529, 189)
+script = ExtResource("8_nkgu6")
+selfnumber = 1
+selfoffnumber = 1
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pirateyellow2"]
+position = Vector2(-24.5, -0.5)
+shape = SubResource("RectangleShape2D_5ymgj")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="pirateyellow2"]
+tile_map_data = PackedByteArray("AAD/////AAAMAAEAAAA=")
+tile_set = SubResource("TileSet_v4gdj")
+
+[node name="Marker2D" type="Marker2D" parent="pirateyellow2"]
+position = Vector2(803, 234)
+
+[node name="pirategreen1" type="Area2D" parent="."]
+position = Vector2(961, 514)
+script = ExtResource("8_nkgu6")
+selfnumber = 2
+selfoffnumber = 2
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pirategreen1"]
+position = Vector2(-70.5, -11)
+shape = SubResource("RectangleShape2D_w0hw3")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="pirategreen1"]
+tile_map_data = PackedByteArray("AAD/////AAAMAAEAAAA=")
+tile_set = SubResource("TileSet_v4gdj")
+
+[node name="Marker2D" type="Marker2D" parent="pirategreen1"]
+position = Vector2(371, -91)
+
+[node name="pirategreen2" type="Area2D" parent="."]
+position = Vector2(910, 706)
+script = ExtResource("8_nkgu6")
+selfnumber = 2
+selfoffnumber = 2
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pirategreen2"]
+position = Vector2(-46, -11)
+shape = SubResource("RectangleShape2D_e4qhk")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="pirategreen2"]
+tile_map_data = PackedByteArray("AAD/////AAAMAAEAAAA=")
+tile_set = SubResource("TileSet_v4gdj")
+
+[node name="Marker2D" type="Marker2D" parent="pirategreen2"]
+position = Vector2(422, -283)
+
+[node name="piratered1" type="Area2D" parent="."]
+position = Vector2(433, 611)
+script = ExtResource("8_nkgu6")
+selfnumber = 3
+selfoffnumber = 3
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piratered1"]
+position = Vector2(-32.5, -32.5)
+shape = SubResource("RectangleShape2D_v4gdj")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="piratered1"]
+tile_map_data = PackedByteArray("AAD/////AAAMAAEAAAA=")
+tile_set = SubResource("TileSet_v4gdj")
+
+[node name="Marker2D" type="Marker2D" parent="piratered1"]
+position = Vector2(899, -188)
+
+[node name="pirateblue1" type="Area2D" parent="."]
+position = Vector2(435, 180)
+script = ExtResource("8_nkgu6")
+selfnumber = 4
+selfoffnumber = 4
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pirateblue1"]
+position = Vector2(-33.5, 11)
+shape = SubResource("RectangleShape2D_mxd2s")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="pirateblue1"]
+tile_map_data = PackedByteArray("AAD/////AAAMAAEAAAA=")
+tile_set = SubResource("TileSet_v4gdj")
+
+[node name="Marker2D" type="Marker2D" parent="pirateblue1"]
+position = Vector2(897, 243)
+
+[node name="pirateswitchyellow1" type="Area2D" parent="."]
+position = Vector2(529, 98)
+script = ExtResource("8_t3m4h")
+selfnumber = 1
+selfoffnumber = 1
+metadata/_edit_group_ = true
+
+[node name="switchhitbox" type="CollisionShape2D" parent="pirateswitchyellow1"]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_t3m4h")
+
+[node name="on" type="TileMapLayer" parent="pirateswitchyellow1"]
+tile_map_data = PackedByteArray("AAAAAP//AAACABAAAAA=")
+tile_set = SubResource("TileSet_7ryl3")
+
+[node name="off" type="TileMapLayer" parent="pirateswitchyellow1"]
+tile_map_data = PackedByteArray("AAAAAP//AAABABAAAAA=")
+tile_set = SubResource("TileSet_7ryl3")
+
+[node name="pirateswitchgreen1" type="Area2D" parent="."]
+position = Vector2(241, 771)
+script = ExtResource("8_t3m4h")
+selfnumber = 2
+selfoffnumber = 2
+metadata/_edit_group_ = true
+
+[node name="switchhitbox" type="CollisionShape2D" parent="pirateswitchgreen1"]
+position = Vector2(45.5, -25)
+shape = SubResource("RectangleShape2D_j7xqf")
+
+[node name="on" type="TileMapLayer" parent="pirateswitchgreen1"]
+tile_map_data = PackedByteArray("AAAAAP//AAACABAAAAA=")
+tile_set = SubResource("TileSet_7ryl3")
+
+[node name="off" type="TileMapLayer" parent="pirateswitchgreen1"]
+tile_map_data = PackedByteArray("AAAAAP//AAABABAAAAA=")
+tile_set = SubResource("TileSet_7ryl3")
+
+[node name="pirateswitchred" type="Area2D" parent="."]
+position = Vector2(287, 195)
+script = ExtResource("8_t3m4h")
+selfnumber = 3
+selfoffnumber = 3
+metadata/_edit_group_ = true
+
+[node name="switchhitbox" type="CollisionShape2D" parent="pirateswitchred"]
+position = Vector2(23.5, -4)
+shape = SubResource("RectangleShape2D_40mbj")
+
+[node name="on" type="TileMapLayer" parent="pirateswitchred"]
+tile_map_data = PackedByteArray("AAAAAP//AAACABAAAAA=")
+tile_set = SubResource("TileSet_7ryl3")
+
+[node name="off" type="TileMapLayer" parent="pirateswitchred"]
+tile_map_data = PackedByteArray("AAAAAP//AAABABAAAAA=")
+tile_set = SubResource("TileSet_7ryl3")
+
+[node name="pirateswitchblue" type="Area2D" parent="."]
+position = Vector2(960, 625)
+script = ExtResource("8_t3m4h")
+selfnumber = 4
+selfoffnumber = 4
+metadata/_edit_group_ = true
+
+[node name="switchhitbox" type="CollisionShape2D" parent="pirateswitchblue"]
+position = Vector2(-13, -25)
+shape = SubResource("RectangleShape2D_6lwgj")
+
+[node name="on" type="TileMapLayer" parent="pirateswitchblue"]
+tile_map_data = PackedByteArray("AAAAAP//AAACABAAAAA=")
+tile_set = SubResource("TileSet_7ryl3")
+
+[node name="off" type="TileMapLayer" parent="pirateswitchblue"]
+tile_map_data = PackedByteArray("AAAAAP//AAABABAAAAA=")
+tile_set = SubResource("TileSet_7ryl3")
+
 [connection signal="body_entered" from="3wayfork" to="3wayfork" method="_on_body_entered"]
 [connection signal="body_entered" from="shipsideview" to="shipsideview" method="_on_body_entered"]
+[connection signal="body_entered" from="pirateyellow1" to="pirateyellow1" method="_on_body_entered"]
+[connection signal="body_entered" from="pirateyellow2" to="pirateyellow2" method="_on_body_entered"]
+[connection signal="body_entered" from="pirategreen1" to="pirategreen1" method="_on_body_entered"]
+[connection signal="body_entered" from="pirategreen2" to="pirategreen2" method="_on_body_entered"]
+[connection signal="body_entered" from="piratered1" to="piratered1" method="_on_body_entered"]
+[connection signal="body_entered" from="pirateblue1" to="pirateblue1" method="_on_body_entered"]
+[connection signal="area_entered" from="pirateswitchyellow1" to="pirateswitchyellow1" method="_on_area_entered"]
+[connection signal="area_exited" from="pirateswitchyellow1" to="pirateswitchyellow1" method="_on_area_exited"]
+[connection signal="area_entered" from="pirateswitchgreen1" to="pirateswitchgreen1" method="_on_area_entered"]
+[connection signal="area_exited" from="pirateswitchgreen1" to="pirateswitchgreen1" method="_on_area_exited"]
+[connection signal="area_entered" from="pirateswitchred" to="pirateswitchred" method="_on_area_entered"]
+[connection signal="area_exited" from="pirateswitchred" to="pirateswitchred" method="_on_area_exited"]
+[connection signal="area_entered" from="pirateswitchblue" to="pirateswitchblue" method="_on_area_entered"]
+[connection signal="area_exited" from="pirateswitchblue" to="pirateswitchblue" method="_on_area_exited"]

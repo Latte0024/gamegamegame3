@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @export var physics : bool
 @export var pos = Vector2 (0,0)
-@export var blank = "res://scripts/battle/bullets/rigidbullet.tscn"
+@export var blank = "res://scripts/battle/bullets/markerbullet.tscn"
 @export var repeat : int 
 @export var delay : float
 @export var amount : int
@@ -37,9 +37,7 @@ func shoot():
 		new_bullet.position = position + pos
 		get_parent().add_child.call_deferred(new_bullet)
 		a = a + 1 
-		print("amount ", a)
-		print("repeat ", b)
-		print(is_visible_in_tree())
+
 	if a == amount and b != repeat:
 		a = 0
 		b = b + 1

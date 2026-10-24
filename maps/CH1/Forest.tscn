@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://bwxrgu1t8edlv"]
+[gd_scene load_steps=54 format=4 uid="uid://bwxrgu1t8edlv"]
 
 [ext_resource type="Texture2D" uid="uid://ce80gqcs0n77g" path="res://textures/tilesets/Chapter 1/DW_Ground.png" id="1_8bnje"]
 [ext_resource type="Texture2D" uid="uid://rbeptii3wyk5" path="res://textures/tilesets/Chapter 1/DW_Assets1.png" id="2_6qsut"]
@@ -21,6 +21,7 @@
 [ext_resource type="Resource" uid="uid://jwdo22r48kxh" path="res://scripts/battle/resources/enemies/slime.tres" id="14_dypi7"]
 [ext_resource type="Script" uid="uid://b4igwri2pj6ti" path="res://scripts/puzzles/rock_1.gd" id="14_mkr63"]
 [ext_resource type="Texture2D" uid="uid://jrvlq53mahla" path="res://textures/tilesets/Chapter 2/CH2DW_Train.png" id="16_0apqp"]
+[ext_resource type="PackedScene" uid="uid://ddx3ad7fteuha" path="res://characters/player/npc.tscn" id="21_qowa1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0apqp"]
 texture = ExtResource("1_8bnje")
@@ -4872,6 +4873,9 @@ shape = SubResource("RectangleShape2D_yduib")
 position = Vector2(24, 24)
 tile_map_data = PackedByteArray("AAD/////AAANAAYAAAA=")
 tile_set = SubResource("TileSet_4nh3p")
+
+[node name="npc" parent="." instance=ExtResource("21_qowa1")]
+position = Vector2(981, 775)
 
 [node name="Player" parent="." instance=ExtResource("10_2efyf")]
 position = Vector2(53, 739)

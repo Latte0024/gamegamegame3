@@ -17,11 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Fade="*res://scripts/system/fade.gd"
-Puzzleswitch="*res://scripts/puzzles/puzzleswitches.gd"
+Puzzleswitch="*res://scripts/puzzles/puzzleswitch.gd"
 BattleGlobals="*res://scripts/battle/battleGlobals.gd"
 PhysicsStuff="*res://scripts/puzzles/physics_stuff.gd"
+Dialogue="*res://scripts/system/dialogue.gd"
 
 [debug]
 
@@ -39,7 +39,7 @@ window/vsync/vsync_mode=0
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray()
 
 [global_group]
 

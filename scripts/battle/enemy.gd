@@ -6,7 +6,10 @@ extends TextureButton
 
 @onready var anim:AnimationPlayer = $animation
 @onready var health:TextureProgressBar = $health
-@export var damageVal:int
+@export var damageVal1:int
+@export var damageVal2:int
+@export var damageValall:int
+
 
 
 

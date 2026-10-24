@@ -54,6 +54,6 @@ func deleting():
 func _on_bullet_area_entered(area: Area2D) -> void:
 
 	print("area entered")
-	BattleGlobals.partyHealth[0] = BattleGlobals.partyHealth[0] - damage
-	print("bullet " , BattleGlobals.partyHealth[0])
+	BattleGlobals.ultimate = BattleGlobals.ultimate + damage
+	print("bullet " , BattleGlobals.ultimate)
 	queue_free()
